@@ -57,7 +57,21 @@ export default async function PaginatedProducts({
     count = searchResults.length
     console.log("searchResults:", searchResults);
     console.log("searchResults.length:", searchResults.length);
+    if (collectionId) {
+      queryParams["collection_id"] = [collectionId]
+    }
 
+    if (categoryId) {
+      queryParams["category_id"] = [categoryId]
+    }
+
+    if (productsIds) {
+      queryParams["id"] = productsIds
+    }
+
+    if (sortBy === "created_at") {
+      queryParams["order"] = "created_at"
+    }
   } else {
     // If no search query, use the regular product listing logic
     const queryParams: PaginatedProductsParams = {
