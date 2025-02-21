@@ -6,6 +6,9 @@ import { IconSearch } from "@tabler/icons-react";
 import Input from "./ui/index";
 import { sdk } from "@lib/config"; // Ensure you have SDK access
 
+const MEDUSA_BACKEND_URL = process.env.MEDUSA_BACKEND_URL
+
+
 const Search = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [suggestions, setSuggestions] = useState<any[]>([]);
@@ -42,7 +45,7 @@ const Search = () => {
   };
 
   const handleSuggestionClick = (slug: string) => {
-    router.push(`/products/${slug}`);
+    router.push(MEDUSA_BACKEND_URL + `/products/${slug}`);
     setSearchQuery("");
     setSuggestions([]);
   };
