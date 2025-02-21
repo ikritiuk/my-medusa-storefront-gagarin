@@ -5,13 +5,13 @@ import { useMedusa } from "medusa-react";
 import debounce from "lodash.debounce";
 
 const SearchBar = () => {
+  const { client } = useMedusa(); // Ensures Medusa client is available inside MedusaProvider
   const [query, setQuery] = useState("");
   const [results, setResults] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
-  const { client } = useMedusa();
 
-  const fetchProducts = async (searchTerm) => {
+  const fetchProducts = async (searchTerm: string) => {
     if (!searchTerm) {
       setResults([]);
       return;
@@ -24,6 +24,7 @@ const SearchBar = () => {
       const { products } = await client.products.list({ q: searchTerm });
       setResults(products);
     } catch (err) {
+      console.error("Error fetching products:", err);
       setError("Failed to fetch products. Please try again.");
     } finally {
       setLoading(false);
