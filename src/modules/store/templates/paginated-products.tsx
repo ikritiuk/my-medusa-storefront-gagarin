@@ -44,6 +44,8 @@ export default async function PaginatedProducts({
   let count
 
   if (query) {
+    console.log("Query received:", query); // Debugging
+
     // If there's a search query, use the SDK to search products
     const { products: searchResults } = await sdk.store.product.list({
       q: query,
