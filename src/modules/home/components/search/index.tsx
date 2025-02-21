@@ -1,17 +1,19 @@
 "use client";
 
 import { useState, useEffect, useCallback } from "react";
-import { useMedusa } from "medusa-react";
+import { MedusaProvider, useMedusa } from "medusa-react";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import debounce from "lodash.debounce";
 
-const SearchBar = () => {
+const queryClient = new QueryClient();
+
+const SearchComponent = () => {
   const [query, setQuery] = useState("");
   const [results, setResults] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
   const { client } = useMedusa();
 
-  // Function to fetch products based on search query
   const fetchProducts = async (searchTerm) => {
     if (!searchTerm) {
       setResults([]);
@@ -31,10 +33,8 @@ const SearchBar = () => {
     }
   };
 
-  // Debounce function to reduce API calls
   const debouncedSearch = useCallback(debounce(fetchProducts, 300), []);
 
-  // Run debounced search when query updates
   useEffect(() => {
     debouncedSearch(query);
     return () => debouncedSearch.cancel();
@@ -63,6 +63,16 @@ const SearchBar = () => {
         </ul>
       )}
     </div>
+  );
+};
+
+const SearchBar = () => {
+  return (
+    <QueryClientProvider client={queryClient}>
+      <MedusaProvider baseUrl={process.env.NEXT_PUBLIC_MEDUSA_BACKEND_URL || "http://localhost:9000"}>
+        <SearchComponent />
+      </MedusaProvider>
+    </QueryClientProvider>
   );
 };
 
