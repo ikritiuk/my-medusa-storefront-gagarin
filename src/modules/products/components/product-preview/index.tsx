@@ -28,6 +28,8 @@ export default async function ProductPreview({
     product,
   })
 
+  console.log("cheapestPrice: ", cheapestPrice)
+
   return (
     <LocalizedClientLink href={`/products/${product.handle}`} className="group">
       <div data-testid="product-wrapper">
