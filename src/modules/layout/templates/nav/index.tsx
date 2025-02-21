@@ -1,10 +1,11 @@
-import { Suspense } from "react"
+import { default as React, Suspense } from "react"
 
 import { listRegions } from "@lib/data/regions"
 import { StoreRegion } from "@medusajs/types"
 import LocalizedClientLink from "@modules/common/components/localized-client-link"
 import CartButton from "@modules/layout/components/cart-button"
 import SideMenu from "@modules/layout/components/side-menu"
+import Search from "@modules/home/components/search"
 
 export default async function Nav() {
   const regions = await listRegions().then((regions: StoreRegion[]) => regions)
@@ -28,7 +29,7 @@ export default async function Nav() {
               Medusa Store
             </LocalizedClientLink>
           </div>
-
+          <Search />
           <div className="flex items-center gap-x-6 h-full flex-1 basis-0 justify-end">
             <div className="hidden small:flex items-center gap-x-6 h-full">
               <LocalizedClientLink
