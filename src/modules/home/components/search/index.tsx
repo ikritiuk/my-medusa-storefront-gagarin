@@ -71,7 +71,7 @@ const SearchComponent = () => {
 const SearchBar = () => {
   return (
     <QueryClientProvider client={queryClient}>
-      <MedusaProvider baseUrl={process.env.NEXT_PUBLIC_MEDUSA_BACKEND_URL || "http://localhost:9000"}>
+      <MedusaProvider baseUrl={process.env.MEDUSA_BACKEND_URL || "http://localhost:9000"}>
         <SearchComponent />
       </MedusaProvider>
     </QueryClientProvider>
