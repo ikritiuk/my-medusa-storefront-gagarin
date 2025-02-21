@@ -2,10 +2,8 @@ import { Metadata } from "next"
 
 import FeaturedProducts from "@modules/home/components/featured-products"
 import Hero from "@modules/home/components/hero"
-import Search from "@modules/home/components/search"
 import { listCollections } from "@lib/data/collections"
 import { getRegion } from "@lib/data/regions"
-import * as React from "react"
 
 export const metadata: Metadata = {
   title: "Medusa Next.js Starter Template",
