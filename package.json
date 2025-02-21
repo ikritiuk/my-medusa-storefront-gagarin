@@ -32,8 +32,7 @@
     "tailwindcss-radix": "^2.8.0",
     "webpack": "^5",
     "lodash.debounce": "latest",
-    "medusa-react": "latest",
-    "@modules/home": "latest"
+    "medusa-react": "latest"
   },
   "devDependencies": {
     "@babel/core": "^7.17.5",
