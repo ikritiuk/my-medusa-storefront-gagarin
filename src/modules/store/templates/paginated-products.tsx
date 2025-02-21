@@ -52,6 +52,9 @@ export default async function PaginatedProducts({
     })
     products = searchResults
     count = searchResults.length
+    console.log("searchResults:", searchResults);
+    console.log("searchResults.length:", searchResults.length);
+
   } else {
     // If no search query, use the regular product listing logic
     const queryParams: PaginatedProductsParams = {
