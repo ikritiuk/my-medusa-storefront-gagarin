@@ -10,7 +10,6 @@ export const metadata: Metadata = {
 
 type Params = {
   searchParams: Promise<{
-    q?: string
     sortBy?: SortOptions
     page?: string
   }>
@@ -24,7 +23,7 @@ export default async function StorePage(props: Params) {
   const searchParams = await props.searchParams;
   console.log("Search params:", searchParams); // Debugging
 
-  const { sortBy, page } = searchParams
+  const { q, sortBy, page } = searchParams
 
   return (
     <StoreTemplate
