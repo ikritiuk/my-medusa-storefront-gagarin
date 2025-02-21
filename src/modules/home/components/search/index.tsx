@@ -11,7 +11,6 @@ const Search = () => {
 
   const handleSearch = (e: { preventDefault: () => void }) => {
     e.preventDefault();
-    console.log("Search Query:", searchQuery); // Debugging
     if (searchQuery.trim()) {
       router.push(`/store?q=${encodeURIComponent(searchQuery.trim())}`);
     }

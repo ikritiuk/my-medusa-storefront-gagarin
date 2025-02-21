@@ -22,7 +22,6 @@ type Params = {
 export default async function StorePage(props: Params) {
   const params = await props.params;
   const searchParams = await props.searchParams;
-  console.log("Search params:", searchParams); // Debugging
 
   const { q, sortBy, page } = searchParams
 
