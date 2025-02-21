@@ -110,6 +110,9 @@ export default async function PaginatedProducts({
           </div>
         ) : (
           products.map((p) => {
+            console.log("product: ", p); // Debugging
+            console.log("region: ", region); // Debugging
+
             return (
               <li key={p.id}>
                 <ProductPreview product={p} region={region}/>
