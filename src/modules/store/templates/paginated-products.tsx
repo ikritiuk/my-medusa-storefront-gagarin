@@ -18,21 +18,23 @@ type PaginatedProductsParams = {
 };
 
 export default async function PaginatedProducts({
+                                                  query,
                                                   sortBy,
                                                   page,
                                                   collectionId,
                                                   categoryId,
                                                   productsIds,
                                                   countryCode,
-                                                  query,
+
                                                 }: {
+  query?: string;
   sortBy?: SortOptions;
   page: number;
   collectionId?: string;
   categoryId?: string;
   productsIds?: string[];
   countryCode: string;
-  query?: string;
+
 }) {
   const region = await getRegion(countryCode)
 
