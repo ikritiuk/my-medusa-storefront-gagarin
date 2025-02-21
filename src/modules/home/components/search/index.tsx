@@ -1,14 +1,14 @@
 "use client";
 
 import { useState, useEffect, useCallback } from "react";
-import { MedusaProvider } from "medusa-react";
+import { MedusaProvider, useMedusa } from "medusa-react"; // ✅ Import useMedusa
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import debounce from "lodash.debounce";
 
 const queryClient = new QueryClient();
 
 const SearchComponent = () => {
-  const { client } = useMedusa(); // Ensures Medusa client is available inside MedusaProvider
+  const { client } = useMedusa(); // ✅ Ensure this is inside MedusaProvider
   const [query, setQuery] = useState("");
   const [results, setResults] = useState([]);
   const [loading, setLoading] = useState(false);
