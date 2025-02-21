@@ -42,6 +42,7 @@ export default async function PaginatedProducts({
 
   let products
   let count
+  console.log("query:", query);
 
   if (query) {
     console.log("Query received:", query); // Debugging

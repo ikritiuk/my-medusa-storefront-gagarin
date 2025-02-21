@@ -10,6 +10,7 @@ export const metadata: Metadata = {
 
 type Params = {
   searchParams: Promise<{
+    q?: string
     sortBy?: SortOptions
     page?: string
   }>
@@ -27,6 +28,7 @@ export default async function StorePage(props: Params) {
 
   return (
     <StoreTemplate
+      q={q}
       sortBy={sortBy}
       page={page}
       countryCode={params.countryCode}
