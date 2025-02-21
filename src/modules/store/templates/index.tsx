@@ -12,6 +12,7 @@ const StoreTemplate = ({
                          page,
                          countryCode,
                        }: {
+  query?: string
   sortBy?: SortOptions
   page?: string
   countryCode: string
