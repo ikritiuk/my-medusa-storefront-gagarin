@@ -7,11 +7,11 @@ import { SortOptions } from "@modules/store/components/refinement-list/sort-prod
 import PaginatedProducts from "./paginated-products"
 
 const StoreTemplate = ({
-  q,
-  sortBy,
-  page,
-  countryCode,
-}: {
+                         query,
+                         sortBy,
+                         page,
+                         countryCode,
+                       }: {
   sortBy?: SortOptions
   page?: string
   countryCode: string
@@ -24,14 +24,14 @@ const StoreTemplate = ({
       className="flex flex-col small:flex-row small:items-start py-6 content-container"
       data-testid="category-container"
     >
-      <RefinementList sortBy={sort} />
+      <RefinementList sortBy={sort}/>
       <div className="w-full">
         <div className="mb-8 text-2xl-semi">
           <h1 data-testid="store-page-title">All products</h1>
         </div>
-        <Suspense fallback={<SkeletonProductGrid />}>
+        <Suspense fallback={<SkeletonProductGrid/>}>
           <PaginatedProducts
-            q={q}
+            query={query}
             sortBy={sort}
             page={pageNumber}
             countryCode={countryCode}

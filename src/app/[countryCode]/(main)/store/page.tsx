@@ -27,7 +27,7 @@ export default async function StorePage(props: Params) {
 
   return (
     <StoreTemplate
-      q={q}
+      query={q}
       sortBy={sortBy}
       page={page}
       countryCode={params.countryCode}
