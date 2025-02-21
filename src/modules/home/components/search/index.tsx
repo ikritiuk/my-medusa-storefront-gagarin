@@ -1,13 +1,10 @@
 "use client";
 
 import { useState, useEffect, useCallback } from "react";
-import { MedusaProvider, useMedusa } from "medusa-react";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { useMedusa } from "medusa-react";
 import debounce from "lodash.debounce";
 
-const queryClient = new QueryClient();
-
-const SearchComponent = () => {
+const SearchBar = () => {
   const [query, setQuery] = useState("");
   const [results, setResults] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -63,16 +60,6 @@ const SearchComponent = () => {
         </ul>
       )}
     </div>
-  );
-};
-
-const SearchBar = () => {
-  return (
-    <QueryClientProvider client={queryClient}>
-      <MedusaProvider baseUrl={process.env.NEXT_PUBLIC_MEDUSA_BACKEND_URL || "http://localhost:9000"}>
-        <SearchComponent />
-      </MedusaProvider>
-    </QueryClientProvider>
   );
 };
 
