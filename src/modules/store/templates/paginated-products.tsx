@@ -46,48 +46,49 @@ export default async function PaginatedProducts({
   let count
   console.log("query:", query);
 
+  const queryParams: PaginatedProductsParams = {
+    limit: PRODUCT_LIMIT,
+  }
+
+  if (collectionId) {
+    queryParams["collection_id"] = [collectionId]
+  }
+
+  if (categoryId) {
+    queryParams["category_id"] = [categoryId]
+  }
+
+  if (productsIds) {
+    queryParams["id"] = productsIds
+  }
+
+  if (sortBy === "created_at") {
+    queryParams["order"] = "created_at"
+  }
+
+  const {
+    response: { products: regularProducts, count: totalCount },
+  } = await listProductsWithSort({
+    page,
+    queryParams,
+    sortBy,
+    countryCode,
+  })
+
   if (query) {
-    console.log("Query received:", query); // Debugging
 
-    // If there's a search query, use the SDK to search products
-    const { products: searchResults } = await sdk.store.product.list({
-      q: query,
-    })
-    products = searchResults
-    count = searchResults.length
-    console.log("searchResults:", searchResults);
-    console.log("searchResults.length:", searchResults.length);
+    // Filter existing regularProducts based on query
+    const lowerCaseQuery = query.toLowerCase();
 
+    products = regularProducts.filter((product) =>
+      product.title.toLowerCase().includes(lowerCaseQuery) ||
+      (product.description && product.description.toLowerCase().includes(lowerCaseQuery))
+    );
+
+    count = products.length;
   } else {
     // If no search query, use the regular product listing logic
-    const queryParams: PaginatedProductsParams = {
-      limit: PRODUCT_LIMIT,
-    }
 
-    if (collectionId) {
-      queryParams["collection_id"] = [collectionId]
-    }
-
-    if (categoryId) {
-      queryParams["category_id"] = [categoryId]
-    }
-
-    if (productsIds) {
-      queryParams["id"] = productsIds
-    }
-
-    if (sortBy === "created_at") {
-      queryParams["order"] = "created_at"
-    }
-
-    const {
-      response: { products: regularProducts, count: totalCount },
-    } = await listProductsWithSort({
-      page,
-      queryParams,
-      sortBy,
-      countryCode,
-    })
 
     products = regularProducts
     count = totalCount
