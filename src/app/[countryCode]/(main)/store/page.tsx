@@ -10,6 +10,7 @@ export const metadata: Metadata = {
 
 type Params = {
   searchParams: Promise<{
+    q?:string
     sortBy?: SortOptions
     page?: string
   }>
