@@ -45,7 +45,7 @@ const Search = () => {
   };
 
   const handleSuggestionClick = (slug: string) => {
-    router.push(MEDUSA_BACKEND_URL + `/products/${slug}`);
+    router.push(`/products/${slug}`);
     setSearchQuery("");
     setSuggestions([]);
   };
