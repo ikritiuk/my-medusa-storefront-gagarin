@@ -1,7 +1,7 @@
 "use client";
 
 import { IconSearch } from "@tabler/icons-react";
-import Input from "./ui/Input";
+import Input from "./ui/index";
 import { useState, KeyboardEvent } from "react";
 import { useRouter } from "next/navigation";
 
