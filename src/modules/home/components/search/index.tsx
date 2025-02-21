@@ -1,3 +1,5 @@
+"use client";
+
 import { useState, useEffect, useCallback } from "react";
 import { useMedusa } from "medusa-react";
 import debounce from "lodash.debounce";
@@ -9,7 +11,7 @@ const SearchBar = () => {
   const [error, setError] = useState(null);
   const { client } = useMedusa();
 
-  // Функция для выполнения поиска с API Medusa
+  // Function to fetch products based on search query
   const fetchProducts = async (searchTerm) => {
     if (!searchTerm) {
       setResults([]);
@@ -23,16 +25,16 @@ const SearchBar = () => {
       const { products } = await client.products.list({ q: searchTerm });
       setResults(products);
     } catch (err) {
-      setError("Ошибка загрузки товаров. Попробуйте позже.");
+      setError("Failed to fetch products. Please try again.");
     } finally {
       setLoading(false);
     }
   };
 
-  // Дебаунсим функцию запроса (ждём 300 мс перед отправкой)
+  // Debounce function to reduce API calls
   const debouncedSearch = useCallback(debounce(fetchProducts, 300), []);
 
-  // Отслеживаем изменение ввода и вызываем поиск с задержкой
+  // Run debounced search when query updates
   useEffect(() => {
     debouncedSearch(query);
     return () => debouncedSearch.cancel();
@@ -44,21 +46,17 @@ const SearchBar = () => {
         type="text"
         value={query}
         onChange={(e) => setQuery(e.target.value)}
-        placeholder="🔍 Искать товары..."
-        className="w-full p-2 border rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+        placeholder="🔍 Search for products..."
+        className="w-full p-3 border rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
       />
 
-      {/* Отображаем состояние загрузки */}
-      {loading && <p className="text-gray-500 text-sm mt-2">Загрузка...</p>}
-
-      {/* Выводим ошибку, если есть */}
+      {loading && <p className="text-gray-500 text-sm mt-2">Loading...</p>}
       {error && <p className="text-red-500 text-sm mt-2">{error}</p>}
 
-      {/* Отображаем результаты поиска */}
       {results.length > 0 && (
         <ul className="absolute bg-white shadow-lg mt-2 w-full rounded-lg border max-h-60 overflow-y-auto">
           {results.map((product) => (
-            <li key={product.id} className="p-2 hover:bg-gray-100 cursor-pointer">
+            <li key={product.id} className="p-3 hover:bg-gray-100 cursor-pointer">
               {product.title}
             </li>
           ))}
