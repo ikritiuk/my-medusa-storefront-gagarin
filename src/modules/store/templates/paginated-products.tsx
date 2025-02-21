@@ -44,19 +44,26 @@ export default async function PaginatedProducts({
 
   let products
   let count
-  console.log("query:", query);
+  console.log("query:", query)
 
   if (query) {
-    console.log("Query received:", query); // Debugging
 
-    // If there's a search query, use the SDK to search products
+    // Fetch products based on search query
     const { products: searchResults } = await sdk.store.product.list({
       q: query,
     })
-    products = searchResults
-    count = searchResults.length
-    console.log("searchResults:", searchResults);
-    console.log("searchResults.length:", searchResults.length);
+
+    // Fetch detailed product data with region-specific pricing
+    const detailedProducts = await listProducts({
+      regionId: region.id,
+      queryParams: { id: searchResults.map((p) => p.id) },
+    }).then(({ response }) => response.products)
+
+    products = detailedProducts
+    count = detailedProducts.length
+
+    console.log("Detailed products with prices:", detailedProducts)
+
 
   } else {
     // If no search query, use the regular product listing logic
@@ -112,8 +119,8 @@ export default async function PaginatedProducts({
           </div>
         ) : (
           products.map((p) => {
-            console.log("product: ", p); // Debugging
-            console.log("region: ", region); // Debugging
+            console.log("product: ", p) // Debugging
+            console.log("region: ", region) // Debugging
 
             return (
               <li key={p.id}>
