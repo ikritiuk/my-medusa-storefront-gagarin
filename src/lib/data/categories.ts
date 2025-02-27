@@ -5,7 +5,7 @@ import { getCacheOptions } from "./cookies"
 export const listCategories = async (query?: Record<string, any>) => {
   const next = {
     ...(await getCacheOptions("categories")),
-    revalidate: 10, // Refresh cache every 10 seconds
+    revalidate: 3600, // Refresh cache every 10 seconds
   }
 
   const limit = query?.limit || 100
@@ -21,7 +21,7 @@ export const listCategories = async (query?: Record<string, any>) => {
           ...query
         },
         next,
-        cache: "no-store", // Disable cache
+        cache: "force-cache",
       }
     )
     .then(({ product_categories }) => product_categories)
