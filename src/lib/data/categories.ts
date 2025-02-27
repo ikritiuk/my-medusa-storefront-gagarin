@@ -18,8 +18,7 @@ export const listCategories = async (query?: Record<string, any>) => {
           fields:
             "*category_children, *products, *parent_category, *parent_category.parent_category",
           limit,
-          ...query,
-          timestamp: Date.now(), // Ensure fresh fetch
+          ...query
         },
         next,
         cache: "no-store", // Disable cache
