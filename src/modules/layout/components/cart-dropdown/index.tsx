@@ -168,7 +168,7 @@ const CartDropdown = ({
                             className="mt-1"
                             data-testid="cart-item-remove-button"
                           >
-                            Remove
+                            Удалить
                           </DeleteButton>
                         </div>
                       </div>

@@ -37,7 +37,7 @@ export default async function Nav() {
                 href="/account"
                 data-testid="nav-account-link"
               >
-                Account
+                Аккаунт
               </LocalizedClientLink>
             </div>
             <Suspense
@@ -47,7 +47,7 @@ export default async function Nav() {
                   href="/cart"
                   data-testid="nav-cart-link"
                 >
-                  Cart (0)
+                  Корзина (0)
                 </LocalizedClientLink>
               }
             >
