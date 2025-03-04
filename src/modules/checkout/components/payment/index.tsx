@@ -129,7 +129,7 @@ const Payment = ({
               className="text-ui-fg-interactive hover:text-ui-fg-interactive-hover"
               data-testid="edit-payment-button"
             >
-              Edit
+              Редактировать
             </button>
           </Text>
         )}
@@ -198,7 +198,7 @@ const Payment = ({
           >
             {!activeSession && isStripeFunc(selectedPaymentMethod)
               ? " Enter card details"
-              : "Continue to review"}
+              : "Перейти к проверке заказа"}
           </Button>
         </div>
 

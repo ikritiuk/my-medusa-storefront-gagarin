@@ -144,7 +144,7 @@ const Addresses = ({
 
                     {sameAsBilling ? (
                       <Text className="txt-medium text-ui-fg-subtle">
-                        Адрес доставки совпадает с адресом оплаты.
+                        Адрес оплаты совпадает с адресом доставки
                       </Text>
                     ) : (
                       <>
