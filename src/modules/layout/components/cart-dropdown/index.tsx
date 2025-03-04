@@ -177,8 +177,7 @@ const CartDropdown = ({
                 <div className="p-4 flex flex-col gap-y-4 text-small-regular">
                   <div className="flex items-center justify-between">
                     <span className="text-ui-fg-base font-semibold">
-                      Subtotal{" "}
-                      <span className="font-normal">(excl. taxes)</span>
+                      Итого{" "}
                     </span>
                     <span
                       className="text-large-semi"
@@ -197,7 +196,7 @@ const CartDropdown = ({
                       size="large"
                       data-testid="go-to-cart-button"
                     >
-                      Go to cart
+                      Перейти в корзину
                     </Button>
                   </LocalizedClientLink>
                 </div>
