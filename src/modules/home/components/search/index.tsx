@@ -76,7 +76,7 @@ const Search = () => {
         </ul>
       )}
 
-      {loading && <p className="text-sm text-gray-400 absolute mt-2">Searching...</p>}
+      {loading && <p className="text-sm text-gray-400 absolute mt-2">Поиск...</p>}
     </div>
   );
 };
