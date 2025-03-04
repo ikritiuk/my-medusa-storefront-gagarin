@@ -151,7 +151,7 @@ const CartDropdown = ({
                                   data-testid="cart-item-quantity"
                                   data-value={item.quantity}
                                 >
-                                  Quantity: {item.quantity}
+                                  Количество: {item.quantity}
                                 </span>
                               </div>
                               <div className="flex justify-end">
