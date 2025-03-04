@@ -119,7 +119,7 @@ const Payment = ({
             }
           )}
         >
-          Payment
+          Оплата
           {!isOpen && paymentReady && <CheckCircleSolid />}
         </Heading>
         {!isOpen && paymentReady && (
@@ -175,7 +175,7 @@ const Payment = ({
                 className="txt-medium text-ui-fg-subtle"
                 data-testid="payment-method-summary"
               >
-                Gift card
+                Подарочная карта
               </Text>
             </div>
           )}
@@ -207,7 +207,7 @@ const Payment = ({
             <div className="flex items-start gap-x-1 w-full">
               <div className="flex flex-col w-1/3">
                 <Text className="txt-medium-plus text-ui-fg-base mb-1">
-                  Payment method
+                  Способ оплаты
                 </Text>
                 <Text
                   className="txt-medium text-ui-fg-subtle"
@@ -219,7 +219,7 @@ const Payment = ({
               </div>
               <div className="flex flex-col w-1/3">
                 <Text className="txt-medium-plus text-ui-fg-base mb-1">
-                  Payment details
+                  Детали оплаты
                 </Text>
                 <div
                   className="flex gap-2 txt-medium text-ui-fg-subtle items-center"
