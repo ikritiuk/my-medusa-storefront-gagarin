@@ -4,9 +4,7 @@ import { Text, clx } from "@medusajs/ui"
 
 import LocalizedClientLink from "@modules/common/components/localized-client-link"
 
-export default async
-
-function Footer() {
+export default async function Footer() {
   const { collections } = await listCollections({
     fields: "*products",
   })
