@@ -79,7 +79,7 @@ const Hero = () => {
 
       {/* Title Section */}
       <div className="hidden lg:block w-full text-center my-6">
-        <h2 className="text-xl font-bold">Популярные бренды</h2>
+        <h2 className="text-xl font-bold">Категории товаров</h2>
       </div>
 
       {/* Row of 3 Images */}
@@ -87,11 +87,11 @@ const Hero = () => {
         <div className="flex flex-col justify-center items-center text-center gap-6">
           <div className="grid grid-cols-3 gap-6">
             <div className="group relative cursor-pointer transition-transform hover:scale-105">
-              <Link href="/collections/rolex">
+              <Link href="/collections/dji">
                 <div className="relative">
                   <img
-                    src="https://medusajs-server.fra1.cdn.digitaloceanspaces.com/hero-rolex-daytona.avif"
-                    alt="Rolex"
+                    src="https://medusajs-server.fra1.cdn.digitaloceanspaces.com/dji-collection.avif"
+                    alt="DJI"
                     className="rounded shadow-lg"
                   />
                   <div
