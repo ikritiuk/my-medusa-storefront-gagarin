@@ -105,7 +105,7 @@ const Hero = () => {
               <Link href="/collections/dji-parts">
                 <div className="relative">
                   <img
-                    src="https://medusajs-server.fra1.cdn.digitaloceanspaces.com/djo-accessorises-collection.avif"
+                    src="https://medusajs-server.fra1.cdn.digitaloceanspaces.com/dji-komplect.avif"
                     alt="DJI: Аксессуары"
                     className="rounded shadow-lg"
                   />
