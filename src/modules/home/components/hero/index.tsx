@@ -96,7 +96,7 @@ const Hero = () => {
                   />
                   <div
                     className="absolute inset-0 bg-black bg-opacity-50 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity">
-                    <span className="text-white text-lg font-semibold">DJI компоектующие к дронам</span>
+                    <span className="text-white text-lg font-semibold">DJI Дроны</span>
                   </div>
                 </div>
               </Link>
@@ -111,7 +111,7 @@ const Hero = () => {
                   />
                   <div
                     className="absolute inset-0 bg-black bg-opacity-50 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity">
-                    <span className="text-white text-lg font-semibold">DJI компоектующие к дронам</span>
+                    <span className="text-white text-lg font-semibold">DJI комплектующие к дронам</span>
                   </div>
                 </div>
               </Link>
