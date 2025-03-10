@@ -34,29 +34,40 @@ const Hero = () => {
       <div className="hidden lg:block h-[80vh] w-full border-b border-ui-border-base relative overflow-hidden">
         <div className="absolute inset-0 flex justify-center items-center bg-black bg-opacity-50 z-20">
           <div className="text-center text-white px-4">
-            <h1 className="text-3xl font-bold mb-2">Премиум часы</h1>
-            <p className="text-lg mb-4">Премиум часы
-              Изготовлены из премиальной стали 904L и оснащены лучшими механизмами на рынке.</p>
-            <p className="text-lg mb-4">Эти часы подчеркнут Ваш безупречный стиль.</p>
-            <p className="text-lg mb-4">Только самые популярные модели с непревзойденным качеством исполнения.</p>
-            <p className="text-lg mb-4">Качество, доступное каждому, по выгодной цене.</p>
+            <h1 className="text-3xl font-bold mb-2">Премиум дроны</h1>
+            <p className="text-lg mb-4">
+              Добро пожаловать в <strong>премиальный магазин дронов</strong>, где передовые технологии встречаются с безупречным качеством!
+            </p>
+            <p className="text-lg mb-4">
+              Мы создали идеальное место для тех, кто ценит <strong>производительность, надежность и современные решения</strong>.
+            </p>
+
+            <h2 className="text-2xl font-semibold mb-2">Почему выбирают нас?</h2>
+            <ul className="list-disc pl-6 text-lg mb-4">
+              <li><strong>ТОПовые модели</strong> – мы отбираем только лучшие дроны от мировых производителей.</li>
+              <li><strong>Инновационные технологии</strong> – 4K-камеры, интеллектуальные системы полета и передовая стабилизация.</li>
+              <li><strong>Гарантированное качество</strong> – проверенные комплектующие и надежная сборка.</li>
+              <li><strong>Лучшие цены</strong> – премиум-дроны доступны каждому.</li>
+              <li><strong>Поддержка экспертов</strong> – поможем выбрать идеальный дрон под ваши задачи.</li>
+            </ul>
 
             <p className="text-3xl font-bold text-yellow-400 mt-6 mb-6 tracking-wide">
               Цены от 25 000 рублей
             </p>
 
-            <Link
-              href="/collections/rolex"
+            <a
+              href="/collections/dji"
               className="inline-block bg-white text-black font-semibold px-6 py-2 rounded"
             >
               Подробнее
-            </Link>
+            </a>
+
           </div>
         </div>
         <div className="absolute inset-0 bg-black bg-opacity-30 z-10"></div>
         <video
-          src="https://medusajs-server.fra1.cdn.digitaloceanspaces.com/panda-hero.mp4"
-          poster="https://medusajs-server.fra1.cdn.digitaloceanspaces.com/panda-hero-preview.jpg"
+          src="https://medusajs-server.fra1.cdn.digitaloceanspaces.com/hero.webm"
+          poster="https://medusajs-server.fra1.cdn.digitaloceanspaces.com/hero-preview.jpg"
           className="w-full h-full object-cover"
           muted
           autoPlay
@@ -218,7 +229,7 @@ const Hero = () => {
         <div className="flex flex-col items-center">
           {/* Title Section */}
           <div className="flex items-center justify-center h-auto py-4 px-4">
-            <h2 className="text-lg font-semibold text-center max-w-[90%]">Популярные бренды</h2>
+            <h2 className="text-lg font-semibold text-center max-w-[90%]">Категории</h2>
           </div>
         </div>
         <div className="flex flex-col items-center mb-6 gap-4">
@@ -231,7 +242,7 @@ const Hero = () => {
                 className="absolute top-2 left-2 bg-black bg-opacity-50 text-white text-lg px-2 py-1 rounded transition-all duration-300 group-hover:shadow-lg group-hover:text-yellow-400 z-10">
                 Rolex
               </div>
-              <Link href="/collections/rolex">
+              <Link href="/collections/dji">
                 <img
                   src="https://medusajs-server.fra1.cdn.digitaloceanspaces.com/hero-rolex.avif"
                   alt="Rolex"
