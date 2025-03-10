@@ -66,8 +66,8 @@ const Hero = () => {
         </div>
         <div className="absolute inset-0 bg-black bg-opacity-30 z-10"></div>
         <video
-          src="https://medusajs-server.fra1.cdn.digitaloceanspaces.com/hero.webm"
-          poster="https://medusajs-server.fra1.cdn.digitaloceanspaces.com/hero-preview.jpg"
+          src="https://medusajs-server.fra1.cdn.digitaloceanspaces.com/hero.mp4"
+          poster="https://medusajs-server.fra1.cdn.digitaloceanspaces.com/hero-preview.webp"
           className="w-full h-full object-cover"
           muted
           autoPlay
