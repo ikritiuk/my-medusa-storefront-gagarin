@@ -32,7 +32,7 @@ const Hero = () => {
     <div className="relative bg-ui-bg-subtle">
       {/* Large screen (lg and up) */}
       <div className="hidden lg:block h-[80vh] w-full border-b border-ui-border-base relative overflow-hidden">
-        <div className="absolute inset-0 flex justify-center items-center bg-black bg-opacity-30 z-20">
+        <div className="absolute inset-0 flex justify-center items-center bg-black-800 bg-opacity-30 z-20">
           <div className="text-center text-white px-4">
             <h1 className="text-3xl font-bold mb-2">Премиум дроны</h1>
             <p className="text-lg mb-4">
