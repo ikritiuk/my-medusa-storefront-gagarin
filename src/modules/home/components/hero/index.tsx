@@ -126,7 +126,7 @@ const Hero = () => {
                   />
                   <div
                     className="absolute inset-0 bg-black bg-opacity-50 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity">
-                    <span className="text-white text-lg font-semibold">DJI Камеры</span>
+                    <span className="text-white text-lg font-semibold">DJI Стабилизаторы и Камеры</span>
                   </div>
                 </div>
               </Link>
