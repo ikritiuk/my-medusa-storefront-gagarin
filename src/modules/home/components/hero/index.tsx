@@ -96,22 +96,22 @@ const Hero = () => {
                   />
                   <div
                     className="absolute inset-0 bg-black bg-opacity-50 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity">
-                    <span className="text-white text-lg font-semibold">DJI</span>
+                    <span className="text-white text-lg font-semibold">DJI дроны</span>
                   </div>
                 </div>
               </Link>
             </div>
             <div className="group relative cursor-pointer transition-transform hover:scale-105">
-              <Link href="/collections/piguet">
+              <Link href="/collections/dji-parts">
                 <div className="relative">
                   <img
-                    src="https://medusajs-server.fra1.cdn.digitaloceanspaces.com/hero-piguet.avif"
-                    alt="Audemars Piguet"
+                    src="https://medusajs-server.fra1.cdn.digitaloceanspaces.com/djo-accessorises-collection.avif"
+                    alt="DJI: Аксессуары"
                     className="rounded shadow-lg"
                   />
                   <div
                     className="absolute inset-0 bg-black bg-opacity-50 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity">
-                    <span className="text-white text-lg font-semibold">Audemars Piguet</span>
+                    <span className="text-white text-lg font-semibold">DJI Аксессуары</span>
                   </div>
                 </div>
               </Link>
