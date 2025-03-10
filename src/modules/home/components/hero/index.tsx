@@ -90,7 +90,7 @@ const Hero = () => {
               <Link href="/collections/dji">
                 <div className="relative">
                   <img
-                    src="https://medusajs-server.fra1.cdn.digitaloceanspaces.com/dji-collection.avif"
+                    src="https://medusajs-server.fra1.cdn.digitaloceanspaces.com/dji-drones.avif"
                     alt="DJI"
                     className="rounded shadow-lg"
                   />
@@ -105,7 +105,7 @@ const Hero = () => {
               <Link href="/collections/dji-parts">
                 <div className="relative">
                   <img
-                    src="https://medusajs-server.fra1.cdn.digitaloceanspaces.com/dji-komplect.avif"
+                    src="https://medusajs-server.fra1.cdn.digitaloceanspaces.com/dji-drones-accessorises.avif"
                     alt="DJI: Аксессуары"
                     className="rounded shadow-lg"
                   />
@@ -117,16 +117,16 @@ const Hero = () => {
               </Link>
             </div>
             <div className="group relative cursor-pointer transition-transform hover:scale-105">
-              <Link href="/collections/patek">
+              <Link href="/collections/dji-cameras">
                 <div className="relative">
                   <img
-                    src="https://medusajs-server.fra1.cdn.digitaloceanspaces.com/hero-patek.avif"
-                    alt="Patek Philippe"
+                    src="https://medusajs-server.fra1.cdn.digitaloceanspaces.com/dji-cameras.avif"
+                    alt="DJI Камеры"
                     className="rounded shadow-lg"
                   />
                   <div
                     className="absolute inset-0 bg-black bg-opacity-50 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity">
-                    <span className="text-white text-lg font-semibold">Patek Philippe</span>
+                    <span className="text-white text-lg font-semibold">DJI Камеры</span>
                   </div>
                 </div>
               </Link>
