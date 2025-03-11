@@ -143,13 +143,13 @@ const Hero = () => {
               <Link href="/collections/cartier">
                 <div className="relative">
                   <img
-                    src="https://medusajs-server.fra1.cdn.digitaloceanspaces.com/cartier-hero.avif"
-                    alt="Cartier"
+                    src="https://medusajs-server.fra1.cdn.digitaloceanspaces.com/dji-microphones.avif"
+                    alt="DJI Микрофоны"
                     className="rounded shadow-lg"
                   />
                   <div
                     className="absolute inset-0 bg-black bg-opacity-50 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity">
-                    <span className="text-white text-lg font-semibold">Cartier</span>
+                    <span className="text-white text-lg font-semibold">DJI Микрофоны</span>
                   </div>
                 </div>
               </Link>
