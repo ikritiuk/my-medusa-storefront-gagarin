@@ -173,7 +173,7 @@ const Hero = () => {
               <Link href="/collections/dji-parts">
                 <div className="relative">
                   <img
-                    src="https://medusajs-server.fra1.cdn.digitaloceanspaces.com/hublot-hero.avif"
+                    src="https://medusajs-server.fra1.cdn.digitaloceanspaces.com/dji-parts.avif"
                     alt="DJI Запасные части и ремонтные комплекты"
                     className="rounded shadow-lg"
                   />
