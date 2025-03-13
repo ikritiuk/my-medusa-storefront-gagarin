@@ -87,7 +87,7 @@ const Hero = () => {
         <div className="flex flex-col justify-center items-center text-center gap-6">
           <div className="grid grid-cols-3 gap-6">
             <div className="group relative cursor-pointer transition-transform hover:scale-105">
-              <Link href="/collections/dji">
+              <Link href="/collections/dji-drones">
                 <div className="relative">
                   <img
                     src="https://medusajs-server.fra1.cdn.digitaloceanspaces.com/dji-drones.avif"
@@ -102,7 +102,7 @@ const Hero = () => {
               </Link>
             </div>
             <div className="group relative cursor-pointer transition-transform hover:scale-105">
-              <Link href="/collections/dji-parts">
+              <Link href="/collections/dji-glasses-cornrollers">
                 <div className="relative">
                   <img
                     src="https://medusajs-server.fra1.cdn.digitaloceanspaces.com/dji-drones-accessorises.avif"
@@ -126,7 +126,7 @@ const Hero = () => {
                   />
                   <div
                     className="absolute inset-0 bg-black bg-opacity-50 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity">
-                    <span className="text-white text-lg font-semibold">DJI Стабилизаторы и Камеры</span>
+                    <span className="text-white text-lg font-semibold">DJI Камеры</span>
                   </div>
                 </div>
               </Link>
@@ -140,7 +140,7 @@ const Hero = () => {
         <div className="flex flex-col justify-center items-center text-center gap-6">
           <div className="grid grid-cols-3 gap-6">
             <div className="group relative cursor-pointer transition-transform hover:scale-105">
-              <Link href="/collections/cartier">
+              <Link href="/collections/dji-microphones">
                 <div className="relative">
                   <img
                     src="https://medusajs-server.fra1.cdn.digitaloceanspaces.com/dji-microphones.avif"
@@ -155,22 +155,22 @@ const Hero = () => {
               </Link>
             </div>
             <div className="group relative cursor-pointer transition-transform hover:scale-105">
-              <Link href="/collections/tag-heuer">
+              <Link href="/collections/dji-stabisators">
                 <div className="relative">
                   <img
-                    src="https://medusajs-server.fra1.cdn.digitaloceanspaces.com/th-hero.avif"
+                    src="https://medusajs-server.fra1.cdn.digitaloceanspaces.com/dji-stabisators.avif"
                     alt="DJI Аккумуляторы и зарядные устройства"
                     className="rounded shadow-lg"
                   />
                   <div
                     className="absolute inset-0 bg-black bg-opacity-50 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity">
-                    <span className="text-white text-lg font-semibold">DJI Аккумуляторы и зарядные устройства</span>
+                    <span className="text-white text-lg font-semibold">DJI Стабилизаторы</span>
                   </div>
                 </div>
               </Link>
             </div>
             <div className="group relative cursor-pointer transition-transform hover:scale-105">
-              <Link href="/collections/hublot">
+              <Link href="/collections/dji-parts">
                 <div className="relative">
                   <img
                     src="https://medusajs-server.fra1.cdn.digitaloceanspaces.com/hublot-hero.avif"
@@ -179,7 +179,7 @@ const Hero = () => {
                   />
                   <div
                     className="absolute inset-0 bg-black bg-opacity-50 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity">
-                    <span className="text-white text-lg font-semibold">DJI Запасные части и ремонтные комплекты</span>
+                    <span className="text-white text-lg font-semibold">DJI Аккумуляторы, Запасные части и ремонтные комплекты</span>
                   </div>
                 </div>
               </Link>
