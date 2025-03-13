@@ -111,7 +111,7 @@ const Hero = () => {
                   />
                   <div
                     className="absolute inset-0 bg-black bg-opacity-50 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity">
-                    <span className="text-white text-lg font-semibold">DJI комплектующие к дронам</span>
+                    <span className="text-white text-lg font-semibold">DJI Очки и системы управления</span>
                   </div>
                 </div>
               </Link>
@@ -159,12 +159,12 @@ const Hero = () => {
                 <div className="relative">
                   <img
                     src="https://medusajs-server.fra1.cdn.digitaloceanspaces.com/th-hero.avif"
-                    alt="Tag Hauer"
+                    alt="DJI Аккумуляторы и зарядные устройства"
                     className="rounded shadow-lg"
                   />
                   <div
                     className="absolute inset-0 bg-black bg-opacity-50 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity">
-                    <span className="text-white text-lg font-semibold">Tag Hauer</span>
+                    <span className="text-white text-lg font-semibold">DJI Аккумуляторы и зарядные устройства</span>
                   </div>
                 </div>
               </Link>
@@ -174,12 +174,12 @@ const Hero = () => {
                 <div className="relative">
                   <img
                     src="https://medusajs-server.fra1.cdn.digitaloceanspaces.com/hublot-hero.avif"
-                    alt="Hublot"
+                    alt="DJI Запасные части и ремонтные комплекты"
                     className="rounded shadow-lg"
                   />
                   <div
                     className="absolute inset-0 bg-black bg-opacity-50 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity">
-                    <span className="text-white text-lg font-semibold">Hublot</span>
+                    <span className="text-white text-lg font-semibold">DJI Запасные части и ремонтные комплекты</span>
                   </div>
                 </div>
               </Link>
