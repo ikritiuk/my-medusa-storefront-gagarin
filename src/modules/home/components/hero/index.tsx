@@ -160,8 +160,8 @@ const Hero = () => {
       <div className="sm:md:block lg:hidden w-full border-b border-ui-border-base relative overflow-hidden">
         {/* Fancy Mobile Video Section */}
         <div className="relative w-full overflow-hidden">
-          <div
-            className="absolute inset-x-4 top-4 bg-black bg-opacity-50 text-white text-lg px-4 py-2 rounded z-20 text-center animate-fade-in">
+          <!-- Black overlay with text -->
+          <div className="absolute inset-x-4 top-4 bg-black bg-opacity-50 text-white text-lg px-4 py-2 rounded z-20 text-center animate-fade-in">
             <div className="text-center text-white px-4 py-6">
               <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold leading-tight max-w-md mx-auto">
                 Откройте мир безграничных возможностей с <span className="text-[#FFC107]">DJI</span>! 🚀
@@ -172,14 +172,9 @@ const Hero = () => {
                 <span className="text-[#FFD700]"> идеального контента и профессиональных съёмок</span>.
               </p>
             </div>
-            <div className="mt-8">
-              <a href="/collections/dji-drones"
-                 className="bg-[#FFC107] hover:bg-[#FFB400] text-black font-semibold py-4 px-8 rounded-lg text-lg sm:text-xl transition block sm:inline-block w-full sm:w-auto">
-                Выбрать дрон
-              </a>
-            </div>
-
           </div>
+
+          <!-- Video Background -->
           <Link href="/collections/dji-drones" className="w-full">
             <video
               src="https://medusajs-server.fra1.cdn.digitaloceanspaces.com/hero-mobile.mp4"
@@ -192,7 +187,16 @@ const Hero = () => {
               preload="auto"
             />
           </Link>
+
+          <!-- Button moved to the bottom -->
+          <div className="w-full flex justify-center mt-4 mb-6">
+            <a href="/collections/dji-drones"
+               className="bg-[#007BFF] hover:bg-[#0056b3] text-white font-semibold py-4 px-8 rounded-lg text-lg sm:text-xl transition block sm:inline-block w-[90%] sm:w-auto text-center">
+              Выбрать дрон
+            </a>
+          </div>
         </div>
+
         <div className="flex flex-col items-center">
           {/* Title Section */}
           <div className="flex items-center justify-center h-auto py-4 px-4">
