@@ -36,16 +36,20 @@ const Hero = () => {
           <div className="text-center text-white px-4">
             <h1 className="text-3xl font-bold mb-2">Премиум дроны</h1>
             <p className="text-lg mb-4">
-              Добро пожаловать в <strong>премиальный магазин дронов</strong>, где передовые технологии встречаются с безупречным качеством!
+              Добро пожаловать в <strong>премиальный магазин дронов</strong>, где передовые технологии встречаются с
+              безупречным качеством!
             </p>
             <p className="text-lg mb-4">
-              Мы создали идеальное место для тех, кто ценит <strong>производительность, надежность и современные решения</strong>.
+              Мы создали идеальное место для тех, кто ценит <strong>производительность, надежность и современные
+              решения</strong>.
             </p>
 
             <h2 className="text-2xl font-semibold mb-2">Почему выбирают нас?</h2>
             <ul className="list-disc pl-6 text-lg mb-4">
               <li><strong>ТОПовые модели</strong> – мы отбираем только лучшие дроны от мировых производителей.</li>
-              <li><strong>Инновационные технологии</strong> – 4K-камеры, интеллектуальные системы полета и передовая стабилизация.</li>
+              <li><strong>Инновационные технологии</strong> – 4K-камеры, интеллектуальные системы полета и передовая
+                стабилизация.
+              </li>
               <li><strong>Гарантированное качество</strong> – проверенные комплектующие и надежная сборка.</li>
               <li><strong>Лучшие цены</strong> – премиум-дроны доступны каждому.</li>
               <li><strong>Поддержка экспертов</strong> – поможем выбрать идеальный дрон под ваши задачи.</li>
@@ -240,7 +244,8 @@ const Hero = () => {
             <div className="relative text-center w-full rounded shadow-lg">
               <div
                 className="absolute top-2 left-2 bg-black bg-opacity-50 text-white text-lg px-2 py-1 rounded transition-all duration-300 group-hover:shadow-lg group-hover:text-yellow-400 z-10">
-                DJI Дроны              </div>
+                DJI Дроны
+              </div>
               <Link href="/collections/dji-drones">
                 <img
                   src="https://medusajs-server.fra1.cdn.digitaloceanspaces.com/dji-drones.avif"
@@ -255,7 +260,8 @@ const Hero = () => {
               <div className="relative w-1/2 text-center overflow-hidden rounded shadow-lg">
                 <div
                   className="absolute top-2 left-2 bg-black bg-opacity-50 text-white text-lg px-2 py-1 rounded transition-all duration-300 group-hover:shadow-lg group-hover:text-yellow-400 z-10">
-                  DJI Очки и системы управления                </div>
+                  DJI Очки и системы управления
+                </div>
                 <Link href="/collections/dji-glasses-cornrollers">
                   <img
                     src="https://medusajs-server.fra1.cdn.digitaloceanspaces.com/dji-drones-accessorises.avif"
@@ -264,15 +270,15 @@ const Hero = () => {
                   />
                 </Link>
               </div>
-              <div className="relative w-1/2 text-center overflow-hidden rounded shadow-lg">
-                <div
-                  className="absolute top-2 left-2 bg-black bg-opacity-50 text-white text-lg px-2 py-1 rounded transition-all duration-300 group-hover:shadow-lg group-hover:text-yellow-400 z-10">
-                  DJI Камеры                </div>
+              <div className="relative w-1/2 text-center overflow-hidden rounded shadow-lg aspect-square">
+                <div className="absolute top-2 left-2 bg-black bg-opacity-50 text-white text-lg px-2 py-1 rounded z-10">
+                  DJI Камеры
+                </div>
                 <Link href="/collections/dji-cameras">
                   <img
                     src="https://medusajs-server.fra1.cdn.digitaloceanspaces.com/dji-cameras.avif"
                     alt="DJI Камеры"
-                    className="rounded shadow-lg transition-transform duration-500 hover:scale-110"
+                    className="w-full h-full object-cover rounded shadow-lg transition-transform duration-500 hover:scale-110"
                   />
                 </Link>
               </div>
@@ -280,16 +286,15 @@ const Hero = () => {
           </div>
 
           <div className="flex flex-col items-center gap-4 ">
-            <div className="relative text-center w-full rounded shadow-lg">
-              <div
-                className="absolute top-2 left-2 bg-black bg-opacity-50 text-white text-lg px-2 py-1 rounded transition-all duration-300 group-hover:shadow-lg group-hover:text-yellow-400 z-10">
+            <div className="relative w-1/2 text-center overflow-hidden rounded shadow-lg aspect-square">
+              <div className="absolute top-2 left-2 bg-black bg-opacity-50 text-white text-lg px-2 py-1 rounded z-10">
                 DJI Микрофоны
               </div>
               <Link href="/collections/dji-microphones">
                 <img
                   src="https://medusajs-server.fra1.cdn.digitaloceanspaces.com/dji-microphones.avif"
                   alt="DJI Микрофоны"
-                  className="rounded shadow-lg transition-transform duration-500 hover:scale-110 hover:transform hover:origin-center"
+                  className="w-full h-full object-cover rounded shadow-lg transition-transform duration-500 hover:scale-110"
                 />
               </Link>
             </div>
