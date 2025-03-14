@@ -241,16 +241,15 @@ const Hero = () => {
           {/* Brand Images */}
           <div className="flex flex-col items-center gap-4">
             {/* Brand Images */}
-            <div className="relative text-center w-full rounded shadow-lg">
-              <div
-                className="absolute top-2 left-2 bg-black bg-opacity-50 text-white text-lg px-2 py-1 rounded transition-all duration-300 group-hover:shadow-lg group-hover:text-yellow-400 z-10">
+            <div className="relative w-full text-center overflow-hidden rounded shadow-lg h-[220px]">
+              <div className="absolute top-2 left-2 bg-black bg-opacity-50 text-white text-lg px-2 py-1 rounded z-10">
                 DJI Дроны
               </div>
               <Link href="/collections/dji-drones">
                 <img
-                  src="https://medusajs-server.fra1.cdn.digitaloceanspaces.com/dji-drones.avif"
+                  src="https://medusajs-server.fra1.cdn.digitaloceanspaces.com/dji-microphones.avif"
                   alt="DJI Дроны"
-                  className="rounded shadow-lg transition-transform duration-500 hover:scale-110 hover:transform hover:origin-center"
+                  className="w-full h-full object-cover rounded shadow-lg transition-transform duration-500 hover:scale-110"
                 />
               </Link>
             </div>
