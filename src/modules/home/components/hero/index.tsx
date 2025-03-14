@@ -219,8 +219,8 @@ const Hero = () => {
           </div>
           <Link href="/collections/dji-drones" className="w-full">
             <video
-              src="https://medusajs-server.fra1.cdn.digitaloceanspaces.com/hero-rolex.mp4"
-              poster="https://medusajs-server.fra1.cdn.digitaloceanspaces.com/hero-rolex-preview.avif"
+              src="https://medusajs-server.fra1.cdn.digitaloceanspaces.com/hero-mobile.mp4"
+              poster="https://medusajs-server.fra1.cdn.digitaloceanspaces.com/hero-mobile-poster.avif"
               className="w-full object-cover transition-transform duration-500 hover:scale-110"
               autoPlay
               loop
