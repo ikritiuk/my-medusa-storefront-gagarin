@@ -9,11 +9,11 @@ const Hero = () => {
         <div className="absolute inset-0 flex justify-center items-center bg-black-800 bg-opacity-30 z-20">
           <div className="text-center text-white px-4">
             <h1 className="text-3xl md:text-5xl font-bold leading-tight">
-              Откройте мир безграничных возможностей с <span className="text-[#FFC107]">DJI</span>! 🚀
+              Откройте мир безграничных возможностей с <span className="text-blue-400">DJI</span>! 🚀
             </h1>
             <p className="mt-4 text-lg md:text-xl">
               <strong>Топовые дроны, камеры, микрофоны и стабилизаторы DJI</strong> — всё, что нужно для
-              <span className="text-[#FFD700]"> идеального контента и профессиональных съёмок</span>.
+              <span className="text-blue-300"> идеального контента и профессиональных съёмок</span>.
             </p>
 
             <div className="mt-6 space-y-2 text-lg">
@@ -25,12 +25,12 @@ const Hero = () => {
 
             <div className="mt-8">
               <a href="/collections/dji-drones"
-                 className="bg-[#FFC107] hover:bg-[#FFB400] text-black font-semibold py-3 px-6 rounded-lg text-lg transition">
+                 className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg text-lg transition">
                 Выбрать дрон
               </a>
             </div>
-          </div>
 
+          </div>
         </div>
         <div className="absolute inset-0 bg-black bg-opacity-30 z-10"></div>
         <video
