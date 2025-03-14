@@ -161,7 +161,8 @@ const Hero = () => {
         {/* Fancy Mobile Video Section */}
         <div className="relative w-full overflow-hidden">
           <!-- Black overlay with text -->
-          <div className="absolute inset-x-4 top-4 bg-black bg-opacity-50 text-white text-lg px-4 py-2 rounded z-20 text-center animate-fade-in">
+          <div
+            className="absolute inset-x-4 top-4 bg-black bg-opacity-50 text-white text-lg px-4 py-2 rounded z-20 text-center animate-fade-in">
             <div className="text-center text-white px-4 py-6">
               <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold leading-tight max-w-md mx-auto">
                 Откройте мир безграничных возможностей с <span className="text-[#FFC107]">DJI</span>! 🚀
@@ -208,7 +209,8 @@ const Hero = () => {
           {/* Brand Images */}
           <div className="flex flex-col items-center gap-4">
             {/* Brand Images */}
-            <div className="relative w-full text-center overflow-hidden rounded shadow-lg h-[250px] sm:h-[280px] md:h-2/3 lg:h-full">
+            <div
+              className="relative w-full text-center overflow-hidden rounded shadow-lg h-[250px] sm:h-[280px] md:h-2/3 lg:h-full">
               <div className="absolute top-2 left-2 bg-black bg-opacity-50 text-white text-lg px-2 py-1 rounded z-10">
                 DJI Дроны
               </div>
@@ -252,7 +254,8 @@ const Hero = () => {
           </div>
 
           <div className="flex flex-col items-center gap-4 ">
-            <div className="relative w-full text-center overflow-hidden rounded shadow-lg h-[250px] sm:h-[280px] md:h-2/3 lg:h-full">
+            <div
+              className="relative w-full text-center overflow-hidden rounded shadow-lg h-[250px] sm:h-[280px] md:h-2/3 lg:h-full">
               <div className="absolute top-2 left-2 bg-black bg-opacity-50 text-white text-lg px-2 py-1 rounded z-10">
                 DJI Микрофоны
               </div>
@@ -300,4 +303,5 @@ const Hero = () => {
 }
 
 export default Hero
+
 
