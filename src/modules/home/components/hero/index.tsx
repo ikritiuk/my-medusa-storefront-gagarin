@@ -286,7 +286,7 @@ const Hero = () => {
           </div>
 
           <div className="flex flex-col items-center gap-4 ">
-            <div className="relative w-1/2 text-center overflow-hidden rounded shadow-lg aspect-square">
+            <div className="relative w-full text-center overflow-hidden rounded shadow-lg h-[220px]">
               <div className="absolute top-2 left-2 bg-black bg-opacity-50 text-white text-lg px-2 py-1 rounded z-10">
                 DJI Микрофоны
               </div>
