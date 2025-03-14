@@ -241,7 +241,7 @@ const Hero = () => {
           {/* Brand Images */}
           <div className="flex flex-col items-center gap-4">
             {/* Brand Images */}
-            <div className="relative w-full text-center overflow-hidden rounded shadow-lg h-[250px] sm:h-[280px] md:h-3/4 lg:h-full">
+            <div className="relative w-full text-center overflow-hidden rounded shadow-lg h-[250px] sm:h-[280px] md:h-2/3 lg:h-full">
               <div className="absolute top-2 left-2 bg-black bg-opacity-50 text-white text-lg px-2 py-1 rounded z-10">
                 DJI Дроны
               </div>
@@ -285,7 +285,7 @@ const Hero = () => {
           </div>
 
           <div className="flex flex-col items-center gap-4 ">
-            <div className="relative w-full text-center overflow-hidden rounded shadow-lg h-[250px] sm:h-[280px] md:h-3/4 lg:h-full">
+            <div className="relative w-full text-center overflow-hidden rounded shadow-lg h-[250px] sm:h-[280px] md:h-2/3 lg:h-full">
               <div className="absolute top-2 left-2 bg-black bg-opacity-50 text-white text-lg px-2 py-1 rounded z-10">
                 DJI Микрофоны
               </div>
