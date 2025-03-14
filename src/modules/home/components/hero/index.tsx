@@ -171,20 +171,12 @@ const Hero = () => {
                 <strong>Топовые дроны, камеры, микрофоны и стабилизаторы DJI</strong> — всё, что нужно для
                 <span className="text-[#FFD700]"> идеального контента и профессиональных съёмок</span>.
               </p>
-
-              <div className="mt-6 space-y-2 text-base sm:text-lg max-w-sm sm:max-w-md mx-auto">
-                <p><strong>Лучшие дроны DJI</strong> с официальной гарантией</p>
-                <p><strong>Премиальные камеры, микрофоны и стабилизаторы</strong> для профессионалов</p>
-                <p><strong>Выгодные цены и акции</strong> каждый день</p>
-                <p>Быстрая доставка по всей России</p>
-              </div>
-
-              <div className="mt-8">
-                <a href="/collections/dji-drones"
-                   className="bg-[#FFC107] hover:bg-[#FFB400] text-black font-semibold py-4 px-8 rounded-lg text-lg sm:text-xl transition block sm:inline-block w-full sm:w-auto">
-                  Выбрать дрон
-                </a>
-              </div>
+            </div>
+            <div className="mt-8">
+              <a href="/collections/dji-drones"
+                 className="bg-[#FFC107] hover:bg-[#FFB400] text-black font-semibold py-4 px-8 rounded-lg text-lg sm:text-xl transition block sm:inline-block w-full sm:w-auto">
+                Выбрать дрон
+              </a>
             </div>
 
           </div>
