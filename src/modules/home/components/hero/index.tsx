@@ -213,7 +213,7 @@ const Hero = () => {
               Цены от 25 000 рублей
             </p>
           </div>
-          <Link href="/collections/rolex" className="w-full">
+          <Link href="/collections/dji-drones" className="w-full">
             <video
               src="https://medusajs-server.fra1.cdn.digitaloceanspaces.com/hero-rolex.mp4"
               poster="https://medusajs-server.fra1.cdn.digitaloceanspaces.com/hero-rolex-preview.avif"
@@ -240,12 +240,11 @@ const Hero = () => {
             <div className="relative text-center w-full rounded shadow-lg">
               <div
                 className="absolute top-2 left-2 bg-black bg-opacity-50 text-white text-lg px-2 py-1 rounded transition-all duration-300 group-hover:shadow-lg group-hover:text-yellow-400 z-10">
-                Rolex
-              </div>
-              <Link href="/collections/dji">
+                DJI Дроны              </div>
+              <Link href="/collections/dji-drones">
                 <img
-                  src="https://medusajs-server.fra1.cdn.digitaloceanspaces.com/hero-rolex.avif"
-                  alt="Rolex"
+                  src="https://medusajs-server.fra1.cdn.digitaloceanspaces.com/dji-drones.avif"
+                  alt="DJI Дроны"
                   className="rounded shadow-lg transition-transform duration-500 hover:scale-110 hover:transform hover:origin-center"
                 />
               </Link>
@@ -256,12 +255,11 @@ const Hero = () => {
               <div className="relative w-1/2 text-center overflow-hidden rounded shadow-lg">
                 <div
                   className="absolute top-2 left-2 bg-black bg-opacity-50 text-white text-lg px-2 py-1 rounded transition-all duration-300 group-hover:shadow-lg group-hover:text-yellow-400 z-10">
-                  Audemars Piguet
-                </div>
-                <Link href="/collections/piguet">
+                  DJI Очки и системы управления                </div>
+                <Link href="/collections/dji-glasses-cornrollers">
                   <img
-                    src="https://medusajs-server.fra1.cdn.digitaloceanspaces.com/hero-piguet-mobile.avif"
-                    alt="Audemars Piguet"
+                    src="https://medusajs-server.fra1.cdn.digitaloceanspaces.com/dji-drones-accessorises.avif"
+                    alt="DJI Очки и системы управления"
                     className="rounded shadow-lg transition-transform duration-500 hover:scale-110"
                   />
                 </Link>
@@ -269,12 +267,11 @@ const Hero = () => {
               <div className="relative w-1/2 text-center overflow-hidden rounded shadow-lg">
                 <div
                   className="absolute top-2 left-2 bg-black bg-opacity-50 text-white text-lg px-2 py-1 rounded transition-all duration-300 group-hover:shadow-lg group-hover:text-yellow-400 z-10">
-                  Patek Philippe
-                </div>
-                <Link href="/collections/patek">
+                  DJI Камеры                </div>
+                <Link href="/collections/dji-cameras">
                   <img
-                    src="https://medusajs-server.fra1.cdn.digitaloceanspaces.com/hero-patek-mobile.avif"
-                    alt="Patek Philippe"
+                    src="https://medusajs-server.fra1.cdn.digitaloceanspaces.com/dji-cameras.avif"
+                    alt="DJI Камеры"
                     className="rounded shadow-lg transition-transform duration-500 hover:scale-110"
                   />
                 </Link>
@@ -286,12 +283,12 @@ const Hero = () => {
             <div className="relative text-center w-full rounded shadow-lg">
               <div
                 className="absolute top-2 left-2 bg-black bg-opacity-50 text-white text-lg px-2 py-1 rounded transition-all duration-300 group-hover:shadow-lg group-hover:text-yellow-400 z-10">
-                Cartier
+                DJI Микрофоны
               </div>
-              <Link href="/collections/cartier">
+              <Link href="/collections/dji-microphones">
                 <img
-                  src="https://medusajs-server.fra1.cdn.digitaloceanspaces.com/cartier-hero-mobile.avif"
-                  alt="Cartier"
+                  src="https://medusajs-server.fra1.cdn.digitaloceanspaces.com/dji-microphones.avif"
+                  alt="DJI Микрофоны"
                   className="rounded shadow-lg transition-transform duration-500 hover:scale-110 hover:transform hover:origin-center"
                 />
               </Link>
@@ -300,12 +297,12 @@ const Hero = () => {
               <div className="relative w-1/2 text-center overflow-hidden rounded shadow-lg">
                 <div
                   className="absolute top-2 left-2 bg-black bg-opacity-50 text-white text-lg px-2 py-1 rounded transition-all duration-300 group-hover:shadow-lg group-hover:text-yellow-400 z-10">
-                  Tag Hauer
+                  DJI Стабилизаторы
                 </div>
-                <Link href="/collections/tag-heuer">
+                <Link href="/collections/dji-stabisators">
                   <img
-                    src="https://medusajs-server.fra1.cdn.digitaloceanspaces.com/th-hero-mobile.avif"
-                    alt="Tag Hauer"
+                    src="https://medusajs-server.fra1.cdn.digitaloceanspaces.com/dji-stabisators.avif"
+                    alt="DJI Стабилизаторы"
                     className="rounded shadow-lg transition-transform duration-500 hover:scale-110"
                   />
                 </Link>
@@ -313,12 +310,12 @@ const Hero = () => {
               <div className="relative w-1/2 text-center overflow-hidden rounded shadow-lg">
                 <div
                   className="absolute top-2 left-2 bg-black bg-opacity-50 text-white text-lg px-2 py-1 rounded transition-all duration-300 group-hover:shadow-lg group-hover:text-yellow-400 z-10">
-                  Hublot
+                  DJI Аккумуляторы, Запасные части и ремонтные комплекты
                 </div>
-                <Link href="/collections/hublot">
+                <Link href="/collections/dji-parts">
                   <img
-                    src="https://medusajs-server.fra1.cdn.digitaloceanspaces.com/hublot-hero-mobile.avif"
-                    alt="Hublot"
+                    src="https://medusajs-server.fra1.cdn.digitaloceanspaces.com/dji-parts.avif"
+                    alt="DJI Аккумуляторы, Запасные части и ремонтные комплекты"
                     className="rounded shadow-lg transition-transform duration-500 hover:scale-110"
                   />
                 </Link>
