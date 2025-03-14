@@ -1,31 +1,5 @@
 "use client"
-
-import { useState } from "react"
 import Link from "next/link"
-
-const trendingWatches = [
-  {
-    name: "Rolex Submariner Date Black Dial Blue Bezel",
-    image: "https://medusajs-server.fra1.cdn.digitaloceanspaces.com/rolex-submariner-date-126619lb-white-gold-black-dial-blue-bezel-2023-rolex-41374317052148_1280x-1720021169543.jpg",
-    link: "/products/rolex-submariner-date-126619-lb-white-gold-black-dial-blue-bezel",
-  },
-  {
-    name: "Audemars Piguet Yellow Gold",
-    image: "https://medusajs-server.fra1.cdn.digitaloceanspaces.com/audemars-piguet-royal-oak-15202ba-oo-1240ba-02-jumbo-40th-anniversary-extra-thin-yellow-gold-audemars-piguet-40258760081652_1280x-1720184726491.webp",
-    link: "/products/audemars-piguet-royal-oak-extra-thin-yellow-gold",
-  },
-  {
-    name: "Patek Philippe Nautilus Green Dial",
-    image: "https://medusajs-server.fra1.cdn.digitaloceanspaces.com/patek-philippe-nautilus-5711-1a-014-stainless-steel-green-dial-patek-philippe-40297153462516_1280x-1720185629726.webp",
-    link: "/collections/patek",
-  },
-
-  {
-    name: "Rolex Submariner Yellow Gold Blue Dial",
-    image: "https://medusajs-server.fra1.cdn.digitaloceanspaces.com/rolex-submariner-date-126613lb-stainless-steel-yellow-gold-blue-dial-2021-rolex-41593886769396_1280x-1720020948071.webp",
-    link: "/products/rolex-submariner-date-126613-lb-stainless-steel-yellow-gold-blue-dial",
-  },
-]
 
 const Hero = () => {
   return (
@@ -313,31 +287,6 @@ const Hero = () => {
                 </Link>
               </div>
             </div>
-          </div>
-        </div>
-        <div className="lg:hidden relative mt-8 px-4">
-          <h2 className="text-lg font-semibold text-center mb-8">
-            Сейчас в тренде
-          </h2>
-          <div className="flex overflow-x-auto space-x-4 scrollbar-hide">
-
-            {trendingWatches.map((watch, index) => (
-              <div key={index} className="flex-none w-80 shadow-lg rounded-lg">
-                <Link href={watch.link}>
-                  <div className="relative">
-                    <img
-                      src={watch.image}
-                      alt={watch.name}
-                      className="rounded shadow-lg transition-transform duration-500 hover:scale-110"
-                    />
-                    <div
-                      className="absolute bottom-2 left-2 right-2 bg-black bg-opacity-50 text-white text-lg px-4 py-2 rounded transition-all duration-300 group-hover:shadow-lg group-hover:text-yellow-400 z-10">
-                      {watch.name}
-                    </div>
-                  </div>
-                </Link>
-              </div>
-            ))}
           </div>
         </div>
       </div>
