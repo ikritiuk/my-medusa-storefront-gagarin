@@ -164,7 +164,7 @@ const Hero = () => {
             className="absolute inset-x-4 top-4 bg-black bg-opacity-50 text-white text-lg px-4 py-2 rounded z-20 text-center animate-fade-in">
             <div className="text-center text-white px-4 py-6">
               <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold leading-tight max-w-md mx-auto">
-                Откройте мир безграничных возможностей с <span className="text-[#FFC107]">DJI</span>! 🚀
+                Откройте мир <span className="text-[#FFC107]">DJI</span>! 🚀
               </h1>
 
               <p className="mt-4 text-base sm:text-lg md:text-xl max-w-sm sm:max-w-md mx-auto">
