@@ -162,12 +162,31 @@ const Hero = () => {
         <div className="relative w-full overflow-hidden">
           <div
             className="absolute inset-x-4 top-4 bg-black bg-opacity-50 text-white text-lg px-4 py-2 rounded z-20 text-center animate-fade-in">
-            <p className="text-xl font-extrabold leading-relaxed mb-4">
-              Премиум часы из высококачественных материалов из Европы.
-            </p>            <p className="text-lg mb-4">Качество, доступное каждому, по выгодной цене.</p>
-            <p className="text-2xl font-bold text-[#D4AF37] mt-4">
-              Цены от 25 000 рублей
-            </p>
+            <div className="text-center text-white px-4 py-6">
+              <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold leading-tight max-w-md mx-auto">
+                Откройте мир безграничных возможностей с <span className="text-[#FFC107]">DJI</span>! 🚀
+              </h1>
+
+              <p className="mt-4 text-base sm:text-lg md:text-xl max-w-sm sm:max-w-md mx-auto">
+                <strong>Топовые дроны, камеры, микрофоны и стабилизаторы DJI</strong> — всё, что нужно для
+                <span className="text-[#FFD700]"> идеального контента и профессиональных съёмок</span>.
+              </p>
+
+              <div className="mt-6 space-y-2 text-base sm:text-lg max-w-sm sm:max-w-md mx-auto">
+                <p><strong>Лучшие дроны DJI</strong> с официальной гарантией</p>
+                <p><strong>Премиальные камеры, микрофоны и стабилизаторы</strong> для профессионалов</p>
+                <p><strong>Выгодные цены и акции</strong> каждый день</p>
+                <p>Быстрая доставка по всей России</p>
+              </div>
+
+              <div className="mt-8">
+                <a href="/collections/dji-drones"
+                   className="bg-[#FFC107] hover:bg-[#FFB400] text-black font-semibold py-4 px-8 rounded-lg text-lg sm:text-xl transition block sm:inline-block w-full sm:w-auto">
+                  Выбрать дрон
+                </a>
+              </div>
+            </div>
+
           </div>
           <Link href="/collections/dji-drones" className="w-full">
             <video
