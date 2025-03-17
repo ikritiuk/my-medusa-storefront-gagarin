@@ -3,13 +3,13 @@ import Link from "next/link"
 import { useRef } from "react"
 
 const Hero = () => {
-  const categoriesRef = useRef(null);
+  const categoriesRef = useRef(null)
 
   const handleVideoClick = () => {
     if (categoriesRef.current) {
-      categoriesRef.current.scrollIntoView({ behavior: "smooth" });
+      categoriesRef.current.scrollIntoView({ behavior: "smooth" })
     }
-  };
+  }
   return (
     <div className="relative bg-ui-bg-subtle">
       {/* Large screen (lg and up) */}
@@ -168,13 +168,14 @@ const Hero = () => {
       <div className="sm:md:block lg:hidden w-full border-b border-ui-border-base relative overflow-hidden">
         {/* Fancy Mobile Video Section */}
         <div className="relative bg-ui-bg-subtle">
-          {/* Mobile Video Section */}
+          {/* Mobile Video Section - Reduced Height */}
           <div
-            className="sm:md:block lg:hidden w-full h-screen border-b border-ui-border-base relative overflow-hidden flex items-center justify-center"
+            className="sm:md:block lg:hidden w-full h-[60vh] border-b border-ui-border-base relative overflow-hidden flex items-center justify-center"
             onClick={handleVideoClick} // Clicking the video scrolls to categories
           >
             {/* Title Overlay on Video (NOT MODIFIED) */}
-            <div className="absolute inset-x-4 top-4 bg-black bg-opacity-50 text-white text-lg px-4 py-2 rounded z-20 text-center animate-fade-in">
+            <div
+              className="absolute inset-x-4 top-4 bg-black bg-opacity-50 text-white text-lg px-4 py-2 rounded z-20 text-center animate-fade-in">
               <div className="text-center text-white px-4 py-6">
                 <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold leading-tight max-w-md mx-auto">
                   Откройте мир <span className="text-[#FFC107]">DJI</span>! 🚀
@@ -208,94 +209,97 @@ const Hero = () => {
           </div>
         </div>
 
-        <div className="flex flex-col items-center mb-6 gap-4">
+      </div>
 
+      <div className="flex flex-col items-center mb-6 gap-4">
+
+        {/* Brand Images */}
+        <div className="flex flex-col items-center gap-4">
           {/* Brand Images */}
-          <div className="flex flex-col items-center gap-4">
-            {/* Brand Images */}
-            <div className="relative w-full text-center overflow-hidden rounded shadow-lg h-[250px] sm:h-[280px] md:h-2/3 lg:h-full">
-              <div className="absolute top-2 left-2 bg-black bg-opacity-50 text-white text-lg px-2 py-1 rounded z-10">
-                DJI Дроны
-              </div>
-              <Link href="/collections/dji-drones">
-                <img
-                  src="https://medusajs-server.fra1.cdn.digitaloceanspaces.com/dji-drones.avif"
-                  alt="DJI Дроны"
-                  className="w-full h-full object-cover rounded shadow-lg transition-transform duration-500 hover:scale-110"
-                />
-              </Link>
+          <div
+            className="relative w-full text-center overflow-hidden rounded shadow-lg h-[250px] sm:h-[280px] md:h-2/3 lg:h-full">
+            <div className="absolute top-2 left-2 bg-black bg-opacity-50 text-white text-lg px-2 py-1 rounded z-10">
+              DJI Дроны
             </div>
-
-            {/* Grid with Swipeable Effect */}
-            <div className="flex items-center justify-between w-full gap-4">
-              <div className="relative w-1/2 text-center overflow-hidden rounded shadow-lg">
-                <div
-                  className="absolute top-2 left-2 bg-black bg-opacity-50 text-white text-lg px-2 py-1 rounded transition-all duration-300 group-hover:shadow-lg group-hover:text-yellow-400 z-10">
-                  DJI Очки и системы управления
-                </div>
-                <Link href="/collections/dji-glasses-cornrollers">
-                  <img
-                    src="https://medusajs-server.fra1.cdn.digitaloceanspaces.com/dji-drones-accessorises.avif"
-                    alt="DJI Очки и системы управления"
-                    className="rounded shadow-lg transition-transform duration-500 hover:scale-110"
-                  />
-                </Link>
-              </div>
-              <div className="relative w-1/2 text-center overflow-hidden rounded shadow-lg aspect-square">
-                <div className="absolute top-2 left-2 bg-black bg-opacity-50 text-white text-lg px-2 py-1 rounded z-10">
-                  DJI Камеры
-                </div>
-                <Link href="/collections/dji-cameras">
-                  <img
-                    src="https://medusajs-server.fra1.cdn.digitaloceanspaces.com/dji-cameras.avif"
-                    alt="DJI Камеры"
-                    className="w-full h-full object-cover rounded shadow-lg transition-transform duration-500 hover:scale-110"
-                  />
-                </Link>
-              </div>
-            </div>
+            <Link href="/collections/dji-drones">
+              <img
+                src="https://medusajs-server.fra1.cdn.digitaloceanspaces.com/dji-drones.avif"
+                alt="DJI Дроны"
+                className="w-full h-full object-cover rounded shadow-lg transition-transform duration-500 hover:scale-110"
+              />
+            </Link>
           </div>
 
-          <div className="flex flex-col items-center gap-4 ">
-            <div className="relative w-full text-center overflow-hidden rounded shadow-lg h-[250px] sm:h-[280px] md:h-2/3 lg:h-full">
-              <div className="absolute top-2 left-2 bg-black bg-opacity-50 text-white text-lg px-2 py-1 rounded z-10">
-                DJI Микрофоны
+          {/* Grid with Swipeable Effect */}
+          <div className="flex items-center justify-between w-full gap-4">
+            <div className="relative w-1/2 text-center overflow-hidden rounded shadow-lg">
+              <div
+                className="absolute top-2 left-2 bg-black bg-opacity-50 text-white text-lg px-2 py-1 rounded transition-all duration-300 group-hover:shadow-lg group-hover:text-yellow-400 z-10">
+                DJI Очки и системы управления
               </div>
-              <Link href="/collections/dji-microphones">
+              <Link href="/collections/dji-glasses-cornrollers">
                 <img
-                  src="https://medusajs-server.fra1.cdn.digitaloceanspaces.com/dji-microphones.avif"
-                  alt="DJI Микрофоны"
+                  src="https://medusajs-server.fra1.cdn.digitaloceanspaces.com/dji-drones-accessorises.avif"
+                  alt="DJI Очки и системы управления"
+                  className="rounded shadow-lg transition-transform duration-500 hover:scale-110"
+                />
+              </Link>
+            </div>
+            <div className="relative w-1/2 text-center overflow-hidden rounded shadow-lg aspect-square">
+              <div className="absolute top-2 left-2 bg-black bg-opacity-50 text-white text-lg px-2 py-1 rounded z-10">
+                DJI Камеры
+              </div>
+              <Link href="/collections/dji-cameras">
+                <img
+                  src="https://medusajs-server.fra1.cdn.digitaloceanspaces.com/dji-cameras.avif"
+                  alt="DJI Камеры"
                   className="w-full h-full object-cover rounded shadow-lg transition-transform duration-500 hover:scale-110"
                 />
               </Link>
             </div>
-            <div className="flex items-center justify-between w-full gap-4">
-              <div className="relative w-1/2 text-center overflow-hidden rounded shadow-lg">
-                <div
-                  className="absolute top-2 left-2 bg-black bg-opacity-50 text-white text-lg px-2 py-1 rounded transition-all duration-300 group-hover:shadow-lg group-hover:text-yellow-400 z-10">
-                  DJI Стабилизаторы
-                </div>
-                <Link href="/collections/dji-stabisators">
-                  <img
-                    src="https://medusajs-server.fra1.cdn.digitaloceanspaces.com/dji-stabisators.avif"
-                    alt="DJI Стабилизаторы"
-                    className="rounded shadow-lg transition-transform duration-500 hover:scale-110"
-                  />
-                </Link>
+          </div>
+        </div>
+
+        <div className="flex flex-col items-center gap-4 ">
+          <div
+            className="relative w-full text-center overflow-hidden rounded shadow-lg h-[250px] sm:h-[280px] md:h-2/3 lg:h-full">
+            <div className="absolute top-2 left-2 bg-black bg-opacity-50 text-white text-lg px-2 py-1 rounded z-10">
+              DJI Микрофоны
+            </div>
+            <Link href="/collections/dji-microphones">
+              <img
+                src="https://medusajs-server.fra1.cdn.digitaloceanspaces.com/dji-microphones.avif"
+                alt="DJI Микрофоны"
+                className="w-full h-full object-cover rounded shadow-lg transition-transform duration-500 hover:scale-110"
+              />
+            </Link>
+          </div>
+          <div className="flex items-center justify-between w-full gap-4">
+            <div className="relative w-1/2 text-center overflow-hidden rounded shadow-lg">
+              <div
+                className="absolute top-2 left-2 bg-black bg-opacity-50 text-white text-lg px-2 py-1 rounded transition-all duration-300 group-hover:shadow-lg group-hover:text-yellow-400 z-10">
+                DJI Стабилизаторы
               </div>
-              <div className="relative w-1/2 text-center overflow-hidden rounded shadow-lg">
-                <div
-                  className="absolute top-2 left-2 bg-black bg-opacity-50 text-white text-lg px-2 py-1 rounded transition-all duration-300 group-hover:shadow-lg group-hover:text-yellow-400 z-10">
-                  DJI Аккумуляторы, Запасные части и ремонтные комплекты
-                </div>
-                <Link href="/collections/dji-parts">
-                  <img
-                    src="https://medusajs-server.fra1.cdn.digitaloceanspaces.com/dji-parts.avif"
-                    alt="DJI Аккумуляторы, Запасные части и ремонтные комплекты"
-                    className="rounded shadow-lg transition-transform duration-500 hover:scale-110"
-                  />
-                </Link>
+              <Link href="/collections/dji-stabisators">
+                <img
+                  src="https://medusajs-server.fra1.cdn.digitaloceanspaces.com/dji-stabisators.avif"
+                  alt="DJI Стабилизаторы"
+                  className="rounded shadow-lg transition-transform duration-500 hover:scale-110"
+                />
+              </Link>
+            </div>
+            <div className="relative w-1/2 text-center overflow-hidden rounded shadow-lg">
+              <div
+                className="absolute top-2 left-2 bg-black bg-opacity-50 text-white text-lg px-2 py-1 rounded transition-all duration-300 group-hover:shadow-lg group-hover:text-yellow-400 z-10">
+                DJI Аккумуляторы, Запасные части и ремонтные комплекты
               </div>
+              <Link href="/collections/dji-parts">
+                <img
+                  src="https://medusajs-server.fra1.cdn.digitaloceanspaces.com/dji-parts.avif"
+                  alt="DJI Аккумуляторы, Запасные части и ремонтные комплекты"
+                  className="rounded shadow-lg transition-transform duration-500 hover:scale-110"
+                />
+              </Link>
             </div>
           </div>
         </div>
