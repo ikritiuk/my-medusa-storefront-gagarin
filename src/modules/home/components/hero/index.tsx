@@ -32,7 +32,7 @@ const Hero = () => {
             </div>
 
             <div className="mt-8">
-              <a href="/collections/dji-drones"
+              <a href="/categories/dji-drones"
                  className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg text-lg transition">
                 Выбрать дрон
               </a>
@@ -63,7 +63,7 @@ const Hero = () => {
         <div className="flex flex-col justify-center items-center text-center gap-6">
           <div className="grid grid-cols-3 gap-6">
             <div className="group relative cursor-pointer transition-transform hover:scale-105">
-              <Link href="/collections/dji-drones">
+              <Link href="/categories/dji-drones">
                 <div className="relative">
                   <img
                     src="https://medusajs-server.fra1.cdn.digitaloceanspaces.com/dji-drones.avif"
@@ -78,7 +78,7 @@ const Hero = () => {
               </Link>
             </div>
             <div className="group relative cursor-pointer transition-transform hover:scale-105">
-              <Link href="/collections/dji-glasses-cornrollers">
+              <Link href="/categories/dji-glasses-cornrollers">
                 <div className="relative">
                   <img
                     src="https://medusajs-server.fra1.cdn.digitaloceanspaces.com/dji-drones-accessorises.avif"
@@ -93,7 +93,7 @@ const Hero = () => {
               </Link>
             </div>
             <div className="group relative cursor-pointer transition-transform hover:scale-105">
-              <Link href="/collections/dji-cameras">
+              <Link href="/categories/dji-cameras">
                 <div className="relative">
                   <img
                     src="https://medusajs-server.fra1.cdn.digitaloceanspaces.com/dji-cameras.avif"
@@ -116,7 +116,7 @@ const Hero = () => {
         <div className="flex flex-col justify-center items-center text-center gap-6">
           <div className="grid grid-cols-3 gap-6">
             <div className="group relative cursor-pointer transition-transform hover:scale-105">
-              <Link href="/collections/dji-microphones">
+              <Link href="/categories/dji-microphones">
                 <div className="relative">
                   <img
                     src="https://medusajs-server.fra1.cdn.digitaloceanspaces.com/dji-microphones.avif"
@@ -131,7 +131,7 @@ const Hero = () => {
               </Link>
             </div>
             <div className="group relative cursor-pointer transition-transform hover:scale-105">
-              <Link href="/collections/dji-stabisators">
+              <Link href="/categories/dji-stabisators">
                 <div className="relative">
                   <img
                     src="https://medusajs-server.fra1.cdn.digitaloceanspaces.com/dji-stabisators.avif"
@@ -146,7 +146,7 @@ const Hero = () => {
               </Link>
             </div>
             <div className="group relative cursor-pointer transition-transform hover:scale-105">
-              <Link href="/collections/dji-parts">
+              <Link href="/categories/dji-parts">
                 <div className="relative">
                   <img
                     src="https://medusajs-server.fra1.cdn.digitaloceanspaces.com/dji-parts.avif"
@@ -219,7 +219,7 @@ const Hero = () => {
               <div className="absolute top-2 left-2 bg-black bg-opacity-50 text-white text-lg px-2 py-1 rounded z-10">
                 DJI Дроны
               </div>
-              <Link href="/collections/dji-drones">
+              <Link href="/categories/dji-drones">
                 <img
                   src="https://medusajs-server.fra1.cdn.digitaloceanspaces.com/dji-drones.avif"
                   alt="DJI Дроны"
@@ -235,7 +235,7 @@ const Hero = () => {
                   className="absolute top-2 left-2 bg-black bg-opacity-50 text-white text-lg px-2 py-1 rounded transition-all duration-300 group-hover:shadow-lg group-hover:text-yellow-400 z-10">
                   DJI Очки и системы управления
                 </div>
-                <Link href="/collections/dji-glasses-cornrollers">
+                <Link href="/categories/dji-glasses-cornrollers">
                   <img
                     src="https://medusajs-server.fra1.cdn.digitaloceanspaces.com/dji-drones-accessorises.avif"
                     alt="DJI Очки и системы управления"
@@ -247,7 +247,7 @@ const Hero = () => {
                 <div className="absolute top-2 left-2 bg-black bg-opacity-50 text-white text-lg px-2 py-1 rounded z-10">
                   DJI Камеры
                 </div>
-                <Link href="/collections/dji-cameras">
+                <Link href="/categories/dji-cameras">
                   <img
                     src="https://medusajs-server.fra1.cdn.digitaloceanspaces.com/dji-cameras.avif"
                     alt="DJI Камеры"
@@ -264,7 +264,7 @@ const Hero = () => {
               <div className="absolute top-2 left-2 bg-black bg-opacity-50 text-white text-lg px-2 py-1 rounded z-10">
                 DJI Микрофоны
               </div>
-              <Link href="/collections/dji-microphones">
+              <Link href="/categories/dji-microphones">
                 <img
                   src="https://medusajs-server.fra1.cdn.digitaloceanspaces.com/dji-microphones.avif"
                   alt="DJI Микрофоны"
@@ -278,7 +278,7 @@ const Hero = () => {
                   className="absolute top-2 left-2 bg-black bg-opacity-50 text-white text-lg px-2 py-1 rounded transition-all duration-300 group-hover:shadow-lg group-hover:text-yellow-400 z-10">
                   DJI Стабилизаторы
                 </div>
-                <Link href="/collections/dji-stabisators">
+                <Link href="/categories/dji-stabisators">
                   <img
                     src="https://medusajs-server.fra1.cdn.digitaloceanspaces.com/dji-stabisators.avif"
                     alt="DJI Стабилизаторы"
@@ -291,7 +291,7 @@ const Hero = () => {
                   className="absolute top-2 left-2 bg-black bg-opacity-50 text-white text-lg px-2 py-1 rounded transition-all duration-300 group-hover:shadow-lg group-hover:text-yellow-400 z-10">
                   DJI Аккумуляторы, Запасные части и ремонтные комплекты
                 </div>
-                <Link href="/collections/dji-parts">
+                <Link href="/categories/dji-parts">
                   <img
                     src="https://medusajs-server.fra1.cdn.digitaloceanspaces.com/dji-parts.avif"
                     alt="DJI Аккумуляторы, Запасные части и ремонтные комплекты"
