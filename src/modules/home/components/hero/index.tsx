@@ -207,12 +207,7 @@ const Hero = () => {
             <h2 className="text-lg font-semibold">Категории</h2>
           </div>
         </div>
-        {/*<div className="flex flex-col items-center">*/}
-        {/*  /!* Title Section *!/*/}
-        {/*  <div className="flex items-center justify-center h-auto py-4 px-4">*/}
-        {/*    <h2 className="text-lg font-semibold text-center max-w-[90%]">Категории</h2>*/}
-        {/*  </div>*/}
-        {/*</div>*/}
+
         <div className="flex flex-col items-center mb-6 gap-4">
 
           {/* Brand Images */}
