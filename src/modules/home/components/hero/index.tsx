@@ -1,7 +1,15 @@
 "use client"
 import Link from "next/link"
+import { useRef } from "react"
 
 const Hero = () => {
+  const categoriesRef = useRef(null);
+
+  const handleVideoClick = () => {
+    if (categoriesRef.current) {
+      categoriesRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   return (
     <div className="relative bg-ui-bg-subtle">
       {/* Large screen (lg and up) */}
@@ -159,46 +167,52 @@ const Hero = () => {
       {/* Mobile Layout */}
       <div className="sm:md:block lg:hidden w-full border-b border-ui-border-base relative overflow-hidden">
         {/* Fancy Mobile Video Section */}
-        <div className="relative w-full overflow-hidden">
+        <div className="relative bg-ui-bg-subtle">
+          {/* Mobile Video Section */}
           <div
-            className="absolute inset-x-4 top-4 bg-black bg-opacity-50 text-white text-lg px-4 py-2 rounded z-20 text-center animate-fade-in">
-            <div className="text-center text-white px-4 py-6">
-              <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold leading-tight max-w-md mx-auto">
-                Откройте мир <span className="text-[#FFC107]">DJI</span>! 🚀
-              </h1>
-
-              <p className="mt-4 text-base sm:text-lg md:text-xl max-w-sm sm:max-w-md mx-auto">
-                <strong>Топовые дроны, камеры, микрофоны и стабилизаторы DJI</strong> — всё, что нужно для
-                <span className="text-[#FFD700]"> идеального контента и профессиональных съёмок</span>.
-              </p>
-            </div>
-            <div className="mt-8">
-              <a href="/collections/dji-drones"
-                 className="bg-[#FFC107] hover:bg-[#FFB400] text-black font-semibold py-4 px-8 rounded-lg text-lg sm:text-xl transition block sm:inline-block w-full sm:w-auto">
-                Выбрать дрон
-              </a>
+            className="sm:md:block lg:hidden w-full h-screen border-b border-ui-border-base relative overflow-hidden flex items-center justify-center"
+            onClick={handleVideoClick} // Clicking the video scrolls to categories
+          >
+            {/* Title Overlay on Video (NOT MODIFIED) */}
+            <div className="absolute inset-x-4 top-4 bg-black bg-opacity-50 text-white text-lg px-4 py-2 rounded z-20 text-center animate-fade-in">
+              <div className="text-center text-white px-4 py-6">
+                <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold leading-tight max-w-md mx-auto">
+                  Откройте мир <span className="text-[#FFC107]">DJI</span>! 🚀
+                </h1>
+                <p className="mt-4 text-base sm:text-lg md:text-xl max-w-sm sm:max-w-md mx-auto">
+                  <strong>Топовые дроны, камеры, микрофоны и стабилизаторы DJI</strong> — всё, что нужно для
+                  <span className="text-[#FFD700]"> идеального контента и профессиональных съёмок</span>.
+                </p>
+              </div>
             </div>
 
-          </div>
-          <Link href="/collections/dji-drones" className="w-full">
+            {/* Clickable Video */}
             <video
               src="https://medusajs-server.fra1.cdn.digitaloceanspaces.com/hero-mobile.mp4"
               poster="https://medusajs-server.fra1.cdn.digitaloceanspaces.com/hero-mobile-poster.avif"
-              className="w-full object-cover transition-transform duration-500 hover:scale-110"
+              className="w-full h-full object-cover"
               autoPlay
               loop
               muted
               playsInline
               preload="auto"
             />
-          </Link>
-        </div>
-        <div className="flex flex-col items-center">
-          {/* Title Section */}
-          <div className="flex items-center justify-center h-auto py-4 px-4">
-            <h2 className="text-lg font-semibold text-center max-w-[90%]">Категории</h2>
+          </div>
+
+          {/* Категории Section (Scroll Target) */}
+          <div
+            ref={categoriesRef}
+            className="w-full text-center py-4 px-4 bg-white shadow-md"
+          >
+            <h2 className="text-lg font-semibold">Категории</h2>
           </div>
         </div>
+        {/*<div className="flex flex-col items-center">*/}
+        {/*  /!* Title Section *!/*/}
+        {/*  <div className="flex items-center justify-center h-auto py-4 px-4">*/}
+        {/*    <h2 className="text-lg font-semibold text-center max-w-[90%]">Категории</h2>*/}
+        {/*  </div>*/}
+        {/*</div>*/}
         <div className="flex flex-col items-center mb-6 gap-4">
 
           {/* Brand Images */}
