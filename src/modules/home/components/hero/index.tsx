@@ -170,7 +170,8 @@ const Hero = () => {
         <div className="relative bg-ui-bg-subtle">
           {/* Mobile Video Section - Reduced Height */}
           <div
-            className="sm:md:block lg:hidden w-full h-[60vh] border-b border-ui-border-base relative overflow-hidden flex items-center justify-center"
+            className="sm:md:block lg:hidden w-full border-b border-ui-border-base relative overflow-hidden flex items-center justify-center"
+            style={{ height: "85vh" }} // Inline style to force height
             onClick={handleVideoClick} // Clicking the video scrolls to categories
           >
             {/* Title Overlay on Video (NOT MODIFIED) */}
