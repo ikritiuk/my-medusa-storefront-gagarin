@@ -278,7 +278,7 @@ const Hero = () => {
                   className="absolute top-2 left-2 bg-black bg-opacity-50 text-white text-lg px-2 py-1 rounded transition-all duration-300 group-hover:shadow-lg group-hover:text-yellow-400 z-10">
                   DJI Стабилизаторы
                 </div>
-                <Link href="/categories/dji-stabisators">
+                <Link href="/categories/dji-stabilizers">
                   <img
                     src="https://medusajs-server.fra1.cdn.digitaloceanspaces.com/dji-stabisators.avif"
                     alt="DJI Стабилизаторы"
