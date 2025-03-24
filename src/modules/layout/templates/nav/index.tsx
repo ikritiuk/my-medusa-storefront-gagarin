@@ -14,20 +14,26 @@ export default async function Nav() {
     <div className="sticky top-0 inset-x-0 z-50 group">
       <header className="relative h-16 mx-auto border-b duration-200 bg-white border-ui-border-base">
         <nav
-          className="content-container txt-xsmall-plus text-ui-fg-subtle flex items-center justify-between w-full h-full text-small-regular">
+          className="content-container txt-xsmall-plus text-ui-fg-subtle flex items-center justify-between w-full h-full text-small-regular relative">
           <div className="flex-1 basis-0 h-full flex items-center">
             <div className="h-full">
               <SideMenu regions={regions}/>
             </div>
           </div>
 
+          {/* Centered logo on desktop */}
           <div className="flex items-center justify-center py-4 md:absolute md:left-1/2 md:-translate-x-1/2">
             <a href="/">
-              <img className="h-24 w-auto md:h-[200px] lg:h-[220px]" src="/logo.svg" alt="Logo" />
+              <img
+                className="h-24 w-auto md:h-[200px] lg:h-[220px]"
+                src="/logo.svg"
+                alt="Logo"
+              />
             </a>
           </div>
 
-          <Search/>
+          <Search />
+
           <div className="flex items-center gap-x-6 h-full flex-1 basis-0 justify-end">
             <div className="hidden small:flex items-center gap-x-6 h-full">
               <LocalizedClientLink
@@ -49,7 +55,7 @@ export default async function Nav() {
                 </LocalizedClientLink>
               }
             >
-              <CartButton/>
+              <CartButton />
             </Suspense>
           </div>
         </nav>
