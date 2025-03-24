@@ -21,11 +21,10 @@ export default async function Nav() {
             </div>
           </div>
 
-          <div>
+          <div className="flex items-center h-full">
             <a
               href="/">
-              <img src="/logo.svg" alt="Logo" className="h-8 w-auto md:h-12 mx-auto"
-              />
+              <img className="w-full h-auto md:w-1/1 mx-auto" src="/logo.svg" alt="Logo"/>
             </a>
           </div>
           <Search/>
