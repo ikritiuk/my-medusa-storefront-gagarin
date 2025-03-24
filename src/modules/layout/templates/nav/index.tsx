@@ -17,14 +17,15 @@ export default async function Nav() {
           className="content-container txt-xsmall-plus text-ui-fg-subtle flex items-center justify-between w-full h-full text-small-regular">
           <div className="flex-1 basis-0 h-full flex items-center">
             <div className="h-full">
-              <div className="flex items-center justify-center py-4">
-                <a
-                  href="/">
-                  <img className="h-24 w-auto md:h-[200px] lg:h-[220px]" src="/logo.svg" alt="Logo"/>
-                </a>
-              </div>
               <SideMenu regions={regions}/>
             </div>
+          </div>
+
+          <div className="flex items-center justify-center py-4">
+            <a
+              href="/">
+              <img className="h-24 w-auto md:h-[200px] lg:h-[220px]" src="/logo.svg" alt="Logo"/>
+            </a>
           </div>
           <Search/>
           <div className="flex items-center gap-x-6 h-full flex-1 basis-0 justify-end">
