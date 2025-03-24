@@ -55,20 +55,24 @@ export default async function Nav() {
                 </LocalizedClientLink>
               </div>
 
-              {/* Cart button only visible on desktop */}
+              {/* Cart button visible only on tablet/desktop */}
               <div className="hidden md:flex">
                 <Suspense
                   fallback={
-                    <LocalizedClientLink
-                      className="hover:text-ui-fg-base flex gap-2"
-                      href="/cart"
-                      data-testid="nav-cart-link"
-                    >
-                      Корзина (0)
-                    </LocalizedClientLink>
+                    <div className="hidden md:flex">
+                      <LocalizedClientLink
+                        className="hover:text-ui-fg-base flex gap-2"
+                        href="/cart"
+                        data-testid="nav-cart-link"
+                      >
+                        Корзина (0)
+                      </LocalizedClientLink>
+                    </div>
                   }
                 >
-                  <CartButton />
+                  <div className="hidden md:flex">
+                    <CartButton />
+                  </div>
                 </Suspense>
               </div>
             </div>
