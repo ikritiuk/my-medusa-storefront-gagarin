@@ -21,12 +21,12 @@ export default async function Nav() {
             </div>
           </div>
 
-          <div className="flex items-center justify-center py-4">
-            <a
-              href="/">
-              <img className="h-24 w-auto md:h-[200px] lg:h-[220px]" src="/logo.svg" alt="Logo"/>
+          <div className="flex items-center justify-center py-4 md:absolute md:left-1/2 md:-translate-x-1/2">
+            <a href="/">
+              <img className="h-24 w-auto md:h-[200px] lg:h-[220px]" src="/logo.svg" alt="Logo" />
             </a>
           </div>
+
           <Search/>
           <div className="flex items-center gap-x-6 h-full flex-1 basis-0 justify-end">
             <div className="hidden small:flex items-center gap-x-6 h-full">
