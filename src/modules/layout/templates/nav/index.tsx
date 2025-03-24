@@ -24,7 +24,7 @@ export default async function Nav() {
           <div className="flex items-center justify-center py-4">
             <a
               href="/">
-              <img className="h-24 w-auto md:h-100" src="/logo.svg" alt="Logo"/>
+              <img className="h-24 w-auto md:h-[200px] lg:h-[220px]" src="/logo.svg" alt="Logo"/>
             </a>
           </div>
           <Search/>
