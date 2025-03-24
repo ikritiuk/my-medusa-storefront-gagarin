@@ -17,10 +17,8 @@ export default async function Nav() {
           <nav
             className="content-container txt-xsmall-plus text-ui-fg-subtle flex items-center justify-between w-full h-full text-small-regular relative"
           >
-            <div>
-              <div className="h-full">
-                <SideMenu regions={regions} />
-              </div>
+            <div className="hidden md:block h-full">
+              <SideMenu regions={regions} />
             </div>
 
             {/* Logo hidden on mobile, visible on desktop */}
@@ -80,7 +78,7 @@ export default async function Nav() {
         </header>
       </div>
 
-      {/* Mobile Bottom Bar */}
+      {/* Mobile Bottom Bar with dynamic cart count */}
       <div className="fixed bottom-0 inset-x-0 z-50 bg-white border-t border-gray-200 flex justify-around items-center py-2 md:hidden">
         <a
           href="/"
@@ -125,26 +123,34 @@ export default async function Nav() {
           Профиль
         </a>
 
-        <a
-          href="/cart"
-          className="flex flex-col items-center text-xs text-gray-700 hover:text-black"
+        <Suspense
+          fallback={
+            <a
+              href="/cart"
+              className="flex flex-col items-center text-xs text-gray-700 hover:text-black"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-6 w-6 mb-1"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={2}
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.3 5.3a1 1 0 001 1.2h12.6a1 1 0 001-1.2L17 13M7 13l-4-8m4 8l4-8"
+                />
+              </svg>
+              Корзина (0)
+            </a>
+          }
         >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-6 w-6 mb-1"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            strokeWidth={2}
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.3 5.3a1 1 0 001 1.2h12.6a1 1 0 001-1.2L17 13M7 13l-4-8m4 8l4-8"
-            />
-          </svg>
-          Корзина
-        </a>
+          <div className="flex flex-col items-center text-xs text-gray-700 hover:text-black">
+            <CartButton />
+          </div>
+        </Suspense>
       </div>
     </>
   )
