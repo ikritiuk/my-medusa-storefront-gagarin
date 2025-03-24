@@ -12,7 +12,7 @@ export default async function Nav() {
 
   return (
     <div className="sticky top-0 inset-x-0 z-50 group">
-      <header className="relative h-auto mx-auto border-b duration-200 bg-white border-ui-border-base">
+      <header className="relative h-16 mx-auto border-b duration-200 bg-white border-ui-border-base">
         <nav
           className="content-container txt-xsmall-plus text-ui-fg-subtle flex items-center justify-between w-full h-full text-small-regular">
           <div className="flex-1 basis-0 h-full flex items-center">
@@ -22,19 +22,12 @@ export default async function Nav() {
           </div>
 
           <div className="flex items-center justify-center py-4">
-            <a href="/">
-              <img
-                className="h-72 w-auto md:h-[28rem]"
-                src="/logo.svg"
-                alt="Logo"
-              />
+            <a
+              href="/">
+              <img className="h-24 w-auto md:h-100" src="/logo.svg" alt="Logo"/>
             </a>
           </div>
-
-          <div className="scale-50 md:scale-75 origin-center">
-            <Search/>
-          </div>
-
+          <Search/>
           <div className="flex items-center gap-x-6 h-full flex-1 basis-0 justify-end">
             <div className="hidden small:flex items-center gap-x-6 h-full">
               <LocalizedClientLink
