@@ -17,10 +17,9 @@ export default async function Nav() {
           <nav
             className="content-container txt-xsmall-plus text-ui-fg-subtle flex items-center justify-between w-full h-full text-small-regular relative"
           >
-            <div>
-              <div className="h-full">
-                <SideMenu regions={regions} />
-              </div>
+            {/* Hide SideMenu trigger on mobile */}
+            <div className="hidden md:block h-full">
+              <SideMenu regions={regions} />
             </div>
 
             {/* Logo hidden on mobile, visible on desktop */}
@@ -82,6 +81,30 @@ export default async function Nav() {
 
       {/* Mobile Bottom Bar */}
       <div className="fixed bottom-0 inset-x-0 z-50 bg-white border-t border-gray-200 flex justify-around items-center py-2 md:hidden">
+        {/* Hamburger menu icon */}
+        <button
+          onClick={() => {
+            // Optional: Trigger side menu toggle if you have mobile logic
+          }}
+          className="flex flex-col items-center text-xs text-gray-700 hover:text-black"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-6 w-6 mb-1"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            strokeWidth={2}
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+          Меню
+        </button>
+
         <a
           href="/"
           className="flex flex-col items-center text-xs text-gray-700 hover:text-black"
@@ -101,6 +124,28 @@ export default async function Nav() {
             />
           </svg>
           Главная
+        </a>
+
+        <a
+          href="/account"
+          className="flex flex-col items-center text-xs text-gray-700 hover:text-black"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-6 w-6 mb-1"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            strokeWidth={2}
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M12 12c2.21 0 4-1.79 4-4S14.21 4 12 4s-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4
+              v2h16v-2c0-2.66-5.33-4-8-4z"
+            />
+          </svg>
+          Профиль
         </a>
 
         <a
