@@ -182,7 +182,7 @@ const Hero = () => {
                 alt="Gagarin Logo"
                 width={200}
                 height={200}
-                className="w-64 h-64 object-contain"
+                className="w-64 h-64 object-contain invert"
               />
               <div className="text-center text-white px-4">
                 <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold leading-tight max-w-md mx-auto">
