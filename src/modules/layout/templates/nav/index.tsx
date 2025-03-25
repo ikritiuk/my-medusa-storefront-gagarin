@@ -41,7 +41,7 @@ export default async function Nav() {
               <Search/>
             </div>
 
-            <div className="flex items-center gap-x-6 h-full flex-1 basis-0 justify-end">
+            <div className="hidden md:flex items-center gap-x-6 h-full flex-1 basis-0 justify-end">
               <div className="hidden small:flex items-center gap-x-6 h-full">
                 <LocalizedClientLink
                   className="hover:text-ui-fg-base"
