@@ -15,9 +15,9 @@ export default async function Nav() {
       <div className="sticky top-0 inset-x-0 z-50 group">
         <header className="relative h-16 mx-auto border-b duration-200 bg-white border-ui-border-base">
           <nav className="content-container txt-xsmall-plus text-ui-fg-subtle flex items-center justify-between w-full h-full text-small-regular relative">
-            {/*<div className="h-full">*/}
-            {/*  <SideMenu regions={regions} />*/}
-            {/*</div>*/}
+            <div className="h-full block md:hidden">
+              <SideMenu regions={regions} />
+            </div>
 
             {/* Логотип в мобильной шапке */}
             <div className="flex md:hidden items-center gap-2">
@@ -25,7 +25,7 @@ export default async function Nav() {
                 <img
                   src="/logo.svg"
                   alt="Logo"
-                  className="h-12 w-auto"
+                  className="h-32 w-32"
                 />
               </a>
             </div>
