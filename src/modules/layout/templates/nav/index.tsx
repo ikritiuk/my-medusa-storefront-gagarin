@@ -17,8 +17,10 @@ export default async function Nav() {
           <nav
             className="content-container txt-xsmall-plus text-ui-fg-subtle flex items-center justify-between w-full h-full text-small-regular relative"
           >
-            <div className="hidden md:block h-full">
-              <SideMenu regions={regions}/>
+            <div>
+              <div className="h-full">
+                <SideMenu regions={regions} />
+              </div>
             </div>
 
             <div className="hidden md:flex items-center justify-center py-4 mr-4 md:mr-10">
