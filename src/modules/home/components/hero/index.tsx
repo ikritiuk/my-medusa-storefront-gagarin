@@ -175,19 +175,16 @@ const Hero = () => {
             style={{ height: "85vh" }} // Inline style to force height
             onClick={handleVideoClick} // Clicking the video scrolls to categories
           >
-            {/* Title Overlay on Video (NOT MODIFIED) */}
             <div
               className="absolute inset-x-4 top-4 bg-black bg-opacity-50 text-white text-lg px-4 py-2 rounded z-20 text-center animate-fade-in">
-              <div className="text-center text-white px-4 py-6">
-                <div className="bg-white/90 rounded-full p-3 shadow-xl mb-4">
-                  <Image
-                    src="/logo.svg"
-                    alt="Gagarin Logo"
-                    width={120}
-                    height={120}
-                    className="w-24 h-24 object-contain"
-                  />
-                </div>
+              <Image
+                src="/logo.svg"
+                alt="Gagarin Logo"
+                width={200}
+                height={200}
+                className="w-64 h-64 object-contain"
+              />
+              <div className="text-center text-white px-4">
                 <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold leading-tight max-w-md mx-auto">
                   Откройте мир <span className="text-[#FFC107]">DJI</span>! 🚀
                 </h1>
