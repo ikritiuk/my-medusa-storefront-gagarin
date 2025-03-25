@@ -1,5 +1,4 @@
 "use client"
-import Link from "next/link"
 import { useRef } from "react"
 import Image from "next/image"
 
@@ -63,15 +62,15 @@ const Hero = () => {
             onClick={handleVideoClick}
           >
             <div className="absolute inset-x-4 top-4 bg-black bg-opacity-50 text-white text-lg px-4 py-2 rounded z-20 text-center animate-fade-in">
-              <div className="text-center text-white px-4 py-6">
-                <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold leading-tight flex items-center justify-center gap-3 max-w-md mx-auto">
-                  <Image
-                    src="/logo.svg"
-                    alt="Gagarin Logo"
-                    width={40}
-                    height={40}
-                    className="w-10 h-10 md:w-12 md:h-12 block lg:hidden"
-                  />
+              <div className="flex flex-col items-center text-center px-4 py-6">
+                <Image
+                  src="/logo.svg"
+                  alt="Gagarin Logo"
+                  width={120}
+                  height={120}
+                  className="w-24 h-24 block lg:hidden mb-4"
+                />
+                <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold leading-tight max-w-md mx-auto">
                   Откройте мир <span className="text-[#FFC107]">DJI</span>! 🚀
                 </h1>
                 <p className="mt-4 text-base sm:text-lg md:text-xl max-w-sm sm:max-w-md mx-auto">
