@@ -37,7 +37,7 @@ export default async function Nav() {
               <Search/>
             </div>
 
-            <div className="flex md:hidden w-full justify-center px-4 mt-2">
+            <div className="flex md:hidden w-full justify-center px-4">
               <div className="w-full max-w-md">
                 <Search/>
               </div>
