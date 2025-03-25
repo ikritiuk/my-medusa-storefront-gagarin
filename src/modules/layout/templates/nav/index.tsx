@@ -108,8 +108,9 @@ export default async function Nav() {
               className="flex flex-col items-center text-xs text-gray-700 hover:text-black"
             >
               <svg
-                fill="none"
                 xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 17 16"
+                fill="none"
                 className="w-8 h-8 mb-1"
               >
                 <path
@@ -126,8 +127,9 @@ export default async function Nav() {
             className="flex flex-col items-center text-xs text-gray-700 hover:text-black"
           >
             <svg
-              fill="none"
               xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 17 16"
+              fill="none"
               className="w-8 h-8 mb-1"
             >
               <path
@@ -135,9 +137,10 @@ export default async function Nav() {
                 fill="#A9A8B0"
               />
             </svg>
-            <CartButton/>
+            <CartButton />
           </a>
         </Suspense>
+
       </div>
     </>
   )
