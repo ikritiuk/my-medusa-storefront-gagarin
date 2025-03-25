@@ -34,11 +34,10 @@ const Hero = () => {
 
             <div className="mt-8">
               <a href="/categories/dji-drones"
-                 className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg text-lg transition">
-                Выбрать дрон
+                 className="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 px-6 rounded-lg text-lg shadow-md transition">
+                Купить дрон
               </a>
             </div>
-
           </div>
         </div>
         <div className="absolute inset-0 bg-black bg-opacity-30 z-10"></div>
@@ -167,27 +166,26 @@ const Hero = () => {
 
       {/* Mobile Layout */}
       <div className="sm:md:block lg:hidden w-full border-b border-ui-border-base relative overflow-hidden">
-        {/* Fancy Mobile Video Section */}
         <div className="relative bg-ui-bg-subtle">
-          {/* Mobile Video Section - Reduced Height */}
           <div
             className="sm:md:block lg:hidden w-full border-b border-ui-border-base relative overflow-hidden flex items-center justify-center"
-            style={{ height: "75vh" }} // Inline style to force height
-            onClick={handleVideoClick} // Clicking the video scrolls to categories
+            style={{ height: "75vh" }}
+            onClick={handleVideoClick}
           >
             <div
-              className="absolute inset-0 flex items-center flex-col bg-black bg-opacity-50 text-white text-center px-4 z-20 animate-fade-in">
+              className="absolute inset-0 flex items-center flex-col bg-black bg-opacity-50 text-white text-center px-4 z-20 animate-fade-in"
+            >
               <Image
                 src="/logo.svg"
                 alt="Gagarin Logo"
-                width={250}
-                height={250}
-                className="w-55 h-55 pt-10 object-contain invert"
+                width={220}
+                height={220}
+                className="object-contain invert pt-6 mb-4"
               />
-              <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold leading-tight max-w-md mx-auto">
+              <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold leading-tight max-w-md mx-auto text-white drop-shadow-lg">
                 Откройте мир <span className="text-[#FFC107]">DJI</span>! 🚀
               </h1>
-              <p className="mt-3 text-base sm:text-lg max-w-sm mx-auto">
+              <p className="mt-3 text-base sm:text-lg max-w-sm mx-auto text-white drop-shadow-md">
                 <strong>Топовые дроны, камеры, микрофоны и стабилизаторы DJI</strong> — всё, что нужно для
                 <span className="text-[#FFD700]"> идеального контента и съёмок</span>.
               </p>
@@ -207,7 +205,6 @@ const Hero = () => {
             />
           </div>
 
-          {/* Категории Section (Scroll Target) */}
           <div
             ref={categoriesRef}
             className="w-full text-center py-4 px-4 bg-white shadow-md"
@@ -314,4 +311,3 @@ const Hero = () => {
 }
 
 export default Hero
-
