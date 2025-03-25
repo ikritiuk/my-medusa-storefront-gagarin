@@ -1,7 +1,6 @@
 "use client"
 import Link from "next/link"
 import { useRef } from "react"
-import Image from "next/image"
 
 const Hero = () => {
   const categoriesRef = useRef(null)
@@ -167,22 +166,19 @@ const Hero = () => {
 
       {/* Mobile Layout */}
       <div className="sm:md:block lg:hidden w-full border-b border-ui-border-base relative overflow-hidden">
+        {/* Fancy Mobile Video Section */}
         <div className="relative bg-ui-bg-subtle">
+          {/* Mobile Video Section - Reduced Height */}
           <div
             className="sm:md:block lg:hidden w-full border-b border-ui-border-base relative overflow-hidden flex items-center justify-center"
-            style={{ height: "85vh" }}
-            onClick={handleVideoClick}
+            style={{ height: "85vh" }} // Inline style to force height
+            onClick={handleVideoClick} // Clicking the video scrolls to categories
           >
-            <div className="absolute inset-x-4 top-4 bg-black bg-opacity-50 text-white text-lg px-4 py-2 rounded z-20 text-center animate-fade-in">
-              <div className="flex flex-col items-center text-center px-4 py-6">
-                <Image
-                  src="/logo.svg"
-                  alt="Gagarin Logo"
-                  width={120}
-                  height={120}
-                  className="invert w-64 h-64 block lg:hidden"
-                />
-                <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold leading-tight max-w-md mx-auto">
+            {/* Title Overlay on Video (NOT MODIFIED) */}
+            <div
+              className="absolute inset-x-4 top-4 bg-black bg-opacity-50 text-white text-lg px-4 py-2 rounded z-20 text-center animate-fade-in">
+              <div className="text-center text-white px-4 py-6">
+                <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold leading-tight max-w-md mx-auto">
                   Откройте мир <span className="text-[#FFC107]">DJI</span>! 🚀
                 </h1>
                 <p className="mt-4 text-base sm:text-lg md:text-xl max-w-sm sm:max-w-md mx-auto">
@@ -312,3 +308,4 @@ const Hero = () => {
 }
 
 export default Hero
+
