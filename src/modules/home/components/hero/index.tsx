@@ -1,4 +1,5 @@
 "use client"
+import Link from "next/link"
 import { useRef } from "react"
 import Image from "next/image"
 
@@ -10,7 +11,6 @@ const Hero = () => {
       categoriesRef.current.scrollIntoView({ behavior: "smooth" })
     }
   }
-
   return (
     <div className="relative bg-ui-bg-subtle">
       {/* Large screen (lg and up) */}
@@ -38,6 +38,7 @@ const Hero = () => {
                 Выбрать дрон
               </a>
             </div>
+
           </div>
         </div>
         <div className="absolute inset-0 bg-black bg-opacity-30 z-10"></div>
@@ -51,6 +52,117 @@ const Hero = () => {
           playsInline
           preload="auto"
         />
+      </div>
+
+      {/* Title Section */}
+      <div className="hidden lg:block w-full text-center my-6">
+        <h2 className="text-xl font-bold">Категории товаров</h2>
+      </div>
+
+      {/* Row of 3 Images */}
+      <div className="hidden lg:block w-full border-b border-ui-border-base">
+        <div className="flex flex-col justify-center items-center text-center gap-6">
+          <div className="grid grid-cols-3 gap-6">
+            <div className="group relative cursor-pointer transition-transform hover:scale-105">
+              <Link href="/categories/dji-drones">
+                <div className="relative">
+                  <img
+                    src="https://medusajs-server.fra1.cdn.digitaloceanspaces.com/dji-drones.avif"
+                    alt="DJI"
+                    className="rounded shadow-lg"
+                  />
+                  <div
+                    className="absolute inset-0 bg-black bg-opacity-50 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity">
+                    <span className="text-white text-lg font-semibold">DJI Дроны</span>
+                  </div>
+                </div>
+              </Link>
+            </div>
+            <div className="group relative cursor-pointer transition-transform hover:scale-105">
+              <Link href="/categories/dji-glasses-cornrollers">
+                <div className="relative">
+                  <img
+                    src="https://medusajs-server.fra1.cdn.digitaloceanspaces.com/dji-drones-accessorises.avif"
+                    alt="DJI: Аксессуары"
+                    className="rounded shadow-lg"
+                  />
+                  <div
+                    className="absolute inset-0 bg-black bg-opacity-50 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity">
+                    <span className="text-white text-lg font-semibold">DJI Очки и системы управления</span>
+                  </div>
+                </div>
+              </Link>
+            </div>
+            <div className="group relative cursor-pointer transition-transform hover:scale-105">
+              <Link href="/categories/dji-cameras">
+                <div className="relative">
+                  <img
+                    src="https://medusajs-server.fra1.cdn.digitaloceanspaces.com/dji-cameras.avif"
+                    alt="DJI Камеры"
+                    className="rounded shadow-lg"
+                  />
+                  <div
+                    className="absolute inset-0 bg-black bg-opacity-50 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity">
+                    <span className="text-white text-lg font-semibold">DJI Камеры</span>
+                  </div>
+                </div>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Second Row of 3 Images */}
+      <div className="hidden lg:block w-full border-b border-ui-border-base py-8">
+        <div className="flex flex-col justify-center items-center text-center gap-6">
+          <div className="grid grid-cols-3 gap-6">
+            <div className="group relative cursor-pointer transition-transform hover:scale-105">
+              <Link href="/categories/dji-microphones">
+                <div className="relative">
+                  <img
+                    src="https://medusajs-server.fra1.cdn.digitaloceanspaces.com/dji-microphones.avif"
+                    alt="DJI Микрофоны"
+                    className="rounded shadow-lg"
+                  />
+                  <div
+                    className="absolute inset-0 bg-black bg-opacity-50 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity">
+                    <span className="text-white text-lg font-semibold">DJI Микрофоны</span>
+                  </div>
+                </div>
+              </Link>
+            </div>
+            <div className="group relative cursor-pointer transition-transform hover:scale-105">
+              <Link href="/categories/dji-stabisators">
+                <div className="relative">
+                  <img
+                    src="https://medusajs-server.fra1.cdn.digitaloceanspaces.com/dji-stabisators.avif"
+                    alt="DJI Аккумуляторы и зарядные устройства"
+                    className="rounded shadow-lg"
+                  />
+                  <div
+                    className="absolute inset-0 bg-black bg-opacity-50 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity">
+                    <span className="text-white text-lg font-semibold">DJI Стабилизаторы</span>
+                  </div>
+                </div>
+              </Link>
+            </div>
+            <div className="group relative cursor-pointer transition-transform hover:scale-105">
+              <Link href="/categories/dji-parts">
+                <div className="relative">
+                  <img
+                    src="https://medusajs-server.fra1.cdn.digitaloceanspaces.com/dji-parts.avif"
+                    alt="DJI Запасные части и ремонтные комплекты"
+                    className="rounded shadow-lg"
+                  />
+                  <div
+                    className="absolute inset-0 bg-black bg-opacity-50 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity">
+                    <span className="text-white text-lg font-semibold">DJI Аккумуляторы, Запасные части и ремонтные комплекты</span>
+                  </div>
+                </div>
+              </Link>
+            </div>
+          </div>
+        </div>
       </div>
 
       {/* Mobile Layout */}
@@ -80,6 +192,7 @@ const Hero = () => {
               </div>
             </div>
 
+            {/* Clickable Video */}
             <video
               src="https://medusajs-server.fra1.cdn.digitaloceanspaces.com/hero-mobile.mp4"
               poster="https://medusajs-server.fra1.cdn.digitaloceanspaces.com/hero-mobile-poster.avif"
@@ -92,6 +205,7 @@ const Hero = () => {
             />
           </div>
 
+          {/* Категории Section (Scroll Target) */}
           <div
             ref={categoriesRef}
             className="w-full text-center py-4 px-4 bg-white shadow-md"
