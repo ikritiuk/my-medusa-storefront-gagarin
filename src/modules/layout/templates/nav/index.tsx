@@ -18,7 +18,7 @@ export default async function Nav() {
             className="content-container txt-xsmall-plus text-ui-fg-subtle flex items-center justify-between w-full h-full text-small-regular relative"
           >
             <div className="hidden md:block h-full">
-              <SideMenu regions={regions} />
+              <SideMenu regions={regions}/>
             </div>
 
             <div className="hidden md:flex items-center justify-center py-4 mr-4 md:mr-10">
@@ -32,11 +32,11 @@ export default async function Nav() {
             </div>
 
             <div className="hidden md:flex absolute left-1/2 -translate-x-1/2">
-              <Search />
+              <Search/>
             </div>
 
             <div className="flex md:hidden">
-              <Search />
+              <Search/>
             </div>
 
             <div className="flex items-center gap-x-6 h-full flex-1 basis-0 justify-end">
@@ -65,7 +65,7 @@ export default async function Nav() {
                   }
                 >
                   <div className="hidden md:flex">
-                    <CartButton />
+                    <CartButton/>
                   </div>
                 </Suspense>
               </div>
@@ -74,10 +74,9 @@ export default async function Nav() {
         </header>
       </div>
 
-      {/* ✅ Мобильная нижняя панель с увеличенными иконками и одинаковым цветом */}
+      {/* ✅ Mobile Bottom Bar with bigger cart icon */}
       <div
-        className="fixed bottom-0 inset-x-0 z-50 bg-white border-t border-gray-200 flex justify-around items-center py-2 md:hidden"
-      >
+        className="fixed bottom-0 inset-x-0 z-50 bg-white border-t border-gray-200 flex justify-around items-center py-2 md:hidden">
         <a
           href="/"
           className="flex flex-col items-center text-xs text-gray-700 hover:text-black"
@@ -95,7 +94,7 @@ export default async function Nav() {
           className="flex flex-col items-center text-xs text-gray-700 hover:text-black"
         >
           <img
-            src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2Fsvg%22%20width%3D%2220%22%20height%3D%2220%22%20fill%3D%22none%22%3E%3Cpath%20fill%3D%22%23C8C8D1%22%20fill-rule%3D%22evenodd%22%20d%3D%22M14.759%204.789c0%202.77-2.195%204.918-4.753%204.918-2.558%200-4.752-2.148-4.752-4.895C5.241%202.101%207.461%200%2010.006%200a4.763%204.763%200%200%201%204.753%204.789ZM0%2018.498C0%2019.484.677%2020%202.57%2020h14.86c1.893%200%202.57-.516%202.57-1.502%200-2.864-3.85-6.808-9.994-6.808C3.85%2011.69%200%2015.634%200%2018.498Z%22%20clip-rule%3D%22evenodd%22%2F%3E%3C%2Fsvg%3E"
+            src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2220%22%20height%3D%2220%22%20fill%3D%22none%22%3E%3Cpath%20fill%3D%22%23C8C8D1%22%20fill-rule%3D%22evenodd%22%20d%3D%22M14.759%204.789c0%202.77-2.195%204.918-4.753%204.918-2.558%200-4.752-2.148-4.752-4.895C5.241%202.101%207.461%200%2010.006%200a4.763%204.763%200%200%201%204.753%204.789ZM0%2018.498C0%2019.484.677%2020%202.57%2020h14.86c1.893%200%202.57-.516%202.57-1.502%200-2.864-3.85-6.808-9.994-6.808C3.85%2011.69%200%2015.634%200%2018.498Z%22%20clip-rule%3D%22evenodd%22%2F%3E%3C%2Fsvg%3E"
             alt="Account"
             className="w-6 h-6 mb-1"
           />
@@ -141,6 +140,7 @@ export default async function Nav() {
             <CartButton />
           </a>
         </Suspense>
+
       </div>
     </>
   )
