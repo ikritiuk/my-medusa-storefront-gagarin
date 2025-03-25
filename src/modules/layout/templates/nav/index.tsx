@@ -18,7 +18,7 @@ export default async function Nav() {
             className="content-container txt-xsmall-plus text-ui-fg-subtle flex items-center justify-between w-full h-full text-small-regular relative"
           >
             <div className="hidden md:block h-full">
-              <SideMenu regions={regions} />
+              <SideMenu regions={regions}/>
             </div>
 
             <div className="hidden md:flex items-center justify-center py-4 mr-4 md:mr-10">
@@ -32,11 +32,11 @@ export default async function Nav() {
             </div>
 
             <div className="hidden md:flex absolute left-1/2 -translate-x-1/2">
-              <Search />
+              <Search/>
             </div>
 
             <div className="flex md:hidden">
-              <Search />
+              <Search/>
             </div>
 
             <div className="flex items-center gap-x-6 h-full flex-1 basis-0 justify-end">
@@ -65,7 +65,7 @@ export default async function Nav() {
                   }
                 >
                   <div className="hidden md:flex">
-                    <CartButton />
+                    <CartButton/>
                   </div>
                 </Suspense>
               </div>
@@ -75,7 +75,8 @@ export default async function Nav() {
       </div>
 
       {/* ✅ Mobile Bottom Bar with your custom SVGs */}
-      <div className="fixed bottom-0 inset-x-0 z-50 bg-white border-t border-gray-200 flex justify-around items-center py-2 md:hidden">
+      <div
+        className="fixed bottom-0 inset-x-0 z-50 bg-white border-t border-gray-200 flex justify-around items-center py-2 md:hidden">
         <a
           href="/"
           className="flex flex-col items-center text-xs text-gray-700 hover:text-black"
@@ -106,12 +107,17 @@ export default async function Nav() {
               href="/cart"
               className="flex flex-col items-center text-xs text-gray-700 hover:text-black"
             >
-              <img
-                src="data:image/svg+xml,%3Csvg%20width%3D%2217%22%20height%3D%2216%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M2.925.488a.833.833%200%200%200-1.517.691l4.295%209.416v.001c.005.008.023.05.046.09a.9.9%200%200%200%20.979.446c.045-.01.089-.023.098-.026l6.22-1.853.105-.031c.44-.13.867-.256%201.201-.523.29-.232.517-.535.657-.88.16-.396.159-.842.158-1.3V4.105c0-.01%200-.06-.004-.11a.901.901%200%200%200-.488-.73.9.9%200%200%200-.447-.098H4.147L2.925.487ZM11.833%2012a1.333%201.333%200%200%200%200%202.667h.007a1.333%201.333%200%200%200%200-2.667h-.007ZM3.167%2013.334c0-.737.597-1.334%201.333-1.334h.007a1.333%201.333%200%200%201%200%202.667H4.5a1.333%201.333%200%200%201-1.333-1.333Z%22%20fill%3D%22%23A9A8B0%22%2F%3E%3C%2Fsvg%3E"
-                alt="Cart"
-                className="h-6 w-6 mb-1"
-              />
-              Корзина
+              <svg width="17" height="16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M2.925.488a.833.833 0 0 0-1.517.691l4.295 9.416v.001c.005.008.023.05.046.09a.9.9 0 0 0 .979.446c.045-.01.089-.023.098-.026l6.22-1.853.105-.031c.44-.13.867-.256 1.201-.523.29-.232.517-.535.657-.88.16-.396.159-.842.158-1.3V4.105c0-.01 0-.06-.004-.11a.901.901 0 0 0-.488-.73.9.9 0 0 0-.447-.098H4.147L2.925.487ZM11.833 12a1.333 1.333 0 0 0 0 2.667h.007a1.333 1.333 0 0 0 0-2.667h-.007ZM3.167 13.334c0-.737.597-1.334 1.333-1.334h.007a1.333 1.333 0 0 1 0 2.667H4.5a1.333 1.333 0 0 1-1.333-1.333Z"
+                  fill="#A9A8B0"/>
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.3 5.3a1 1 0 001 1.2h12.6a1 1 0 001-1.2L17 13M7 13l-4-8m4 8l4-8"
+                />
+              </svg>
+              Корзина (0)
             </a>
           }
         >
@@ -119,7 +125,17 @@ export default async function Nav() {
             href="/cart"
             className="flex flex-col items-center text-xs text-gray-700 hover:text-black"
           >
-            <CartButton />
+            <svg width="17" height="16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M2.925.488a.833.833 0 0 0-1.517.691l4.295 9.416v.001c.005.008.023.05.046.09a.9.9 0 0 0 .979.446c.045-.01.089-.023.098-.026l6.22-1.853.105-.031c.44-.13.867-.256 1.201-.523.29-.232.517-.535.657-.88.16-.396.159-.842.158-1.3V4.105c0-.01 0-.06-.004-.11a.901.901 0 0 0-.488-.73.9.9 0 0 0-.447-.098H4.147L2.925.487ZM11.833 12a1.333 1.333 0 0 0 0 2.667h.007a1.333 1.333 0 0 0 0-2.667h-.007ZM3.167 13.334c0-.737.597-1.334 1.333-1.334h.007a1.333 1.333 0 0 1 0 2.667H4.5a1.333 1.333 0 0 1-1.333-1.333Z"
+                fill="#A9A8B0"/>
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.3 5.3a1 1 0 001 1.2h12.6a1 1 0 001-1.2L17 13M7 13l-4-8m4 8l4-8"
+              />
+            </svg>
+            <CartButton/>
           </a>
         </Suspense>
       </div>
