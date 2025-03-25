@@ -175,13 +175,7 @@ const Hero = () => {
             <div
               className="absolute inset-0 flex items-center flex-col bg-black bg-opacity-50 text-white text-center px-4 z-20 animate-fade-in"
             >
-              <Image
-                src="/logo.svg"
-                alt="Gagarin Logo"
-                width={220}
-                height={220}
-                className="object-contain invert pt-6 mb-4"
-              />
+
               <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold leading-tight max-w-md mx-auto text-white drop-shadow-lg">
                 Откройте мир <span className="text-[#FFC107]">DJI</span>! 🚀
               </h1>
