@@ -53,7 +53,7 @@ const Search = () => {
   return (
     <div className="relative w-full xl:w-[600px]">
       <Input
-        placeholder="Поиск в GAGARIN-SHOP"
+        placeholder="Поиск товаров..."
         icon={<IconSearch color="lightgray" size={16} />}
         className="text-sm w-full"
         value={searchQuery}
