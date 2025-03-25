@@ -172,28 +172,27 @@ const Hero = () => {
           {/* Mobile Video Section - Reduced Height */}
           <div
             className="sm:md:block lg:hidden w-full border-b border-ui-border-base relative overflow-hidden flex items-center justify-center"
-            style={{ height: "85vh" }} // Inline style to force height
+            style={{ height: "75vh" }} // Inline style to force height
             onClick={handleVideoClick} // Clicking the video scrolls to categories
           >
             <div
-              className="absolute inset-x-4 top-4 bg-black bg-opacity-50 text-white text-lg px-4 py-2 rounded z-20 text-center animate-fade-in">
+              className="absolute inset-0 flex items-center justify-center flex-col bg-black bg-opacity-50 text-white text-center px-4 z-20 animate-fade-in">
               <Image
                 src="/logo.svg"
                 alt="Gagarin Logo"
-                width={200}
-                height={200}
-                className="w-64 h-64 object-contain invert"
+                width={160}
+                height={160}
+                className="w-40 h-40 object-contain invert mb-4"
               />
-              <div className="text-center text-white px-4">
-                <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold leading-tight max-w-md mx-auto">
-                  Откройте мир <span className="text-[#FFC107]">DJI</span>! 🚀
-                </h1>
-                <p className="mt-4 text-base sm:text-lg md:text-xl max-w-sm sm:max-w-md mx-auto">
-                  <strong>Топовые дроны, камеры, микрофоны и стабилизаторы DJI</strong> — всё, что нужно для
-                  <span className="text-[#FFD700]"> идеального контента и профессиональных съёмок</span>.
-                </p>
-              </div>
+              <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold leading-tight max-w-md mx-auto">
+                Откройте мир <span className="text-[#FFC107]">DJI</span>! 🚀
+              </h1>
+              <p className="mt-3 text-base sm:text-lg max-w-sm mx-auto">
+                <strong>Топовые дроны, камеры, микрофоны и стабилизаторы DJI</strong> — всё, что нужно для
+                <span className="text-[#FFD700]"> идеального контента и съёмок</span>.
+              </p>
             </div>
+
 
             {/* Clickable Video */}
             <video
