@@ -37,8 +37,10 @@ export default async function Nav() {
               <Search/>
             </div>
 
-            <div className="flex md:hidden">
-              <Search/>
+            <div className="flex md:hidden w-full justify-center px-4 mt-2">
+              <div className="w-full max-w-md">
+                <Search/>
+              </div>
             </div>
 
             <div className="hidden md:flex items-center gap-x-6 h-full flex-1 basis-0 justify-end">
