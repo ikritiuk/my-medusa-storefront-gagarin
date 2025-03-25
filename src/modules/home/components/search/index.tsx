@@ -51,7 +51,7 @@ const Search = () => {
   };
 
   return (
-    <div className="relative w-full xl:w-[400px]">
+    <div className="relative w-full xl:w-[600px]">
       <Input
         placeholder="Поиск товаров..."
         icon={<IconSearch color="lightgray" size={16} />}
