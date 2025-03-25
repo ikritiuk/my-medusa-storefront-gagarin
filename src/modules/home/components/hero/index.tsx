@@ -179,6 +179,7 @@ const Hero = () => {
               className="absolute inset-x-4 top-4 bg-black bg-opacity-50 text-white text-lg px-4 py-2 rounded z-20 text-center animate-fade-in">
               <div className="text-center text-white px-4 py-6">
                 <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold leading-tight max-w-md mx-auto">
+                  <Image src="/logo.svg" alt="gagarin-logo" width={40} height={40} className="w-10 h-10 md:w-12 md:h-12 block lg:hidden" />
                   Откройте мир <span className="text-[#FFC107]">DJI</span>! 🚀
                 </h1>
                 <p className="mt-4 text-base sm:text-lg md:text-xl max-w-sm sm:max-w-md mx-auto">
