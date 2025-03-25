@@ -1,7 +1,7 @@
 "use client"
 import Link from "next/link"
 import { useRef } from "react"
-import Logo from "/public/logo.svg"  // убедись, что путь верный
+import Logo from "../../../../../public/logo.svg"  // убедись, что путь верный
 
 const Hero = () => {
   const categoriesRef = useRef(null)
