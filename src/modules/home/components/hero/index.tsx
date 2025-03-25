@@ -182,7 +182,7 @@ const Hero = () => {
                 alt="Gagarin Logo"
                 width={160}
                 height={160}
-                className="w-50 h-50 object-contain invert mb-4"
+                className="w-55 h-55 object-contain invert mb-4"
               />
               <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold leading-tight max-w-md mx-auto">
                 Откройте мир <span className="text-[#FFC107]">DJI</span>! 🚀
