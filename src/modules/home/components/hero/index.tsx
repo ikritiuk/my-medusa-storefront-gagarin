@@ -176,13 +176,13 @@ const Hero = () => {
             onClick={handleVideoClick} // Clicking the video scrolls to categories
           >
             <div
-              className="absolute inset-0 flex items-center justify-center flex-col bg-black bg-opacity-50 text-white text-center px-4 z-20 animate-fade-in">
+              className="absolute inset-0 flex items-center flex-col bg-black bg-opacity-50 text-white text-center px-4 z-20 animate-fade-in">
               <Image
                 src="/logo.svg"
                 alt="Gagarin Logo"
                 width={160}
                 height={160}
-                className="w-40 h-40 object-contain invert mb-4"
+                className="w-50 h-50 object-contain invert mb-4"
               />
               <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold leading-tight max-w-md mx-auto">
                 Откройте мир <span className="text-[#FFC107]">DJI</span>! 🚀
