@@ -55,7 +55,7 @@ const Search = () => {
       <Input
         placeholder="Поиск товаров..."
         icon={<IconSearch color="lightgray" size={16} />}
-        className="text-base w-full" // change from text-sm to text-base or text-[16px]
+        className="text-base w-full"
         value={searchQuery}
         onChange={(e) => setSearchQuery(e.target.value)}
         onKeyDown={(e) => e.key === "Enter" && handleSearch(e)}
