@@ -180,8 +180,8 @@ const Hero = () => {
               <Image
                 src="/logo.svg"
                 alt="Gagarin Logo"
-                width={160}
-                height={160}
+                width={250}
+                height={250}
                 className="w-55 h-55 py-10 object-contain invert"
               />
               <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold leading-tight max-w-md mx-auto">
