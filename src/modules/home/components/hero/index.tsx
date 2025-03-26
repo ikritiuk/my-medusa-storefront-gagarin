@@ -3,6 +3,16 @@ import Link from "next/link"
 import { useRef } from "react"
 import Image from "next/image"
 import { motion } from "framer-motion"
+import { useEffect } from "react"
+
+// ✅ Disable automatic scroll restoration & reset scroll to top on mount
+useEffect(() => {
+  if (typeof window !== "undefined") {
+    window.history.scrollRestoration = "manual"
+    window.scrollTo(0, 0)
+  }
+}, [])
+
 
 const Hero = () => {
   const categoriesRef = useRef(null)
