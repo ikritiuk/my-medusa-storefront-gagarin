@@ -2,6 +2,7 @@
 import Link from "next/link"
 import { useRef } from "react"
 import Image from "next/image"
+import { motion } from "framer-motion"
 
 const Hero = () => {
   const categoriesRef = useRef(null)
@@ -18,34 +19,72 @@ const Hero = () => {
       categoriesDesktopRef.current.scrollIntoView({ behavior: "smooth" })
     }
   }
+
+  const fadeInUp = {
+    hidden: { opacity: 0, y: 20 },
+    visible: (custom) => ({
+      opacity: 1,
+      y: 0,
+      transition: { delay: custom * 0.3, duration: 0.8 }
+    })
+  }
+
   return (
     <div className="relative bg-ui-bg-subtle">
       {/* Large screen (lg and up) */}
       <div className="hidden lg:block h-[80vh] w-full border-b border-ui-border-base relative overflow-hidden">
         <div className="absolute inset-0 flex justify-center items-center bg-black-800 bg-opacity-30 z-20">
           <div className="text-center text-white px-4">
-            <h1 className="text-3xl md:text-5xl font-bold leading-tight">
-              Откройте мир безграничных возможностей с <span className="text-blue-400">DJI</span>! 🚀
-            </h1>
-            <p className="mt-4 text-lg md:text-xl">
+            <motion.h1
+              initial="hidden"
+              animate="visible"
+              variants={fadeInUp}
+              custom={0}
+              className="text-3xl md:text-5xl font-bold leading-tight"
+            >
+              Откройте мир безграничных возможностей с <motion.span
+              whileHover={{ scale: 1.2, rotate: [0, -5, 5, 0] }}
+              transition={{ repeat: Infinity, repeatDelay: 2, duration: 1 }}
+              className="text-blue-400 inline-block"
+            >DJI 🚀</motion.span>!
+            </motion.h1>
+            <motion.p
+              initial="hidden"
+              animate="visible"
+              variants={fadeInUp}
+              custom={1}
+              className="mt-4 text-lg md:text-xl"
+            >
               <strong>Топовые дроны, камеры, микрофоны и стабилизаторы DJI</strong> — всё, что нужно для
               <span className="text-blue-300"> идеального контента и профессиональных съёмок</span>.
-            </p>
+            </motion.p>
 
-            <div className="mt-6 space-y-2 text-lg">
+            <motion.div
+              initial="hidden"
+              animate="visible"
+              variants={fadeInUp}
+              custom={2}
+              className="mt-6 space-y-2 text-lg"
+            >
               <p><strong>Лучшие дроны DJI</strong> с официальной гарантией</p>
               <p><strong>Премиальные камеры, микрофоны и стабилизаторы</strong> для профессионалов</p>
               <p><strong>Выгодные цены и акции</strong> каждый день</p>
               <p>Быстрая доставка по всей России</p>
-            </div>
+            </motion.div>
 
-            <div className="mt-8">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 1.2, duration: 0.5 }}
+              className="mt-8"
+            >
               <button
                 onClick={handleDesktopButtonClick}
-                className="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 px-6 rounded-lg text-lg shadow-md transition">
+                className="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 px-6 rounded-lg text-lg shadow-md transition hover:animate-pulse"
+              >
                 Смотреть каталог DJI
               </button>
-            </div>
+            </motion.div>
           </div>
         </div>
         <div className="absolute inset-0 bg-black bg-opacity-30 z-10"></div>
@@ -60,6 +99,18 @@ const Hero = () => {
           preload="auto"
         />
       </div>
+
+      {/* Title Section with motion highlight */}
+      <motion.div
+        ref={categoriesDesktopRef}
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7 }}
+        viewport={{ once: true }}
+        className="hidden lg:block w-full text-center my-6"
+      >
+        <h2 className="text-xl font-bold border-b-2 border-orange-500 inline-block pb-1">Категории товаров</h2>
+      </motion.div>
 
       {/* Title Section */}
       <div className="hidden lg:block w-full text-center my-6"

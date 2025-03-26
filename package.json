@@ -34,7 +34,8 @@
     "server-only": "^0.0.1",
     "tailwindcss-radix": "^2.8.0",
     "webpack": "^5",
-    "@tabler/icons-react": "latest"
+    "@tabler/icons-react": "latest",
+    "framer-motion": "latest"
   },
   "devDependencies": {
     "@babel/core": "^7.17.5",
