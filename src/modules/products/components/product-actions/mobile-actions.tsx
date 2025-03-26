@@ -9,7 +9,7 @@ import X from "@modules/common/icons/x"
 import { getProductPrice } from "@lib/util/get-product-price"
 import OptionSelect from "./option-select"
 import { HttpTypes } from "@medusajs/types"
-import AddToCartButtonMobile from "../product-actions"
+import AddToCartButtonMobile from "@modules/products/components/product-actions/add-to-cart-mobile"
 
 type MobileActionsProps = {
   product: HttpTypes.StoreProduct

@@ -11,7 +11,7 @@ import { useParams } from "next/navigation"
 import { useEffect, useMemo, useRef, useState } from "react"
 import ProductPrice from "../product-price"
 import MobileActions from "./mobile-actions"
-import AddToCartButton from "../product-actions"
+import AddToCartButton from "@modules/products/components/product-actions/add-to-cart"
 
 
 type ProductActionsProps = {
