@@ -43,7 +43,7 @@ const Hero = () => {
               <button
                 onClick={handleDesktopButtonClick}
                 className="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 px-6 rounded-lg text-lg shadow-md transition">
-                В Магазин
+                Перейти в каталог
               </button>
             </div>
           </div>
