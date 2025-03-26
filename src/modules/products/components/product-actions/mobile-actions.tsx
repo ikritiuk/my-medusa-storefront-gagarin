@@ -11,7 +11,6 @@ import OptionSelect from "./option-select"
 import { HttpTypes } from "@medusajs/types"
 import AddToCartButtonMobile from "../product-actions"
 
-
 type MobileActionsProps = {
   product: HttpTypes.StoreProduct
   variant?: HttpTypes.StoreProductVariant
@@ -110,7 +109,7 @@ const MobileActions: React.FC<MobileActionsProps> = ({
                       ? Object.values(options).join(" / ")
                       : "Select Options"}
                   </span>
-                  <ChevronDown/>
+                  <ChevronDown />
                 </div>
               </Button>
               <AddToCartButtonMobile
@@ -134,7 +133,7 @@ const MobileActions: React.FC<MobileActionsProps> = ({
             leaveFrom="opacity-100"
             leaveTo="opacity-0"
           >
-            <div className="fixed inset-0 bg-gray-700 bg-opacity-75 backdrop-blur-sm"/>
+            <div className="fixed inset-0 bg-gray-700 bg-opacity-75 backdrop-blur-sm" />
           </Transition.Child>
 
           <div className="fixed bottom-0 inset-x-0">
@@ -158,20 +157,20 @@ const MobileActions: React.FC<MobileActionsProps> = ({
                       className="bg-white w-12 h-12 rounded-full text-ui-fg-base flex justify-center items-center"
                       data-testid="close-modal-button"
                     >
-                      <X/>
+                      <X />
                     </button>
                   </div>
                   <div className="bg-white px-6 py-12">
-                    {(product.variants?.length ? ? 0) > 1 && (
+                    {(product.variants?.length ?? 0) > 1 && (
                       <div className="flex flex-col gap-y-6">
                         {(product.options || []).map((option) => {
                           return (
                             <div key={option.id}>
                               <OptionSelect
                                 option={option}
-                                current={options[option.title ? ? ""]}
+                                current={options[option.title ?? ""]}
                                 updateOption={updateOptions}
-                                title={option.title ? ? ""}
+                                title={option.title ?? ""}
                                 disabled={optionsDisabled}
                               />
                             </div>
