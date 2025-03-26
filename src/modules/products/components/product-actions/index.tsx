@@ -149,16 +149,15 @@ export default function ProductActions({
             isAdding ||
             !isValidVariant
           }
-          variant="primary"
-          className="w-full h-10"
+          className={`w-full h-10 bg-orange-500 hover:bg-orange-600 text-white font-semibold rounded-lg shadow-md transition hover:animate-pulse disabled:opacity-50 disabled:cursor-not-allowed`}
           isLoading={isAdding}
           data-testid="add-product-button"
         >
           {!selectedVariant && !options
             ? "Выбрать вариант"
             : !inStock || !isValidVariant
-            ? "Нет в наличие"
-            : "Добавить в Корзину"}
+              ? "Нет в наличии"
+              : "Добавить в корзину"}
         </Button>
         <MobileActions
           product={product}

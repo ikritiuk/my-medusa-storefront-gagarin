@@ -114,15 +114,15 @@ const MobileActions: React.FC<MobileActionsProps> = ({
               <Button
                 onClick={handleAddToCart}
                 disabled={!inStock || !variant}
-                className="w-full"
+                className={`w-full bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 px-6 rounded-lg text-lg shadow-md transition hover:animate-pulse disabled:opacity-50 disabled:cursor-not-allowed`}
                 isLoading={isAdding}
                 data-testid="mobile-cart-button"
               >
                 {!variant
                   ? "Выбрать вариант"
                   : !inStock
-                  ? "Нет в наличие"
-                  : "Добавить в Корзину"}
+                    ? "Нет в наличии"
+                    : "Добавить в корзину"}
               </Button>
             </div>
           </div>
