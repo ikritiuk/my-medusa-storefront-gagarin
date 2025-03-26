@@ -1,5 +1,6 @@
 "use client"
-
+import { ShoppingBag } from "lucide-react"
+import { CheckCircle } from "lucide-react"
 import { isManual, isStripe } from "@lib/constants"
 import { placeOrder } from "@lib/data/cart"
 import { HttpTypes } from "@medusajs/types"
@@ -140,7 +141,9 @@ const StripePaymentButton = ({
         size="large"
         isLoading={submitting}
         data-testid={dataTestId}
+        className="w-full mt-6 bg-orange-500 hover:bg-orange-600 active:scale-95 text-white font-semibold text-lg rounded-lg shadow-md transition-all hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
       >
+        <ShoppingBag size={20} />
         Оформить заказ
       </Button>
       <ErrorMessage
@@ -179,7 +182,9 @@ const ManualTestPaymentButton = ({ notReady }: { notReady: boolean }) => {
         onClick={handlePayment}
         size="large"
         data-testid="submit-order-button"
+        className="w-full mt-6 bg-orange-500 hover:bg-orange-600 active:scale-95 text-white font-semibold text-lg rounded-lg shadow-md transition-all hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
       >
+        <CheckCircle size={20} />
         Оформить заказ
       </Button>
       <ErrorMessage

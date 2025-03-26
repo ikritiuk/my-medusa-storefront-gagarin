@@ -5,13 +5,11 @@ import React from "react"
 import { useFormStatus } from "react-dom"
 
 export function SubmitButton({
-  children,
-  variant = "primary",
-  className,
-  "data-testid": dataTestId,
-}: {
+                               children,
+                               className = "",
+                               "data-testid": dataTestId,
+                             }: {
   children: React.ReactNode
-  variant?: "primary" | "secondary" | "transparent" | "danger" | null
   className?: string
   "data-testid"?: string
 }) {
@@ -20,11 +18,10 @@ export function SubmitButton({
   return (
     <Button
       size="large"
-      className={className}
       type="submit"
       isLoading={pending}
-      variant={variant || "primary"}
       data-testid={dataTestId}
+      className={`w-full bg-orange-500 hover:bg-orange-600 active:scale-95 text-white font-semibold text-lg rounded-lg shadow-md transition-all hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed ${className}`}
     >
       {children}
     </Button>

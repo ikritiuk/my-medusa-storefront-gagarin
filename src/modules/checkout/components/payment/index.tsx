@@ -1,5 +1,5 @@
 "use client"
-
+import { CheckCircle, CreditCard } from "lucide-react"
 import { RadioGroup } from "@headlessui/react"
 import { isStripe as isStripeFunc, paymentInfoMap } from "@lib/constants"
 import { initiatePaymentSession } from "@lib/data/cart"
@@ -187,7 +187,7 @@ const Payment = ({
 
           <Button
             size="large"
-            className="mt-6"
+            className={`w-full mt-6 bg-orange-500 hover:bg-orange-600 active:scale-95 text-white font-semibold text-lg rounded-lg shadow-md transition-all hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2`}
             onClick={handleSubmit}
             isLoading={isLoading}
             disabled={
@@ -196,9 +196,17 @@ const Payment = ({
             }
             data-testid="submit-payment-button"
           >
-            {!activeSession && isStripeFunc(selectedPaymentMethod)
-              ? " Enter card details"
-              : "Перейти к проверке заказа"}
+            {!activeSession && isStripeFunc(selectedPaymentMethod) ? (
+              <>
+                <CreditCard size={20} />
+                Ввести данные карты
+              </>
+            ) : (
+              <>
+                Перейти к проверке заказа
+                <CheckCircle size={20} />
+              </>
+            )}
           </Button>
         </div>
 
