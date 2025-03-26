@@ -21,7 +21,7 @@ export function SubmitButton({
       type="submit"
       isLoading={pending}
       data-testid={dataTestId}
-      className={`w-full bg-orange-500 hover:bg-orange-600 active:scale-95 text-white font-semibold text-lg rounded-lg shadow-md transition-all hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed ${className}`}
+      className={`bg-orange-500 hover:bg-orange-600 active:scale-95 text-white font-semibold text-lg rounded-lg shadow-md transition-all hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed ${className}`}
     >
       {children}
     </Button>

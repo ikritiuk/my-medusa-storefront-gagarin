@@ -186,7 +186,7 @@ const Payment = ({
 
           <Button
             size="large"
-            className={`w-full mt-6 bg-orange-500 hover:bg-orange-600 active:scale-95 text-white font-semibold text-lg rounded-lg shadow-md transition-all hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2`}
+            className={`mt-6 bg-orange-500 hover:bg-orange-600 active:scale-95 text-white font-semibold text-lg rounded-lg shadow-md transition-all hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2`}
             onClick={handleSubmit}
             isLoading={isLoading}
             disabled={
