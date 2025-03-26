@@ -171,6 +171,7 @@ const Hero = () => {
             className="sm:md:block lg:hidden w-full border-b border-ui-border-base relative overflow-hidden flex items-center justify-center"
             style={{ height: "75vh" }}
             onClick={handleVideoClick}
+            ref={categoriesRef}
           >
             <div
               className="absolute justify-center inset-0 flex items-center flex-col bg-black bg-opacity-50 text-white text-center px-4 z-20 animate-fade-in"
@@ -196,7 +197,6 @@ const Hero = () => {
               muted
               playsInline
               preload="auto"
-              ref={categoriesRef}
             />
           </div>
 
