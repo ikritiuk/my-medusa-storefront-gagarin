@@ -100,18 +100,6 @@ const Hero = () => {
         />
       </div>
 
-      {/* Title Section with motion highlight */}
-      <motion.div
-        ref={categoriesDesktopRef}
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.7 }}
-        viewport={{ once: true }}
-        className="hidden lg:block w-full text-center my-6"
-      >
-        <h2 className="text-xl font-bold border-b-2 border-orange-500 inline-block pb-1">Категории товаров</h2>
-      </motion.div>
-
       {/* Title Section */}
       <div className="hidden lg:block w-full text-center my-6"
            ref={categoriesDesktopRef}>
