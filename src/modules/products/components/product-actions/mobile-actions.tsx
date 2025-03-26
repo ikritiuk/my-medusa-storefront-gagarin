@@ -118,7 +118,8 @@ const MobileActions: React.FC<MobileActionsProps> = ({
                 inStock={inStock}
                 variant={variant}
                 isAdding={isAdding}
-              /></div>
+              />
+            </div>
           </div>
         </Transition>
       </div>
