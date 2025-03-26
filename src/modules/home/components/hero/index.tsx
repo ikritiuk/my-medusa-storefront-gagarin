@@ -5,10 +5,17 @@ import Image from "next/image"
 
 const Hero = () => {
   const categoriesRef = useRef(null)
+  const categoriesDesktopRef = useRef(null)
 
   const handleVideoClick = () => {
     if (categoriesRef.current) {
       categoriesRef.current.scrollIntoView({ behavior: "smooth" })
+    }
+  }
+
+  const handleDesktopButtonClick = () => {
+    if (categoriesDesktopRef.current) {
+      categoriesDesktopRef.current.scrollIntoView({ behavior: "smooth" })
     }
   }
   return (
@@ -33,10 +40,11 @@ const Hero = () => {
             </div>
 
             <div className="mt-8">
-              <a href="/categories/dji-drones"
-                 className="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 px-6 rounded-lg text-lg shadow-md transition">
-                Купить дрон
-              </a>
+              <button
+                onClick={handleDesktopButtonClick}
+                className="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 px-6 rounded-lg text-lg shadow-md transition">
+                В Магазин
+              </button>
             </div>
           </div>
         </div>
@@ -54,7 +62,8 @@ const Hero = () => {
       </div>
 
       {/* Title Section */}
-      <div className="hidden lg:block w-full text-center my-6">
+      <div className="hidden lg:block w-full text-center my-6"
+           ref={categoriesDesktopRef}>
         <h2 className="text-xl font-bold">Категории товаров</h2>
       </div>
 
@@ -176,7 +185,8 @@ const Hero = () => {
               className="absolute justify-center inset-0 flex items-center flex-col bg-black bg-opacity-50 text-white text-center px-4 z-20 animate-fade-in"
             >
 
-              <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold leading-tight max-w-md mx-auto text-white drop-shadow-lg">
+              <h1
+                className="text-2xl sm:text-3xl md:text-4xl font-bold leading-tight max-w-md mx-auto text-white drop-shadow-lg">
                 Откройте мир <span className="text-[#FFC107]">DJI</span>! 🚀
               </h1>
               <p className="mt-3 text-base sm:text-lg max-w-sm mx-auto text-white drop-shadow-md">
