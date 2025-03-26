@@ -11,6 +11,8 @@ import { useParams } from "next/navigation"
 import { useEffect, useMemo, useRef, useState } from "react"
 import ProductPrice from "../product-price"
 import MobileActions from "./mobile-actions"
+import AddToCartButton from "../product-actions"
+
 
 type ProductActionsProps = {
   product: HttpTypes.StoreProduct
@@ -140,25 +142,8 @@ export default function ProductActions({
 
         <ProductPrice product={product} variant={selectedVariant} />
 
-        <Button
-          onClick={handleAddToCart}
-          disabled={
-            !inStock ||
-            !selectedVariant ||
-            !!disabled ||
-            isAdding ||
-            !isValidVariant
-          }
-          className={`w-full h-10 bg-orange-500 hover:bg-orange-600 text-white font-semibold rounded-lg shadow-md transition hover:animate-pulse disabled:opacity-50 disabled:cursor-not-allowed`}
-          isLoading={isAdding}
-          data-testid="add-product-button"
-        >
-          {!selectedVariant && !options
-            ? "Выбрать вариант"
-            : !inStock || !isValidVariant
-              ? "Нет в наличии"
-              : "Добавить в корзину"}
-        </Button>
+      <AddToCartButton/>
+
         <MobileActions
           product={product}
           variant={selectedVariant}

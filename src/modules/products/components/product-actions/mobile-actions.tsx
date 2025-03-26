@@ -9,6 +9,8 @@ import X from "@modules/common/icons/x"
 import { getProductPrice } from "@lib/util/get-product-price"
 import OptionSelect from "./option-select"
 import { HttpTypes } from "@medusajs/types"
+import AddToCartButtonMobile from "../product-actions"
+
 
 type MobileActionsProps = {
   product: HttpTypes.StoreProduct
@@ -111,19 +113,7 @@ const MobileActions: React.FC<MobileActionsProps> = ({
                   <ChevronDown />
                 </div>
               </Button>
-              <Button
-                onClick={handleAddToCart}
-                disabled={!inStock || !variant}
-                className={`w-full bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 px-6 rounded-lg text-lg shadow-md transition hover:animate-pulse disabled:opacity-50 disabled:cursor-not-allowed`}
-                isLoading={isAdding}
-                data-testid="mobile-cart-button"
-              >
-                {!variant
-                  ? "Выбрать вариант"
-                  : !inStock
-                    ? "Нет в наличии"
-                    : "Добавить в корзину"}
-              </Button>
+              <AddToCartButtonMobile/>
             </div>
           </div>
         </Transition>
