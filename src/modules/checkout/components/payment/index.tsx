@@ -1,5 +1,4 @@
 "use client"
-import { CheckCircle, CreditCard } from "lucide-react"
 import { RadioGroup } from "@headlessui/react"
 import { isStripe as isStripeFunc, paymentInfoMap } from "@lib/constants"
 import { initiatePaymentSession } from "@lib/data/cart"
@@ -204,7 +203,7 @@ const Payment = ({
             ) : (
               <>
                 Перейти к проверке заказа
-                <CheckCircle size={20} />
+                <CheckCircleSolid size={20} />
               </>
             )}
           </Button>
