@@ -16,6 +16,7 @@ import LocalizedClientLink from "@modules/common/components/localized-client-lin
 import Thumbnail from "@modules/products/components/thumbnail"
 import { usePathname } from "next/navigation"
 import { Fragment, useEffect, useRef, useState } from "react"
+import { ShoppingCart } from "lucide-react"
 
 const CartDropdown = ({
   cart: cartState,
@@ -192,10 +193,11 @@ const CartDropdown = ({
                   </div>
                   <LocalizedClientLink href="/cart" passHref>
                     <Button
-                      className="w-full"
+                      className="w-full h-10 bg-orange-500 hover:bg-orange-600 active:scale-95 text-white rounded-lg shadow-md transition-all hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
                       size="large"
                       data-testid="go-to-cart-button"
                     >
+                      <ShoppingCart size={20} />
                       Перейти в корзину
                     </Button>
                   </LocalizedClientLink>
