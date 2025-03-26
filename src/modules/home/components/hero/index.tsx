@@ -171,7 +171,6 @@ const Hero = () => {
             className="sm:md:block lg:hidden w-full border-b border-ui-border-base relative overflow-hidden flex items-center justify-center"
             style={{ height: "75vh" }}
             onClick={handleVideoClick}
-            ref={categoriesRef}
           >
             <div
               className="absolute justify-center inset-0 flex items-center flex-col bg-black bg-opacity-50 text-white text-center px-4 z-20 animate-fade-in"
@@ -201,6 +200,7 @@ const Hero = () => {
           </div>
 
           <div
+            ref={categoriesRef}
             className="w-full text-center py-4 px-4 bg-white shadow-md"
           >
             <h2 className="text-lg font-semibold">Категории</h2>
