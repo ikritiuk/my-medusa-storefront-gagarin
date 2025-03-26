@@ -196,11 +196,11 @@ const Hero = () => {
               muted
               playsInline
               preload="auto"
+              ref={categoriesRef}
             />
           </div>
 
           <div
-            ref={categoriesRef}
             className="w-full text-center py-4 px-4 bg-white shadow-md"
           >
             <h2 className="text-lg font-semibold">Категории</h2>
