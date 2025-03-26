@@ -24,7 +24,7 @@ const AddToCartButton = ({ handleAddToCart, inStock, selectedVariant, disabled, 
       data-testid="add-product-button"
     >
       {added
-        ? "✅ Добавлено!"
+        ? "Добавлено!"
         : !selectedVariant && !options
           ? "Выбрать вариант"
           : !inStock || !isValidVariant

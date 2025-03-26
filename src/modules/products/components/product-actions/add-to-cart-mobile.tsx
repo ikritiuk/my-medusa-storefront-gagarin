@@ -22,7 +22,7 @@ const AddToCartButtonMobile = ({ handleAddToCart, inStock, variant, isAdding }) 
       data-testid="mobile-cart-button"
     >
       {added
-        ? "✅ Добавлено!"
+        ? "Добавлено!"
         : !variant
           ? "Выбрать вариант"
           : !inStock
