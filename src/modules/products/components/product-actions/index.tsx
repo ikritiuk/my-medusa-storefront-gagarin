@@ -142,7 +142,15 @@ export default function ProductActions({
 
         <ProductPrice product={product} variant={selectedVariant} />
 
-      <AddToCartButton/>
+        <AddToCartButton
+          handleAddToCart={handleAddToCart}
+          inStock={inStock}
+          selectedVariant={selectedVariant}
+          disabled={disabled}
+          isAdding={isAdding}
+          isValidVariant={isValidVariant}
+          options={options}
+        />
 
         <MobileActions
           product={product}

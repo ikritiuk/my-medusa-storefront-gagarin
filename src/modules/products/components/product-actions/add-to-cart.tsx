@@ -2,7 +2,7 @@
 import { useState } from "react"
 import { motion } from "framer-motion"
 
-const AddToCartButtonMobile = ({ handleAddToCart, inStock, variant, isAdding }) => {
+  const AddToCartButtonMobile = ({ handleAddToCart, inStock, variant, isAdding }) => {
   const [added, setAdded] = useState(false)
 
   const handleClick = () => {
