@@ -1,4 +1,5 @@
 "use client"
+import { ShoppingCart } from "lucide-react"
 
 import {
   Popover,
@@ -17,6 +18,7 @@ import Thumbnail from "@modules/products/components/thumbnail"
 import { usePathname } from "next/navigation"
 import { Fragment, useEffect, useRef, useState } from "react"
 import { ShoppingCart } from "lucide-react"
+import * as React from "react"
 
 const CartDropdown = ({
   cart: cartState,
@@ -82,6 +84,7 @@ const CartDropdown = ({
     >
       <Popover className="relative h-full">
         <PopoverButton className="h-full">
+          <ShoppingCart size={20} />
           <LocalizedClientLink
             className="hover:text-ui-fg-base"
             href="/cart"
