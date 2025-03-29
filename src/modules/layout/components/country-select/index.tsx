@@ -121,7 +121,7 @@ const CountrySelect = ({ toggleState, regions }: CountrySelectProps) => {
                       }}
                       countryCode={o?.country ?? ""}
                     />{" "}
-                    {o?.label}
+                    {translateCountryToRussian(o?.label)}
                   </ListboxOption>
                 )
               })}
