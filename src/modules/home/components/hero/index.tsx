@@ -116,10 +116,9 @@ const Hero = () => {
           preload="auto"
         />
       </div>
-      <div ref={categoriesDesktopRef}>
-      </div>
       {/* Title Section */}
-      <div className="hidden lg:block w-full text-center my-6">
+      <div className="hidden lg:block w-full text-center my-6"
+           ref={categoriesDesktopRef}>
         <h2 className="text-xl font-bold">Категории товаров</h2>
       </div>
 
@@ -284,9 +283,8 @@ const Hero = () => {
               preload="auto"
             />
           </div>
-          <div ref={categoriesRef}>
-          </div>
           <div
+            ref={categoriesRef}
             className="w-full text-center py-4 px-4 bg-white shadow-md"
           >
             <h2 className="text-lg font-semibold">Категории</h2>
