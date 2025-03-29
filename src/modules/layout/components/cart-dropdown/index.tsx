@@ -104,7 +104,7 @@ const CartDropdown = ({
             data-testid="nav-cart-dropdown"
           >
             <div className="p-4 flex items-center justify-center">
-              <h3 className="text-large-semi">Cart</h3>
+              <h3 className="text-large-semi">Корзина</h3>
             </div>
             {cartState && cartState.items?.length ? (
               <>
