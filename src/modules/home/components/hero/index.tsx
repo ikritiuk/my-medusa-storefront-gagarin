@@ -33,9 +33,17 @@ const Hero = () => {
   }
 
   const handleDesktopButtonClick = () => {
-    if (categoriesDesktopRef.current) {
-      categoriesDesktopRef.current.scrollIntoView({ behavior: "smooth" })
-    }
+    if (!categoriesDesktopRef.current) return
+
+    setTimeout(() => {
+      const rect = categoriesDesktopRef.current.getBoundingClientRect()
+      const scrollTop = window.scrollY + rect.top - 60 // adjust offset if needed
+
+      window.scrollTo({
+        top: scrollTop,
+        behavior: "smooth",
+      })
+    }, 50)
   }
 
   const fadeInUp = {
