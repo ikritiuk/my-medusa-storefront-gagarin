@@ -42,9 +42,6 @@ const Login = ({ setCurrentView }: Props) => {
           />
         </div>
         <ErrorMessage error={message} data-testid="login-error-message" />
-        <SubmitButton data-testid="sign-in-button" className="w-full mt-6">
-          Войти
-        </SubmitButton>
       </form>
       <span className="text-center text-ui-fg-base text-small-regular mt-6">
        Нет профиля?{" "}
