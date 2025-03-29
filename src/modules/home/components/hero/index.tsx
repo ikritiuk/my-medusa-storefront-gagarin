@@ -23,7 +23,7 @@ const Hero = () => {
     // Wait for layout to settle
     setTimeout(() => {
       const rect = categoriesRef.current.getBoundingClientRect()
-      const scrollTop = window.scrollY + rect.top - 130 // adjust this as needed
+      const scrollTop = window.scrollY + rect.top - 70 // adjust this as needed
 
       window.scrollTo({
         top: scrollTop,
