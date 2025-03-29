@@ -1,6 +1,7 @@
 "use client"
 import { useState } from "react"
 import { motion } from "framer-motion"
+import { ShoppingCart } from "lucide-react"
 
 const AddToCartButton = ({ handleAddToCart, inStock, selectedVariant, disabled, isAdding, isValidVariant, options }) => {
   const [added, setAdded] = useState(false)
@@ -20,9 +21,10 @@ const AddToCartButton = ({ handleAddToCart, inStock, selectedVariant, disabled, 
       disabled={
         !inStock || !selectedVariant || disabled || isAdding || !isValidVariant
       }
-      className={`w-full h-10 bg-orange-500 hover:bg-orange-600 text-white font-semibold rounded-lg shadow-md transition-all hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed`}
+      className="w-full h-10 bg-orange-500 hover:bg-orange-600 text-white font-semibold rounded-lg shadow-md transition-all hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
       data-testid="add-product-button"
     >
+      {!added && <ShoppingCart size={18} />}
       {added
         ? "Добавлено!"
         : !selectedVariant && !options
