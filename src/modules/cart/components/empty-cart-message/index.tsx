@@ -15,7 +15,7 @@ const EmptyCartMessage = () => {
         Ваша корзина пуста
       </Text>
       <div>
-        <InteractiveLink href="/store">В магазин</InteractiveLink>
+        <InteractiveLink href="/">На главную</InteractiveLink>
       </div>
     </div>
   )
