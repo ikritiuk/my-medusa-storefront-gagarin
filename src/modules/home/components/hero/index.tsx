@@ -18,17 +18,18 @@ const Hero = () => {
   const categoriesDesktopRef = useRef(null)
 
   const handleVideoClick = () => {
-    if (categoriesRef.current) {
-      const offsetTop =
-        categoriesRef.current.getBoundingClientRect().top +
-        window.pageYOffset -
-        40 // ← Better offset (adjust if you have a sticky header)
+    if (!categoriesRef.current) return
+
+    // Wait for layout to settle
+    setTimeout(() => {
+      const rect = categoriesRef.current.getBoundingClientRect()
+      const scrollTop = window.scrollY + rect.top - 20 // adjust this as needed
 
       window.scrollTo({
-        top: offsetTop,
+        top: scrollTop,
         behavior: "smooth",
       })
-    }
+    }, 50)
   }
 
   const handleDesktopButtonClick = () => {
