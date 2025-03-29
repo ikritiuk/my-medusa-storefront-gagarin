@@ -108,10 +108,10 @@ const Hero = () => {
           preload="auto"
         />
       </div>
-
+      <div ref={categoriesDesktopRef}>
+      </div>
       {/* Title Section */}
-      <div className="hidden lg:block w-full text-center my-6"
-           ref={categoriesDesktopRef}>
+      <div className="hidden lg:block w-full text-center my-6">
         <h2 className="text-xl font-bold">Категории товаров</h2>
       </div>
 
@@ -276,13 +276,26 @@ const Hero = () => {
               preload="auto"
             />
           </div>
-
+          <div ref={categoriesRef}>
+          </div>
           <div
-            ref={categoriesRef}
             className="w-full text-center py-4 px-4 bg-white shadow-md"
           >
             <h2 className="text-lg font-semibold">Категории</h2>
           </div>
+        </div>
+        <div
+          className="relative w-full text-center overflow-hidden rounded shadow-lg h-[250px] sm:h-[280px] md:h-2/3 lg:h-full">
+          <div className="absolute top-2 left-2 bg-black bg-opacity-50 text-white text-lg px-2 py-1 rounded z-10">
+            DJI Дроны
+          </div>
+          <Link href="/categories/dji-drones">
+            <img
+              src="https://medusajs-server.fra1.cdn.digitaloceanspaces.com/dji-drones.avif"
+              alt="DJI Дроны"
+              className="w-full h-full object-cover rounded shadow-lg transition-transform duration-500 hover:scale-110"
+            />
+          </Link>
         </div>
         {/* Grid with Swipeable Effect */}
         <div className="flex items-center justify-between w-full gap-4">
