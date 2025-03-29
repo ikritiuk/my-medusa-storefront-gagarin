@@ -19,7 +19,15 @@ const Hero = () => {
 
   const handleVideoClick = () => {
     if (categoriesRef.current) {
-      categoriesRef.current.scrollIntoView({ behavior: "smooth" })
+      const offsetTop =
+        categoriesRef.current.getBoundingClientRect().top +
+        window.pageYOffset -
+        20 // ← optional padding or fixed header height
+
+      window.scrollTo({
+        top: offsetTop,
+        behavior: "smooth",
+      })
     }
   }
 
