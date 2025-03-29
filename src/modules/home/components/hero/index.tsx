@@ -22,7 +22,7 @@ const Hero = () => {
       const offsetTop =
         categoriesRef.current.getBoundingClientRect().top +
         window.pageYOffset -
-        120 // ← optional padding or fixed header height
+        40 // ← Better offset (adjust if you have a sticky header)
 
       window.scrollTo({
         top: offsetTop,
