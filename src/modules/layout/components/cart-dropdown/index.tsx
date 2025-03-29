@@ -1,5 +1,4 @@
 "use client"
-import { ShoppingCart } from "lucide-react"
 
 import {
   Popover,
