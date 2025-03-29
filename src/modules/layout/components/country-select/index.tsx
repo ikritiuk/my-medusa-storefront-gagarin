@@ -87,7 +87,7 @@ const CountrySelect = ({ toggleState, regions }: CountrySelectProps) => {
                   }}
                   countryCode={current.country ?? ""}
                 />
-                {current.label}
+                {translateCountryToRussian(current.label)}
               </span>
             )}
           </div>
