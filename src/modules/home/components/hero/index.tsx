@@ -304,7 +304,11 @@ const Hero = () => {
           {/* Brand Images */}
           <div className="flex flex-col items-center gap-4">
             {/* Brand Images */}
-            <div
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
               className="relative w-full text-center overflow-hidden rounded shadow-lg h-[250px] sm:h-[280px] md:h-2/3 lg:h-full">
               <div className="absolute top-2 left-2 bg-black bg-opacity-50 text-white text-lg px-2 py-1 rounded z-10">
                 DJI Дроны
@@ -316,11 +320,15 @@ const Hero = () => {
                   className="w-full h-full object-cover rounded shadow-lg transition-transform duration-500 hover:scale-110"
                 />
               </Link>
-            </div>
+            </motion.div>
 
-            {/* Grid with Swipeable Effect */}
             <div className="flex items-center justify-between w-full gap-4">
-              <div className="relative w-1/2 text-center overflow-hidden rounded shadow-lg">
+              <motion.div
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+                className="relative w-1/2 text-center overflow-hidden rounded shadow-lg">
                 <div
                   className="absolute top-2 left-2 bg-black bg-opacity-50 text-white text-lg px-2 py-1 rounded transition-all duration-300 group-hover:shadow-lg group-hover:text-yellow-400 z-10">
                   DJI Очки и системы управления
@@ -332,8 +340,13 @@ const Hero = () => {
                     className="rounded shadow-lg transition-transform duration-500 hover:scale-110"
                   />
                 </Link>
-              </div>
-              <div className="relative w-1/2 text-center overflow-hidden rounded shadow-lg aspect-square">
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+                className="relative w-1/2 text-center overflow-hidden rounded shadow-lg aspect-square">
                 <div className="absolute top-2 left-2 bg-black bg-opacity-50 text-white text-lg px-2 py-1 rounded z-10">
                   DJI Камеры
                 </div>
@@ -344,12 +357,16 @@ const Hero = () => {
                     className="w-full h-full object-cover rounded shadow-lg transition-transform duration-500 hover:scale-110"
                   />
                 </Link>
-              </div>
+              </motion.div>
             </div>
           </div>
 
           <div className="flex flex-col items-center gap-4 ">
-            <div
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
               className="relative w-full text-center overflow-hidden rounded shadow-lg h-[250px] sm:h-[280px] md:h-2/3 lg:h-full">
               <div className="absolute top-2 left-2 bg-black bg-opacity-50 text-white text-lg px-2 py-1 rounded z-10">
                 DJI Микрофоны
@@ -361,9 +378,14 @@ const Hero = () => {
                   className="w-full h-full object-cover rounded shadow-lg transition-transform duration-500 hover:scale-110"
                 />
               </Link>
-            </div>
+            </motion.div>
             <div className="flex items-center justify-between w-full gap-4">
-              <div className="relative w-1/2 text-center overflow-hidden rounded shadow-lg">
+              <motion.div
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+                className="relative w-1/2 text-center overflow-hidden rounded shadow-lg">
                 <div
                   className="absolute top-2 left-2 bg-black bg-opacity-50 text-white text-lg px-2 py-1 rounded transition-all duration-300 group-hover:shadow-lg group-hover:text-yellow-400 z-10">
                   DJI Стабилизаторы
@@ -375,8 +397,13 @@ const Hero = () => {
                     className="rounded shadow-lg transition-transform duration-500 hover:scale-110"
                   />
                 </Link>
-              </div>
-              <div className="relative w-1/2 text-center overflow-hidden rounded shadow-lg">
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+                className="relative w-1/2 text-center overflow-hidden rounded shadow-lg">
                 <div
                   className="absolute top-2 left-2 bg-black bg-opacity-50 text-white text-lg px-2 py-1 rounded transition-all duration-300 group-hover:shadow-lg group-hover:text-yellow-400 z-10">
                   DJI Аккумуляторы, Запасные части и ремонтные комплекты
@@ -388,7 +415,7 @@ const Hero = () => {
                     className="rounded shadow-lg transition-transform duration-500 hover:scale-110"
                   />
                 </Link>
-              </div>
+              </motion.div>
             </div>
           </div>
         </div>
@@ -396,6 +423,5 @@ const Hero = () => {
     </div>
   )
 }
-
 export default Hero
 
