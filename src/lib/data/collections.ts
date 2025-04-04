@@ -64,7 +64,7 @@ export const getCollectionByHandle = async (
     ...(await getCacheOptions("collections")),
   }
 
-  const region = await getRegion(countryCode)
+  const region = await getRegion("ru")
 
   const query: Record<string, string> = {
     handle,
