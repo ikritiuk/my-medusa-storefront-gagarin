@@ -67,6 +67,7 @@ export default async function CategoryPage(props: Props) {
       category={productCategory}
       sortBy={sortBy}
       page={page}
+      countryCode='ru'
     />
   )
 }

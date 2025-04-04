@@ -60,6 +60,7 @@ export default async function CollectionPage(props: Props) {
       collection={collection}
       page={page}
       sortBy={sortBy}
+      countryCode="ru"
     />
   )
 }
