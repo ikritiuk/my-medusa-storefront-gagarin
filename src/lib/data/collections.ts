@@ -70,9 +70,9 @@ export const getCollectionByHandle = async (
     fields: "*products",
   }
 
-  if (region?.id) {
-    query.region_id = region.id
-  }
+  // if (region?.id) {
+  //   query.region_id = region.id
+  // }
 
   return sdk.client
     .fetch<HttpTypes.StoreCollectionListResponse>(`/store/collections`, {
