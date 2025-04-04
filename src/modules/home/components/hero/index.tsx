@@ -37,7 +37,7 @@ const Hero = () => {
 
     setTimeout(() => {
       const rect = categoriesDesktopRef.current.getBoundingClientRect()
-      const scrollTop = window.scrollY + rect.top - 75 // adjust offset if needed
+      const scrollTop = window.scrollY + rect.top - 80 // adjust offset if needed
 
       window.scrollTo({
         top: scrollTop,
