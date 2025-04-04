@@ -10,27 +10,24 @@ export const metadata: Metadata = {
 
 type Params = {
   searchParams: Promise<{
-    q?:string
+    q?: string
     sortBy?: SortOptions
     page?: string
-  }>
-  params: Promise<{
-    countryCode: string
   }>
 }
 
 export default async function StorePage(props: Params) {
-  const params = await props.params;
-  const searchParams = await props.searchParams;
-
+  const searchParams = await props.searchParams
   const { q, sortBy, page } = searchParams
+
+  const DEFAULT_COUNTRY_CODE = "ru" // or fetch from cookies in future
 
   return (
     <StoreTemplate
       query={q}
       sortBy={sortBy}
       page={page}
-      countryCode={params.countryCode}
+      countryCode={DEFAULT_COUNTRY_CODE}
     />
   )
 }
