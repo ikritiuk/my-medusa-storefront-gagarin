@@ -94,9 +94,11 @@ const CartDropdown = ({
         </div>
         <LocalizedClientLink
           href="/cart"
-          className="flex md:hidden items-center p-2"
+          className="hidden md:flex h-full items-center gap-2 px-2 hover:text-ui-fg-base text-base font-medium leading-none"
+          data-testid="nav-cart-link"
         >
-          <ShoppingCart size={22} />
+          <ShoppingCart size={20} />
+          <span>{`Корзина (${totalItems})`}</span>
         </LocalizedClientLink>
         <Transition
           show={cartDropdownOpen}
