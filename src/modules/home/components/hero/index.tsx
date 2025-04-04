@@ -306,10 +306,16 @@ const Hero = () => {
           <div className="flex flex-col items-center gap-4">
             {/* Brand Images */}
             <motion.div
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
+              initial={{ opacity: 0, y: 50, scale: 0.95 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
+              transition={{
+                type: "spring",
+                stiffness: 60,
+                damping: 15,
+                mass: 0.6,
+                delay: 0.1, // для каскада (можешь увеличивать)
+              }}
+              viewport={{ once: true, amount: 0.3 }} // появится, когда 30% блока видно
               className="relative w-full text-center overflow-hidden rounded shadow-lg h-[250px] sm:h-[280px] md:h-2/3 lg:h-full">
               <div className="absolute top-2 left-2 bg-black bg-opacity-50 text-white text-lg px-2 py-1 rounded z-10">
                 DJI Дроны
@@ -325,10 +331,16 @@ const Hero = () => {
 
             <div className="flex items-center justify-between w-full gap-4">
               <motion.div
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
+                initial={{ opacity: 0, y: 50, scale: 0.95 }}
+                whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                transition={{
+                  type: "spring",
+                  stiffness: 60,
+                  damping: 15,
+                  mass: 0.6,
+                  delay: 0.1, // для каскада (можешь увеличивать)
+                }}
+                viewport={{ once: true, amount: 0.3 }} // появится, когда 30% блока видно
                 className="relative w-1/2 text-center overflow-hidden rounded shadow-lg">
                 <div
                   className="absolute top-2 left-2 bg-black bg-opacity-50 text-white text-lg px-2 py-1 rounded transition-all duration-300 group-hover:shadow-lg group-hover:text-yellow-400 z-10">
@@ -343,10 +355,16 @@ const Hero = () => {
                 </Link>
               </motion.div>
               <motion.div
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
+                initial={{ opacity: 0, y: 50, scale: 0.95 }}
+                whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                transition={{
+                  type: "spring",
+                  stiffness: 60,
+                  damping: 15,
+                  mass: 0.6,
+                  delay: 0.1, // для каскада (можешь увеличивать)
+                }}
+                viewport={{ once: true, amount: 0.3 }} // появится, когда 30% блока видно
                 className="relative w-1/2 text-center overflow-hidden rounded shadow-lg aspect-square">
                 <div className="absolute top-2 left-2 bg-black bg-opacity-50 text-white text-lg px-2 py-1 rounded z-10">
                   DJI Камеры
@@ -364,10 +382,16 @@ const Hero = () => {
 
           <div className="flex flex-col items-center gap-4 ">
             <motion.div
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
+              initial={{ opacity: 0, y: 50, scale: 0.95 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
+              transition={{
+                type: "spring",
+                stiffness: 60,
+                damping: 15,
+                mass: 0.6,
+                delay: 0.1, // для каскада (можешь увеличивать)
+              }}
+              viewport={{ once: true, amount: 0.3 }} // появится, когда 30% блока видно
               className="relative w-full text-center overflow-hidden rounded shadow-lg h-[250px] sm:h-[280px] md:h-2/3 lg:h-full">
               <div className="absolute top-2 left-2 bg-black bg-opacity-50 text-white text-lg px-2 py-1 rounded z-10">
                 DJI Микрофоны
@@ -382,10 +406,16 @@ const Hero = () => {
             </motion.div>
             <div className="flex items-center justify-between w-full gap-4">
               <motion.div
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
+                initial={{ opacity: 0, y: 50, scale: 0.95 }}
+                whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                transition={{
+                  type: "spring",
+                  stiffness: 60,
+                  damping: 15,
+                  mass: 0.6,
+                  delay: 0.1, // для каскада (можешь увеличивать)
+                }}
+                viewport={{ once: true, amount: 0.3 }} // появится, когда 30% блока видно
                 className="relative w-1/2 text-center overflow-hidden rounded shadow-lg">
                 <div
                   className="absolute top-2 left-2 bg-black bg-opacity-50 text-white text-lg px-2 py-1 rounded transition-all duration-300 group-hover:shadow-lg group-hover:text-yellow-400 z-10">
@@ -400,10 +430,16 @@ const Hero = () => {
                 </Link>
               </motion.div>
               <motion.div
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
+                initial={{ opacity: 0, y: 50, scale: 0.95 }}
+                whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                transition={{
+                  type: "spring",
+                  stiffness: 60,
+                  damping: 15,
+                  mass: 0.6,
+                  delay: 0.1, // для каскада (можешь увеличивать)
+                }}
+                viewport={{ once: true, amount: 0.3 }} // появится, когда 30% блока видно
                 className="relative w-1/2 text-center overflow-hidden rounded shadow-lg">
                 <div
                   className="absolute top-2 left-2 bg-black bg-opacity-50 text-white text-lg px-2 py-1 rounded transition-all duration-300 group-hover:shadow-lg group-hover:text-yellow-400 z-10">
