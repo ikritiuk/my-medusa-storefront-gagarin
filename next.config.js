@@ -40,8 +40,13 @@ const nextConfig = {
         protocol: "https",
         hostname: "medusajs-server.fra1.cdn.digitaloceanspaces.com",
       },
-
     ],
+  },
+
+  i18n: {
+    locales: ['ru'],         // Только одна локаль
+    defaultLocale: 'ru',     // Делаем её дефолтной
+    localeDetection: true,   // Автоматическое определение (можно отключить, если не нужно)
   },
 }
 
