@@ -82,14 +82,10 @@ const CartDropdown = ({
       onMouseLeave={close}
     >
       <Popover className="relative h-full">
-        <LocalizedClientLink
-          href="/cart"
-          className="h-full flex items-center gap-2 px-2 hover:text-ui-fg-base text-base font-medium leading-none"
-          data-testid="nav-cart-link"
-        >
+        <PopoverButton as={LocalizedClientLink} href="/cart" className="h-full flex items-center gap-2 px-2 hover:text-ui-fg-base" data-testid="nav-cart-link">
           <ShoppingCart size={20} />
-          <span>{`Корзина1 (${totalItems})`}</span>
-        </LocalizedClientLink>
+          <span>{`Корзина (${totalItems})`}</span>
+        </PopoverButton>
         <Transition
           show={cartDropdownOpen}
           as={Fragment}
