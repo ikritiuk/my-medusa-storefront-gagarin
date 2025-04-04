@@ -5,7 +5,6 @@ import { HttpTypes } from "@medusajs/types"
 import { getCacheOptions } from "./cookies"
 import { getRegion } from "./regions"
 
-const DEFAULT_COUNTRY_CODE = "ru"
 
 /**
  * Retrieve a collection by its ID
@@ -59,7 +58,7 @@ export const listCollections = async (
  */
 export const getCollectionByHandle = async (
   handle: string,
-  countryCode: string = DEFAULT_COUNTRY_CODE
+  countryCode: string = 'ru'
 ): Promise<HttpTypes.StoreCollection> => {
   const next = {
     ...(await getCacheOptions("collections")),
