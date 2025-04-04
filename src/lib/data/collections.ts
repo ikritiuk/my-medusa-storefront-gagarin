@@ -58,7 +58,6 @@ export const listCollections = async (
  */
 export const getCollectionByHandle = async (
   handle: string,
-  countryCode: string = 'ru'
 ): Promise<HttpTypes.StoreCollection> => {
   const next = {
     ...(await getCacheOptions("collections")),
