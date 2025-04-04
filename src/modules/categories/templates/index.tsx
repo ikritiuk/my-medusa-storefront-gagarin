@@ -88,7 +88,7 @@ export default function CategoryTemplate({
             sortBy={sort}
             page={pageNumber}
             categoryId={category.id}
-            countryCode={countryCode}
+            countryCode="ru"
           />
         </Suspense>
       </div>

@@ -35,7 +35,7 @@ const StoreTemplate = ({
             query={query}
             sortBy={sort}
             page={pageNumber}
-            countryCode={countryCode}
+            countryCode="ru"
           />
         </Suspense>
       </div>

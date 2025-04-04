@@ -38,7 +38,7 @@ export default function CollectionTemplate({
             sortBy={sort}
             page={pageNumber}
             collectionId={collection.id}
-            countryCode={countryCode}
+            countryCode="ru"
           />
         </Suspense>
       </div>
