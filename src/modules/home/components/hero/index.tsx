@@ -19,6 +19,7 @@ const Hero = () => {
 
   const handleVideoClick = () => {
     if (!categoriesRef.current) return
+    if (navigator.vibrate) navigator.vibrate(30)
 
     // Wait for layout to settle
     setTimeout(() => {
@@ -37,7 +38,7 @@ const Hero = () => {
 
     setTimeout(() => {
       const rect = categoriesDesktopRef.current.getBoundingClientRect()
-      const scrollTop = window.scrollY + rect.top - 90 // adjust offset if needed
+      const scrollTop = window.scrollY + rect.top - 85 // adjust offset if needed
 
       window.scrollTo({
         top: scrollTop,
