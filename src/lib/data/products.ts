@@ -84,6 +84,47 @@ export const listProducts = async ({
 }
 
 export const listProductsWithSort = async ({
-  page = 0,
-  queryParams,
-  sortBy = "created_at_
+                                             page = 0,
+                                             queryParams,
+                                             sortBy = "created_at",
+                                             countryCode,
+                                           }: {
+  page?: number
+  queryParams?: HttpTypes.FindParams & HttpTypes.StoreProductParams
+  sortBy?: SortOptions
+  countryCode?: string
+}): Promise<{
+  response: { products: HttpTypes.StoreProduct[]; count: number }
+  nextPage: number | null
+  queryParams?: HttpTypes.FindParams & HttpTypes.StoreProductParams
+}> => {
+  const limit = queryParams?.limit || 12
+
+  const {
+    response: { products, count },
+  } = await listProducts({
+    pageParam: 0,
+    queryParams: {
+      ...queryParams,
+      limit: 100,
+    },
+    countryCode,
+  })
+
+  const sortedProducts = sortProducts(products, sortBy)
+
+  const pageParam = (page - 1) * limit
+
+  const nextPage = count > pageParam + limit ? pageParam + limit : null
+
+  const paginatedProducts = sortedProducts.slice(pageParam, pageParam + limit)
+
+  return {
+    response: {
+      products: paginatedProducts,
+      count,
+    },
+    nextPage,
+    queryParams,
+  }
+}
