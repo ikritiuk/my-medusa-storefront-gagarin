@@ -1,6 +1,6 @@
 "use client"
-import { translateCountryToRussian } from '../../../common/utils/utils';
 
+import { translateCountryToRussian } from "../../../common/utils/utils"
 import {
   Listbox,
   ListboxButton,
@@ -10,9 +10,8 @@ import {
 } from "@headlessui/react"
 import { Fragment, useEffect, useMemo, useState } from "react"
 import ReactCountryFlag from "react-country-flag"
-
 import { StateType } from "@lib/hooks/use-toggle-state"
-import { useParams, usePathname } from "next/navigation"
+import { usePathname } from "next/navigation"
 import { updateRegion } from "@lib/data/cart"
 import { HttpTypes } from "@medusajs/types"
 
@@ -27,66 +26,52 @@ type CountrySelectProps = {
   regions: HttpTypes.StoreRegion[]
 }
 
-const CountrySelect = ({ toggleState, regions }: CountrySelectProps) => {
-  const [current, setCurrent] = useState<
-    | { country: string | undefined; region: string; label: string | undefined }
-    | undefined
-  >(undefined)
+const DEFAULT_COUNTRY_CODE = "ru" // fallback
 
-  const { countryCode } = useParams()
-  const currentPath = usePathname().split(`/${countryCode}`)[1]
+const CountrySelect = ({ toggleState, regions }: CountrySelectProps) => {
+  const [current, setCurrent] = useState<CountryOption | undefined>(undefined)
+  const pathname = usePathname()
 
   const { state, close } = toggleState
 
   const options = useMemo(() => {
     return regions
-      ?.map((r) => {
-        return r.countries?.map((c) => ({
+      ?.flatMap((r) =>
+        r.countries?.map((c) => ({
           country: c.iso_2,
           region: r.id,
           label: c.display_name,
         }))
-      })
-      .flat()
+      )
       .sort((a, b) => (a?.label ?? "").localeCompare(b?.label ?? ""))
   }, [regions])
 
   useEffect(() => {
-    if (countryCode) {
-      const option = options?.find((o) => o?.country === countryCode)
-      setCurrent(option)
-    }
-  }, [options, countryCode])
+    // Optionally: read default region from cookie/localStorage
+    const defaultCode = DEFAULT_COUNTRY_CODE
+    const option = options?.find((o) => o.country === defaultCode)
+    setCurrent(option)
+  }, [options])
 
   const handleChange = (option: CountryOption) => {
-    updateRegion(option.country, currentPath)
+    // ⛔ Do NOT redirect based on URL anymore
+    updateRegion(option.country, pathname) // still updates region in cart/session
+    setCurrent(option)
     close()
   }
 
   return (
     <div>
-      <Listbox
-        as="span"
-        onChange={handleChange}
-        defaultValue={
-          countryCode
-            ? options?.find((o) => o?.country === countryCode)
-            : undefined
-        }
-      >
+      <Listbox as="span" onChange={handleChange} value={current}>
         <ListboxButton className="py-1 w-full">
           <div className="txt-compact-small flex items-start gap-x-2">
             <span>Доставка в:</span>
             {current && (
               <span className="txt-compact-small flex items-center gap-x-2">
-                {/* @ts-ignore */}
                 <ReactCountryFlag
                   svg
-                  style={{
-                    width: "16px",
-                    height: "16px",
-                  }}
-                  countryCode={current.country ?? ""}
+                  style={{ width: "16px", height: "16px" }}
+                  countryCode="ru"
                 />
                 {translateCountryToRussian(current.label)}
               </span>
@@ -105,26 +90,20 @@ const CountrySelect = ({ toggleState, regions }: CountrySelectProps) => {
               className="absolute -bottom-[calc(100%-36px)] left-0 xsmall:left-auto xsmall:right-0 max-h-[442px] overflow-y-scroll z-[900] bg-white drop-shadow-md text-small-regular uppercase text-black no-scrollbar rounded-rounded w-full"
               static
             >
-              {options?.map((o, index) => {
-                return (
-                  <ListboxOption
-                    key={index}
-                    value={o}
-                    className="py-2 hover:bg-gray-200 px-3 cursor-pointer flex items-center gap-x-2"
-                  >
-                    {/* @ts-ignore */}
-                    <ReactCountryFlag
-                      svg
-                      style={{
-                        width: "16px",
-                        height: "16px",
-                      }}
-                      countryCode={o?.country ?? ""}
-                    />{" "}
-                    {translateCountryToRussian(o?.label)}
-                  </ListboxOption>
-                )
-              })}
+              {options?.map((o, index) => (
+                <ListboxOption
+                  key={index}
+                  value={o}
+                  className="py-2 hover:bg-gray-200 px-3 cursor-pointer flex items-center gap-x-2"
+                >
+                  <ReactCountryFlag
+                    svg
+                    style={{ width: "16px", height: "16px" }}
+                    countryCode={o?.country ?? ""}
+                  />
+                  {translateCountryToRussian(o?.label)}
+                </ListboxOption>
+              ))}
             </ListboxOptions>
           </Transition>
         </div>
