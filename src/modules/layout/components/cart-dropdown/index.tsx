@@ -88,7 +88,7 @@ const CartDropdown = ({
           data-testid="nav-cart-link"
         >
           <ShoppingCart size={20} />
-          <span>{`Корзина (${totalItems})`}</span>
+          <span>{`Корзина1 (${totalItems})`}</span>
         </LocalizedClientLink>
         <Transition
           show={cartDropdownOpen}
