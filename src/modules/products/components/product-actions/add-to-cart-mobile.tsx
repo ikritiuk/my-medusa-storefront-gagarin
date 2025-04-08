@@ -23,7 +23,6 @@ const AddToCartButtonMobile = ({ handleAddToCart, inStock, variant, isAdding }) 
       className={`relative top-[-24px] w-full bg-orange-500 hover:bg-orange-600 text-white font-semibold py-1 px-6 rounded-lg text-lg shadow-md transition-all hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed`}
       data-testid="mobile-cart-button"
     >
-      <ShoppingCart size={20} />
       {added
         ? "Добавлено!"
         : !variant
