@@ -42,18 +42,15 @@ const MobileActions: React.FC<MobileActionsProps> = ({
   })
 
   const selectedPrice = useMemo(() => {
-    if (!price) {
-      return null
-    }
+    if (!price) return null
     const { variantPrice, cheapestPrice } = price
-
     return variantPrice || cheapestPrice || null
   }, [price])
 
   return (
     <>
       <div
-        className={clx("lg:hidden inset-x-0 bottom-0 fixed", {
+        className={clx("lg:hidden inset-x-0 bottom-4 fixed z-50", {
           "pointer-events-none": !show,
         })}
       >
@@ -68,7 +65,7 @@ const MobileActions: React.FC<MobileActionsProps> = ({
           leaveTo="opacity-0"
         >
           <div
-            className="bg-white flex flex-col gap-y-3 justify-center items-center text-large-regular p-10 h-full w-full border-t border-gray-200"
+            className="bg-white flex flex-col gap-y-3 justify-center items-center text-large-regular p-10 w-full border-t border-gray-200 rounded-t-xl shadow-lg"
             data-testid="mobile-actions"
           >
             <div className="flex items-center gap-x-2">
@@ -93,25 +90,26 @@ const MobileActions: React.FC<MobileActionsProps> = ({
                   </span>
                 </div>
               ) : (
-                <div></div>
+                <div />
               )}
             </div>
             <div className="grid grid-cols-2 w-full gap-x-4">
-              {/*<Button*/}
-              {/*  onClick={open}*/}
-              {/*  variant="secondary"*/}
-              {/*  className="w-full"*/}
-              {/*  data-testid="mobile-actions-button"*/}
-              {/*>*/}
-              {/*  <div className="flex items-center justify-between w-full">*/}
-              {/*    <span>*/}
-              {/*      {variant*/}
-              {/*        ? Object.values(options).join(" / ")*/}
-              {/*        : "Select Options"}*/}
-              {/*    </span>*/}
-              {/*    <ChevronDown />*/}
-              {/*  </div>*/}
-              {/*</Button>*/}
+              {/* Uncomment below to enable option select button */}
+              {/* <Button
+                onClick={open}
+                variant="secondary"
+                className="w-full"
+                data-testid="mobile-actions-button"
+              >
+                <div className="flex items-center justify-between w-full">
+                  <span>
+                    {variant
+                      ? Object.values(options).join(" / ")
+                      : "Select Options"}
+                  </span>
+                  <ChevronDown />
+                </div>
+              </Button> */}
               <AddToCartButtonMobile
                 handleAddToCart={handleAddToCart}
                 inStock={inStock}
@@ -122,6 +120,7 @@ const MobileActions: React.FC<MobileActionsProps> = ({
           </div>
         </Transition>
       </div>
+
       <Transition appear show={state} as={Fragment}>
         <Dialog as="div" className="relative z-[75]" onClose={close}>
           <Transition.Child
@@ -163,19 +162,17 @@ const MobileActions: React.FC<MobileActionsProps> = ({
                   <div className="bg-white px-6 py-12">
                     {(product.variants?.length ?? 0) > 1 && (
                       <div className="flex flex-col gap-y-6">
-                        {(product.options || []).map((option) => {
-                          return (
-                            <div key={option.id}>
-                              <OptionSelect
-                                option={option}
-                                current={options[option.title ?? ""]}
-                                updateOption={updateOptions}
-                                title={option.title ?? ""}
-                                disabled={optionsDisabled}
-                              />
-                            </div>
-                          )
-                        })}
+                        {(product.options || []).map((option) => (
+                          <div key={option.id}>
+                            <OptionSelect
+                              option={option}
+                              current={options[option.title ?? ""]}
+                              updateOption={updateOptions}
+                              title={option.title ?? ""}
+                              disabled={optionsDisabled}
+                            />
+                          </div>
+                        ))}
                       </div>
                     )}
                   </div>
