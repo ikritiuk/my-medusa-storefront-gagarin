@@ -18,7 +18,7 @@ const AddToCartButtonMobile = ({ handleAddToCart, inStock, variant, isAdding }) 
       transition={{ duration: 0.4 }}
       onClick={handleClick}
       disabled={!inStock || !variant || isAdding}
-      className={`w-full bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2 px-6 rounded-lg text-lg shadow-md transition-all hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed`}
+      className={`relative top-[-16px] w-full bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2 px-6 rounded-lg text-lg shadow-md transition-all hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed`}
       data-testid="mobile-cart-button"
     >
       {added
