@@ -25,7 +25,7 @@ export default async function Nav() {
                 <img
                   src="/logo.svg"
                   alt="Logo"
-                  className="h-[7.5rem] w-auto"
+                  className="h-32 w-33"
                 />
               </a>
             </div>
