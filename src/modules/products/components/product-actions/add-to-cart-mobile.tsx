@@ -20,10 +20,10 @@ const AddToCartButtonMobile = ({ handleAddToCart, inStock, variant, isAdding }) 
       transition={{ duration: 0.4 }}
       onClick={handleClick}
       disabled={!inStock || !variant || isAdding}
-      className={`relative top-[-24px] w-full bg-orange-500 hover:bg-orange-600 text-white font-semibold py-1 px-6 rounded-lg text-lg shadow-md transition-all hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed`}
+      className={`relative top-[-24px] w-full h-10 bg-orange-500 hover:bg-orange-600 text-white font-semibold rounded-lg shadow-md transition-all hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2`}
       data-testid="mobile-cart-button"
     >
-      <ShoppingCart className="w-5 h-5 self-center stroke-[1.5]" />
+      <ShoppingCart size={18} />
       {added
         ? "Добавлено!"
         : !variant
