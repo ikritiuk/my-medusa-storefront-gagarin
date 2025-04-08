@@ -93,7 +93,7 @@ const MobileActions: React.FC<MobileActionsProps> = ({
                 <div />
               )}
             </div>
-            <div className="grid grid-cols-2 w-full gap-x-4">
+            <div className="w-full">
               {/* Uncomment below to enable option select button */}
               {/* <Button
                 onClick={open}
