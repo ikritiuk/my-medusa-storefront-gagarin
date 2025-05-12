@@ -7,6 +7,6 @@ export const metadata: Metadata = {
   description: "Contacts page",
 }
 
-export default function LegalPage() {
+export default function Contacts() {
   return <ContactsPage/>
 }
