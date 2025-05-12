@@ -107,7 +107,10 @@ export default async function Footer() {
                 </ul>
               </div>
             )}
-
+            <div className="flex flex-col gap-y-2">
+              <a href="/contacts" className="text-sm text-gray-600 hover:underline">Контакты</a>
+              <a href="/legal" className="text-sm text-gray-600 hover:underline">Правовая информация</a>
+            </div>
           </div>
         </div>
         <div className="flex w-full mb-16 justify-between text-ui-fg-muted">
