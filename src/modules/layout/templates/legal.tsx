@@ -5,40 +5,47 @@ const LegalPage = () => {
   return (
     <div className="py-12">
       <div className="content-container">
-        <div className="w-full max-w-3xl px-6 py-12 bg-white rounded-lg shadow-lg mx-auto">
-          <h1 className="text-3xl font-bold mb-6">Контактная информация</h1>
+        <div className="w-full max-w-4xl px-6 py-12 bg-white rounded-lg shadow-lg mx-auto">
+          <h1 className="text-3xl font-bold mb-6">Правовая информация</h1>
 
-          <div className="mb-4">
-            <h2 className="text-xl font-semibold mb-2">ФИО владельца</h2>
-            <p>Критюк Илья Витальевич</p>
-          </div>
+          <h2 className="text-2xl font-semibold mb-4">1. Общие положения</h2>
+          <p className="mb-4">
+            Настоящее Соглашение регулирует использование сайта gagarin-shop.ru и является обязательным к соблюдению
+            для всех пользователей. Пользуясь сайтом, вы подтверждаете свое согласие с условиями.
+          </p>
 
-          <div className="mb-4">
-            <h2 className="text-xl font-semibold mb-2">ИНН самозанятого</h2>
-            <p>621402683132</p>
-          </div>
+          <h2 className="text-2xl font-semibold mb-4">2. Права и обязанности сторон</h2>
+          <p className="mb-2">
+            Пользователь обязуется предоставлять достоверную информацию при оформлении заказов и не нарушать
+            законодательство РФ. Администрация вправе изменять содержимое сайта, приостанавливать доступ и
+            аннулировать заказы при подозрении на недобросовестные действия.
+          </p>
 
-          <div className="mb-4">
-            <h2 className="text-xl font-semibold mb-2">Адрес</h2>
-            <p>Рязанская область, г. Ряжск, ул. Береговая, д. 37</p>
-          </div>
+          <h2 className="text-2xl font-semibold mb-4">3. Условия предоставления услуг</h2>
+          <p className="mb-2">
+            Все товары и услуги представлены в информационных целях. Оплата, доставка и возврат регулируются
+            действующим законодательством РФ. Вся информация на сайте может быть изменена без предварительного уведомления.
+          </p>
 
-          <div className="mb-4">
-            <h2 className="text-xl font-semibold mb-2">Телефон</h2>
-            <p>
-              <a href="tel:+79537542769" className="text-blue-600 underline">+7 (953) 754-27-69</a>
-            </p>
-          </div>
+          <h2 className="text-2xl font-semibold mb-4">4. Интеллектуальная собственность</h2>
+          <p className="mb-2">
+            Все изображения, тексты и элементы дизайна являются собственностью администрации сайта или правообладателей
+            и защищены авторским правом. Копирование запрещено без письменного разрешения.
+          </p>
 
-          <div className="mb-4">
-            <h2 className="text-xl font-semibold mb-2">Электронная почта</h2>
-            <p>
-              <a href="mailto:ikritiuk@gmail.com" className="text-blue-600 underline">ikritiuk@gmail.com</a>
-            </p>
-          </div>
+          <h2 className="text-2xl font-semibold mb-4">5. Ограничение ответственности</h2>
+          <p className="mb-2">
+            Сайт не несёт ответственности за возможные убытки, возникшие в результате использования размещенной информации.
+            Пользователь действует на свой страх и риск.
+          </p>
+
+          <h2 className="text-2xl font-semibold mb-4">6. Контакты</h2>
+          <p className="mb-2">
+            Для связи с администрацией сайта: <a href="mailto:info@gagarin-shop.ru" className="text-blue-600 underline">info@gagarin-shop.ru</a>
+          </p>
 
           <p className="mt-8 text-sm text-gray-500">
-            Вы можете связаться с нами по любым вопросам, связанным с заказами, доставкой или дополнительной информацией.
+            Последнее обновление: 12 мая 2025 года
           </p>
         </div>
       </div>
