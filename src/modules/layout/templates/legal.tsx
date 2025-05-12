@@ -41,7 +41,7 @@ const LegalPage = () => {
 
           <h2 className="text-2xl font-semibold mb-4">6. Контакты</h2>
           <p className="mb-2">
-            Для связи с администрацией сайта: <a href="mailto:info@gagarin-shop.ru" className="text-blue-600 underline">info@gagarin-shop.ru</a>
+            Для связи с администрацией сайта: <a href="mailto:info@gagarin-shop.ru" className="text-blue-600 underline">ikritiuk@gmail.com</a>
           </p>
 
           <p className="mt-8 text-sm text-gray-500">
